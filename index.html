@@ -1052,9 +1052,10 @@
     renderGrid();
   </script>
 
-  <!-- Vercel Web Analytics — privacy-friendly, no cookies. Turn on under
-       Project → Analytics in the Vercel dashboard; then this loads real data. -->
-  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- Plausible Analytics — privacy-friendly, cookie-free (no consent banner).
+       Dashboard/login at plausible.io; a daily summary is emailed via the
+       /api/daily-analytics-email Vercel Cron. Add the site as "mister.cloud"
+       in Plausible for this to report data. -->
+  <script defer data-domain="mister.cloud" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>

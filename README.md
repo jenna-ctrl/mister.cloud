@@ -120,14 +120,42 @@ node scripts/shopify-sync.mjs --apply    # creates DRAFT products (needs .contex
 Credentials load from `.context/shopify.env` (gitignored) or env vars:
 `SHOPIFY_STORE`, `SHOPIFY_ADMIN_TOKEN`, optional `SHOPIFY_API_VERSION`.
 
+## 📊 Analytics & daily email
+
+**Privacy-friendly (no cookies, no consent banner) via Plausible + a daily email to
+`shailin@futureprooftmt.com`.** Two parts:
+
+**Login / dashboard (view any time):**
+1. Create a [Plausible](https://plausible.io) account, add the site **`mister.cloud`**. The tracking
+   script is already in `index.html` — it reports as soon as the site is deployed on that domain.
+2. Give Shailin access: Plausible → site **Settings → Visibility** → either add a **team member**
+   (`shailin@futureprooftmt.com`) or enable a **shared dashboard link** to send them.
+
+**Daily email (`api/daily-analytics-email.js`, scheduled in `vercel.json`):**
+A Vercel Cron runs once a day (13:00 UTC), pulls yesterday's stats from the Plausible Stats API, and
+emails a branded summary (visitors, pageviews, bounce, avg visit, top pages, sources, countries) via
+[Resend](https://resend.com). Set these env vars in **Vercel → Project → Settings → Environment
+Variables** (template in `.env.example`):
+
+| Var | Where to get it |
+|---|---|
+| `PLAUSIBLE_SITE_ID` | `mister.cloud` |
+| `PLAUSIBLE_API_KEY` | Plausible → Settings → API Keys (Stats API key) |
+| `RESEND_API_KEY` | Resend → API Keys |
+| `REPORT_TO` | `shailin@futureprooftmt.com` (default; comma-separate for more) |
+| `REPORT_FROM` | e.g. `Mister Cloud Analytics <analytics@mister.cloud>` — **verify the domain in Resend first** |
+| `CRON_SECRET` | any long random string (Vercel sends it so only the cron can trigger the route) |
+
+Test it after deploy: `curl -H "Authorization: Bearer $CRON_SECRET" https://mister.cloud/api/daily-analytics-email`.
+Note: Vercel Cron requires a deployed project; on the Hobby plan crons run about once per day (fine here).
+
 ## ✅ Still to do before / around launch
 
 - [ ] **Create the Stripe Payment Links** and paste them into `STRIPE_LINKS` (see above).
 - [ ] **Wire `FORM_ENDPOINT`** so launch-news signups are actually captured.
 - [ ] **Confirm social handles** — the footer links to Instagram/TikTok/Facebook/Reddit using the
       handles from the social cheat sheet. Verify each URL is live (marked with a `TODO` in the HTML).
-- [ ] **Turn on Vercel Web Analytics** (Project → Analytics in the Vercel dashboard). The script tag
-      is already in `index.html`; it starts collecting once enabled. Privacy-friendly, no cookie banner.
+- [ ] **Analytics** — set up Plausible + the daily-email cron (see "Analytics & daily email" below).
 - [ ] **Product images** — tiles use emoji placeholders. Add v1 / prototype photos when available.
 - [ ] **Regional brands** — Señor Nube & Badal Sahib cards use the Mister Cloud mark as a placeholder.
 - [ ] **Legal (recommended for a kids-facing brand taking payment)** — add **Privacy** + **Terms**
