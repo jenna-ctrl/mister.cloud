@@ -133,8 +133,11 @@ Credentials load from `.context/shopify.env` (gitignored) or env vars:
 
 **Daily email (`api/daily-analytics-email.js`, scheduled in `vercel.json`):**
 A Vercel Cron runs once a day (13:00 UTC), pulls yesterday's stats from the Plausible Stats API, and
-emails a branded summary (visitors, pageviews, bounce, avg visit, top pages, sources, countries) via
-[Resend](https://resend.com). Set these env vars in **Vercel → Project → Settings → Environment
+emails a branded summary via [Resend](https://resend.com): visitors, pageviews, bounce, avg visit, top
+pages, sources, countries, plus **device type, browser, OS, and screen size**. Note: Plausible is
+privacy-first, so it does **not** expose IP / ISP / network connection type — those aren't available by
+design (it's what keeps the site cookie- and consent-banner-free). Set these env vars in **Vercel →
+Project → Settings → Environment
 Variables** (template in `.env.example`):
 
 | Var | Where to get it |

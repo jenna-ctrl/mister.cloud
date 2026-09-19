@@ -57,24 +57,30 @@ module.exports = async (req, res) => {
     return `${PLAUSIBLE_HOST}/api/v1/stats/${path}?${usp}`;
   };
 
+  const breakdown = async (property, metrics = 'visitors') => {
+    const r = await fetch(q('breakdown', { property, metrics, limit: '6' }), { headers: pHeaders });
+    if (!r.ok) throw new Error(`Plausible ${property} ${r.status}: ${await r.text()}`);
+    return (await r.json()).results || [];
+  };
+
   try {
-    const [aggRes, pagesRes, sourcesRes, countriesRes] = await Promise.all([
-      fetch(q('aggregate', { metrics: 'visitors,pageviews,bounce_rate,visit_duration' }), { headers: pHeaders }),
-      fetch(q('breakdown', { property: 'event:page', metrics: 'visitors,pageviews', limit: '5' }), { headers: pHeaders }),
-      fetch(q('breakdown', { property: 'visit:source', metrics: 'visitors', limit: '5' }), { headers: pHeaders }),
-      fetch(q('breakdown', { property: 'visit:country', metrics: 'visitors', limit: '5' }), { headers: pHeaders }),
+    const aggR = await fetch(q('aggregate', { metrics: 'visitors,pageviews,bounce_rate,visit_duration' }), { headers: pHeaders });
+    if (!aggR.ok) throw new Error(`Plausible aggregate ${aggR.status}: ${await aggR.text()}`);
+    const agg = (await aggR.json()).results || {};
+
+    // Note: Plausible is privacy-first — it exposes device/browser/OS/screen,
+    // but NOT ISP / IP / connection type. Those aren't available here by design.
+    const [pages, sources, countries, devices, browsers, os, screens] = await Promise.all([
+      breakdown('event:page', 'visitors,pageviews'),
+      breakdown('visit:source'),
+      breakdown('visit:country'),
+      breakdown('visit:device'),
+      breakdown('visit:browser'),
+      breakdown('visit:os'),
+      breakdown('visit:screen_size'),
     ]);
 
-    for (const [name, r] of [['aggregate', aggRes], ['pages', pagesRes], ['sources', sourcesRes], ['countries', countriesRes]]) {
-      if (!r.ok) throw new Error(`Plausible ${name} ${r.status}: ${await r.text()}`);
-    }
-
-    const agg = (await aggRes.json()).results || {};
-    const pages = (await pagesRes.json()).results || [];
-    const sources = (await sourcesRes.json()).results || [];
-    const countries = (await countriesRes.json()).results || [];
-
-    const html = buildEmail({ prettyDate, agg, pages, sources, countries, site });
+    const html = buildEmail({ prettyDate, agg, pages, sources, countries, devices, browsers, os, screens, site });
 
     const sendRes = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -101,7 +107,7 @@ function fmtDuration(seconds) {
   return m ? `${m}m ${s % 60}s` : `${s}s`;
 }
 
-function buildEmail({ prettyDate, agg, pages, sources, countries, site }) {
+function buildEmail({ prettyDate, agg, pages, sources, countries, devices, browsers, os, screens, site }) {
   const visitors = agg.visitors?.value ?? 0;
   const pageviews = agg.pageviews?.value ?? 0;
   const bounce = agg.bounce_rate?.value ?? 0;
@@ -120,6 +126,10 @@ function buildEmail({ prettyDate, agg, pages, sources, countries, site }) {
       </tr>`).join('')
     : `<tr><td style="padding:4px 0;color:#94a3b8;font-size:13px">No data yet.</td></tr>`;
 
+  const section = (title, rows, keyName) => `
+    <h2 style="font-size:14px;color:#0A1B2E;margin:22px 0 6px;border-bottom:2px solid #0A8CF5;padding-bottom:4px">${title}</h2>
+    <table style="width:100%;border-collapse:collapse">${list(rows, keyName)}</table>`;
+
   return `
   <div style="max-width:560px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;color:#0A1B2E">
     <h1 style="color:#0A8CF5;font-size:20px;margin:0 0 2px">☁️ Mister Cloud — daily traffic</h1>
@@ -129,15 +139,20 @@ function buildEmail({ prettyDate, agg, pages, sources, countries, site }) {
       <tr>${stat('Visitors', visitors)}${stat('Pageviews', pageviews)}${stat('Bounce', bounce + '%')}${stat('Avg. visit', duration)}</tr>
     </table>
 
-    <h2 style="font-size:14px;color:#0A1B2E;margin:22px 0 6px;border-bottom:2px solid #0A8CF5;padding-bottom:4px">Top pages</h2>
-    <table style="width:100%;border-collapse:collapse">${list(pages, 'page')}</table>
+    ${section('Top pages', pages, 'page')}
 
     <h2 style="font-size:14px;color:#0A1B2E;margin:22px 0 6px;border-bottom:2px solid #0A8CF5;padding-bottom:4px">Where they came from</h2>
     <p style="font-size:11px;color:#94a3b8;margin:0 0 6px">Curious visitors who typed the URL after seeing the brand show up as <b>Direct / None</b>.</p>
     <table style="width:100%;border-collapse:collapse">${list(sources, 'source')}</table>
 
-    <h2 style="font-size:14px;color:#0A1B2E;margin:22px 0 6px;border-bottom:2px solid #0A8CF5;padding-bottom:4px">Top countries</h2>
-    <table style="width:100%;border-collapse:collapse">${list(countries, 'country')}</table>
+    ${section('Top countries', countries, 'country')}
+
+    <h2 style="font-size:15px;color:#0A8CF5;margin:26px 0 4px">Device &amp; connection</h2>
+    <p style="font-size:11px;color:#94a3b8;margin:0 0 6px">Privacy-first: we see the device, browser, OS, and screen — but never the visitor's IP, ISP, or network (no cookies, no consent banner).</p>
+    ${section('Device type', devices, 'device')}
+    ${section('Browser', browsers, 'browser')}
+    ${section('Operating system', os, 'os')}
+    ${section('Screen size', screens, 'screen_size')}
 
     <p style="margin:24px 0 0;font-size:12px;color:#94a3b8">
       Full dashboard: <a href="${PLAUSIBLE_HOST}/${site}" style="color:#0A8CF5">${PLAUSIBLE_HOST.replace(/^https?:\/\//, '')}/${site}</a><br>
