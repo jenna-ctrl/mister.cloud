@@ -561,69 +561,8 @@
           <h2 class="text-3xl font-bold text-slate-800 brand-font">Our curriculum, by audience</h2>
           <p class="text-slate-600">Tailored resources for every role and age group in the family&rsquo;s digital learning journey.</p>
         </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Tile 1 -->
-        <button class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-sky-300 transition-colors" onclick="toggleTile('tile-tots', this)" aria-expanded="false" aria-controls="tile-tots">
-          <div class="flex justify-between items-center gap-2">
-            <h3 class="text-xl font-bold text-sky-600 brand-font">Tots</h3>
-            <span class="text-xs font-bold bg-sky-100 text-sky-600 px-2 py-1 rounded-full whitespace-nowrap">0-3 yrs</span>
-          </div>
-          <div id="tile-tots" class="tile-content mt-4 text-slate-600 text-sm">Content coming soon. Focuses on sensory play, board books, and recognizing the friendly faces of digital infrastructure.</div>
-        </button>
-        <!-- Tile 2 -->
-        <button class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-sky-300 transition-colors" onclick="toggleTile('tile-kids4', this)" aria-expanded="false" aria-controls="tile-kids4">
-          <div class="flex justify-between items-center gap-2">
-            <h3 class="text-xl font-bold text-sky-600 brand-font">Kids</h3>
-            <span class="text-xs font-bold bg-sky-100 text-sky-600 px-2 py-1 rounded-full whitespace-nowrap">4-7 yrs</span>
-          </div>
-          <div id="tile-kids4" class="tile-content mt-4 text-slate-600 text-sm">Content coming soon. Introduction to &ldquo;Pause before you share&rdquo; and recognizing basic sensors like the camera eye.</div>
-        </button>
-        <!-- Tile 3 -->
-        <button class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-sky-300 transition-colors" onclick="toggleTile('tile-kids8', this)" aria-expanded="false" aria-controls="tile-kids8">
-          <div class="flex justify-between items-center gap-2">
-            <h3 class="text-xl font-bold text-sky-600 brand-font">Kids</h3>
-            <span class="text-xs font-bold bg-sky-100 text-sky-600 px-2 py-1 rounded-full whitespace-nowrap">8-12 yrs</span>
-          </div>
-          <div id="tile-kids8" class="tile-content mt-4 text-slate-600 text-sm">Content coming soon. Advanced interactive learning, understanding where data goes, and practicing digital boundaries.</div>
-        </button>
-        <!-- Tile 4 -->
-        <button class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-sky-300 transition-colors" onclick="toggleTile('tile-teens', this)" aria-expanded="false" aria-controls="tile-teens">
-          <div class="flex justify-between items-center gap-2">
-            <h3 class="text-xl font-bold text-sky-600 brand-font">Teens</h3>
-            <span class="text-xs font-bold bg-sky-100 text-sky-600 px-2 py-1 rounded-full whitespace-nowrap">13-18 yrs</span>
-          </div>
-          <div id="tile-teens" class="tile-content mt-4 text-slate-600 text-sm">Content coming soon. Managing digital footprints, algorithmic awareness, and consent in cloud environments.</div>
-        </button>
-        <!-- Tile 5 -->
-        <button class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-amber-300 transition-colors" onclick="toggleTile('tile-parents', this)" aria-expanded="false" aria-controls="tile-parents">
-          <div class="flex justify-between items-center gap-2">
-            <h3 class="text-xl font-bold text-amber-500 brand-font">Parents</h3>
-          </div>
-          <div id="tile-parents" class="tile-content mt-4 text-slate-600 text-sm">Content coming soon. Resources, guides, and zero-data apps to help facilitate the digital Montessori experience at home.</div>
-        </button>
-        <!-- Tile 6 -->
-        <button class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-amber-300 transition-colors" onclick="toggleTile('tile-grandparents', this)" aria-expanded="false" aria-controls="tile-grandparents">
-          <div class="flex justify-between items-center gap-2">
-            <h3 class="text-xl font-bold text-amber-500 brand-font">Grandparents</h3>
-          </div>
-          <div id="tile-grandparents" class="tile-content mt-4 text-slate-600 text-sm">Content coming soon. &ldquo;Grandparent Mode&rdquo; — scams resistance, password hygiene, and safer shared-device use with grandchildren.</div>
-        </button>
-        <!-- Tile 7 -->
-        <button class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-teal-300 transition-colors" onclick="toggleTile('tile-educators', this)" aria-expanded="false" aria-controls="tile-educators">
-          <div class="flex justify-between items-center gap-2">
-            <h3 class="text-xl font-bold text-teal-500 brand-font">Educators / Admins</h3>
-          </div>
-          <div id="tile-educators" class="tile-content mt-4 text-slate-600 text-sm">Content coming soon. Institutional licensing materials for preschools, libraries, and community learning centers.</div>
-        </button>
-        <!-- Tile 8 -->
-        <button class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-teal-300 transition-colors" onclick="toggleTile('tile-caregivers', this)" aria-expanded="false" aria-controls="tile-caregivers">
-          <div class="flex justify-between items-center gap-2">
-            <h3 class="text-xl font-bold text-teal-500 brand-font">Caregivers</h3>
-          </div>
-          <div id="tile-caregivers" class="tile-content mt-4 text-slate-600 text-sm">Content coming soon. Support tools for nannies, elder-care providers, and extended family establishing digital boundaries.</div>
-        </button>
-      </div>
-      <p class="text-center text-sm text-slate-400 mt-4 italic">Tap a tile to expand.</p>
+      <div id="curriculum-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+      <p class="text-center text-sm text-slate-400 mt-4 italic">Tap any group to open the full curriculum.</p>
       </div>
 
       <!-- Partners & Investors -->
@@ -725,6 +664,25 @@
               <p id="modal-fineprint" class="text-xs text-slate-400 mt-3 text-center">Pre-order: you&rsquo;ll be charged today to reserve your order, which ships in October 2026. Secure checkout via Stripe.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Curriculum interstitial (modal) -->
+  <div id="curriculum-modal" class="fixed inset-0 z-[80] hidden" role="dialog" aria-modal="true" aria-labelledby="curr-title">
+    <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" onclick="closeCurriculum()"></div>
+    <div class="absolute inset-0 overflow-y-auto p-4 flex items-start sm:items-center justify-center">
+      <div class="relative bg-white rounded-3xl soft-shadow w-full max-w-2xl my-8 p-6 sm:p-9 animate-[fadeIn_.3s_ease]">
+        <button onclick="closeCurriculum()" aria-label="Close" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-slate-500 hover:text-slate-800 flex items-center justify-center font-bold text-xl shadow">&times;</button>
+        <span id="curr-badge" class="inline-block text-xs font-bold px-2 py-1 rounded-full mb-3"></span>
+        <h3 id="curr-title" class="text-2xl md:text-3xl font-bold text-slate-800 brand-font mb-2"></h3>
+        <p id="curr-focus" class="text-slate-600 leading-relaxed mb-5"></p>
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">What they learn</p>
+        <ul id="curr-learn" class="space-y-2 mb-6"></ul>
+        <div class="bg-sky-50 border border-sky-100 rounded-2xl p-4">
+          <p class="text-xs font-bold uppercase tracking-wider text-sky-500 mb-1">Core habit</p>
+          <p id="curr-habit" class="text-slate-800 font-bold brand-font text-lg"></p>
         </div>
       </div>
     </div>
@@ -1153,6 +1111,155 @@
     // Init storefront
     renderFilters();
     renderGrid();
+  </script>
+
+  <!-- Curriculum by audience -->
+  <script>
+    const CURR_THEME = {
+      sky:   { title: 'text-sky-600',   badge: 'bg-sky-100 text-sky-600',     hover: 'hover:border-sky-300' },
+      amber: { title: 'text-amber-500', badge: 'bg-amber-100 text-amber-600', hover: 'hover:border-amber-300' },
+      teal:  { title: 'text-teal-500',  badge: 'bg-teal-100 text-teal-600',   hover: 'hover:border-teal-300' },
+    };
+
+    const CURRICULUM = [
+      { key: 'tots', name: 'Tots', age: '0–3 yrs', theme: 'sky',
+        focus: 'Before words, before rules — the three things a device can want, and a first memorable boundary. Every icon is Mister Cloud (the device, and the whole network behind it) asking for something.',
+        preview: ['📷 Camera = wants to SEE', '🎤 Microphone = wants to HEAR', '📍 Location = wants to know WHERE'],
+        learn: [
+          'The camera icon means Mister Cloud wants to SEE — the device, and the network behind it.',
+          'The microphone icon means Mister Cloud wants to HEAR.',
+          'The location pin means Mister Cloud wants to know WHERE you are.',
+          'The first three responses — yes, no, and “ask” — long before the words for privacy exist.',
+          'Sensory play and board books that name what a device can see, hear, and locate.',
+        ],
+        habit: '“No thank you, Mister Cloud.”' },
+
+      { key: 'kids4', name: 'Kids', age: '4–7 yrs', theme: 'sky',
+        focus: 'The internet is a real place, and sharing is a choice you get to make.',
+        preview: ['Meet the sensors', '“Private” vs “shared”', 'Practice the pause'],
+        learn: [
+          'Meet the sensors — camera, microphone, location — and learn each one can be turned off.',
+          '“Private” vs “shared,” and asking a trusted grown-up before sending anything.',
+          'The internet has a body: your tap travels somewhere real.',
+          'Practice the pause before tapping “yes” or “allow.”',
+        ],
+        habit: '“Pause before you share.”' },
+
+      { key: 'kids8', name: 'Kids', age: '8–12 yrs', theme: 'sky',
+        focus: 'Follow a photo or message on its real journey — and meet who watches along the way.',
+        preview: ['Where your data travels', 'Cookies & trackers', '“Free” isn’t free'],
+        learn: [
+          'The internet has a body: device → router → cables → data centers, and back.',
+          'Cookies and trackers are “crumbs” that follow you from site to site.',
+          '“Free” apps and games are paid for with data and attention — someone profits.',
+          'Companies guess things about you (profiling); strong passwords; think before you click.',
+        ],
+        habit: '“If it’s free, ask what they’re really collecting.”' },
+
+      { key: 'teens', name: 'Teens', age: '13–18 yrs', theme: 'sky',
+        focus: 'Understand the tech you live on — and how attention and personal data are bought, sold, and used to shape what you see.',
+        preview: ['What is Wi-Fi?', 'What is Bluetooth?', 'Footprint & the data economy'],
+        learn: [
+          'What Wi-Fi actually is — local networks, signals, and who can see them.',
+          'What Bluetooth is — device-to-device links, proximity, and permissions.',
+          'Digital footprint and permanence; a public self vs a private self.',
+          'How feeds and ads are targeted — behavioral profiling, data brokers, and the attention economy.',
+          'Spotting manipulation: manufactured urgency, phishing, and social engineering.',
+        ],
+        habit: '“When it’s free, you’re the product — decide what you’ll trade.”' },
+
+      { key: 'parents', name: 'Parents', age: null, theme: 'amber',
+        focus: 'Set up a calm, low-tracking home — and see what’s really collecting on your family, from apps to the car in the driveway.',
+        preview: ['Device & privacy setup', 'What does my connected car know about my kids?', 'Reduce household tracking'],
+        learn: [
+          'Device and account setup: permissions hygiene, privacy settings, and age-gating.',
+          'A simple family media agreement built around “pause before you share.”',
+          'What does my connected car know about my kids? — the surprising trackers hiding in everyday things (cars, smart TVs, toys, and apps).',
+          'Recognize and reduce the ad-tech quietly tracking the whole household.',
+        ],
+        habit: '“Model the pause — children copy what we do, not what we say.”' },
+
+      { key: 'grandparents', name: 'Grandparents', age: '60+', theme: 'amber',
+        focus: 'Calm, plain-language protection — because a grandparent’s device security is the grandchildren’s security too.',
+        preview: ['Robocalls & scam calls', 'Password hygiene', 'Reduce ads & tracking', 'Device security = grandkids’ security'],
+        learn: [
+          'Robocalls and scam calls: recognize the classics — the “grandchild in trouble” call, fake prizes, tax threats, and tech-support pop-ups.',
+          'Password hygiene without the overwhelm.',
+          'Reducing ads and avoiding tracking on phones, smart TVs, and browsers.',
+          'Device security as family security: a compromised grandparent device can expose the grandchildren.',
+          'Verify before you act: hang up, look it up, and call back on a number you trust.',
+        ],
+        habit: '“When it’s urgent and scary, slow down and check.”' },
+
+      { key: 'educators', name: 'Educators & Admins', age: null, theme: 'teal',
+        focus: 'A ready-to-run digital-citizenship program for preschools, libraries, and community centers.',
+        preview: ['Age-banded lesson sequences', 'Story-time & take-home kits', 'Standards-aligned'],
+        learn: [
+          'Age-banded lesson sequences (Tots → Teens) with books, songs, and routines.',
+          'Story-time kits, big-book editions, and take-home cards for families.',
+          'Alignment to digital-citizenship and media-literacy standards.',
+          'Simple ways to check understanding and reinforce one shared vocabulary.',
+        ],
+        habit: '“One vocabulary, repeated across every grade.”' },
+
+      { key: 'caregivers', name: 'Caregivers', age: null, theme: 'teal',
+        focus: 'Nannies, elder-care providers, and extended family keeping the boundaries consistent across every home.',
+        preview: ['Reinforce the family’s language', 'Supervise shared devices', 'Protect both ends'],
+        learn: [
+          'Reinforce the same phrases and routines the family already uses.',
+          'Supervise shared devices, and protect both the youngest and the oldest.',
+          'Spot exploitation aimed at either end of the household.',
+          'Know when to pause — and who to check with.',
+        ],
+        habit: '“Same boundaries, every home, every caregiver.”' },
+    ];
+
+    function renderCurriculum() {
+      const wrap = document.getElementById('curriculum-grid');
+      if (!wrap) return;
+      wrap.innerHTML = CURRICULUM.map(c => {
+        const t = CURR_THEME[c.theme];
+        const badge = c.age
+          ? `<span class="text-xs font-bold ${t.badge} px-2 py-1 rounded-full whitespace-nowrap">${c.age}</span>` : '';
+        const preview = c.preview.map(p =>
+          `<li class="flex items-start gap-2"><span class="${t.title} font-bold">•</span><span>${p}</span></li>`).join('');
+        return `<button onclick="openCurriculum('${c.key}')" class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 ${t.hover} transition flex flex-col h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
+          <div class="flex justify-between items-center gap-2 mb-3">
+            <h3 class="text-xl font-bold ${t.title} brand-font">${c.name}</h3>
+            ${badge}
+          </div>
+          <ul class="space-y-1 text-slate-600 text-sm flex-grow">${preview}</ul>
+          <span class="mt-4 ${t.title} font-bold text-sm">Full curriculum &rarr;</span>
+        </button>`;
+      }).join('');
+    }
+
+    function openCurriculum(key) {
+      const c = CURRICULUM.find(x => x.key === key);
+      if (!c) return;
+      const t = CURR_THEME[c.theme];
+      const badge = document.getElementById('curr-badge');
+      badge.textContent = 'Curriculum';
+      badge.className = `inline-block text-xs font-bold px-2 py-1 rounded-full mb-3 ${t.badge}`;
+      document.getElementById('curr-title').textContent = c.age ? `${c.name} · ${c.age}` : c.name;
+      document.getElementById('curr-focus').textContent = c.focus;
+      document.getElementById('curr-learn').innerHTML = c.learn.map(item =>
+        `<li class="flex items-start gap-2 text-slate-600"><span class="${t.title} font-bold">•</span><span>${item}</span></li>`).join('');
+      document.getElementById('curr-habit').textContent = c.habit;
+      document.getElementById('curriculum-modal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeCurriculum() {
+      document.getElementById('curriculum-modal').classList.add('hidden');
+      if (document.getElementById('product-modal').classList.contains('hidden')) {
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCurriculum(); });
+
+    renderCurriculum();
   </script>
 
   <!-- Plausible Analytics — privacy-friendly, cookie-free (no consent banner).
