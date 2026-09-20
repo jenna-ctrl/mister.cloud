@@ -92,6 +92,9 @@
     .bg-emerald-400 { background-color: #34d399; }
     .animate-pulse { animation: mc-pulse 2s cubic-bezier(.4,0,.6,1) infinite; }
     @keyframes mc-pulse { 50% { opacity: .5; } }
+    .border-violet-400 { border-color: #a78bfa; }
+    .text-violet-600 { color: #7c3aed; }
+    .border-slate-400 { border-color: #94a3b8; }
 
     /* Welcome-intro attribution chips (mobile-friendly tap targets) */
     .intro-chip {
@@ -338,8 +341,24 @@
     <!-- ABOUT (mission + products) -->
     <section id="about" class="tab-section hidden space-y-12" aria-labelledby="about-heading">
       <div class="text-center space-y-4 max-w-3xl mx-auto">
-        <span class="inline-block py-1 px-3 rounded-full bg-sky-100 text-sky-600 font-bold text-xs uppercase tracking-wider">About Mister Cloud</span>
-        <h2 id="about-heading" class="text-4xl md:text-5xl font-bold text-slate-800 brand-font">Our mission &amp; what we make</h2>
+        <span class="inline-block py-1 px-3 rounded-full bg-sky-100 text-sky-600 font-bold text-xs uppercase tracking-wider">Why families trust Mister Cloud</span>
+        <h2 id="about-heading" class="text-4xl md:text-5xl font-bold text-slate-800 brand-font">Built by the people who audit the internet &mdash; for their own kids first</h2>
+      </div>
+
+      <!-- Founder trust story -->
+      <div class="bg-white rounded-3xl soft-shadow border border-sky-100 p-8 md:p-10 max-w-4xl mx-auto space-y-4 text-slate-600 leading-relaxed">
+        <p>
+          Mister Cloud was created by a <strong class="text-slate-800">big-tech auditor who has invented patented bot-detection technology since 2017</strong> &mdash; the systems that tell real humans apart from automated fraud at internet scale. For years, that deep systems knowledge and investigative experience quietly kept his own family and immediate circle safer online.
+        </p>
+        <p>
+          His wife, a <strong class="text-slate-800">neuropsychology and child-development expert</strong>, helped him turn it into something a child could actually hold: a catalogue of curriculum, books, and toys that taught the children across their family how to be safe online &mdash; in language a toddler, a teen, and a grandparent could each understand.
+        </p>
+        <p class="brand-font text-lg font-bold text-sky-600">
+          What they built to protect their own family is now shared with yours.
+        </p>
+      </div>
+
+      <div class="text-center max-w-2xl mx-auto pt-2">
         <p class="text-lg text-slate-600 leading-relaxed">
           We turn invisible data centers and subsea cables into familiar stories, teaching families the foundational habits of digital life &mdash; starting with <strong class="text-slate-800">pause before you share.</strong>
         </p>
@@ -411,6 +430,7 @@
           <div class="bg-indigo-100 p-2 rounded-xl"><img src="logos/mister-cloud-mark.png" alt="" class="h-9 w-auto" aria-hidden="true"></div>
           <h2 class="text-3xl font-bold text-slate-800 brand-font">Apps <span class="text-indigo-500 text-lg font-semibold mc-tip" tabindex="0" role="note" aria-label="Zero-Data means the app runs entirely on the device — no tracking, no accounts, and no data ever leaves your phone or tablet." data-tip="Runs entirely on the device — no tracking, no accounts, and no data ever leaves your phone or tablet.">[Zero-Data]</span></h2>
         </div>
+        <p class="text-slate-500 leading-relaxed"><strong class="text-indigo-500">Zero-Data</strong> means the app runs <strong class="text-slate-700">entirely on the device</strong> &mdash; no tracking, no accounts, no ads, and no data ever leaves your phone or tablet.</p>
         <div class="grid md:grid-cols-2 gap-8">
           <div class="product-card bg-gradient-to-br from-white to-indigo-50 p-8 rounded-3xl border border-indigo-100 soft-shadow flex flex-col">
             <div class="flex justify-between items-start gap-4 mb-4">
@@ -423,7 +443,10 @@
             <p class="text-slate-600 mb-6 leading-relaxed flex-grow">
               A privacy-safe research and curiosity response app. Utilizing a controlled, small-LM to provide curated and safe-for-home information to your young ones, without compromising diligence or breadth of information. No tracking, no behavioral profiling.
             </p>
-            <span class="inline-flex items-center gap-2 text-indigo-500 font-bold self-start"><span class="w-2 h-2 rounded-full bg-indigo-400" aria-hidden="true"></span>In development · preview coming soon</span>
+            <div class="self-start">
+              <span class="inline-flex items-center gap-2 text-indigo-500 font-bold"><span class="w-2 h-2 rounded-full bg-indigo-400" aria-hidden="true"></span>Late-stage development · coming early 2027</span>
+              <a href="mailto:hello@mister.cloud?subject=Early%20access%20%E2%80%94%20Curiosity%20Companion" class="block mt-2 text-indigo-600 font-bold hover:text-indigo-800 underline underline-offset-2">Email us for early access &rarr;</a>
+            </div>
           </div>
           <div class="product-card bg-gradient-to-br from-white to-emerald-50 p-8 rounded-3xl border border-emerald-100 soft-shadow flex flex-col">
             <div class="flex justify-between items-start gap-4 mb-4">
@@ -436,7 +459,10 @@
             <p class="text-slate-600 mb-6 leading-relaxed flex-grow">
               How does an email, image, or video travel from departure to destination? This entire interactive map is pre-coded and runs <strong>100% offline</strong> once installed on a smartphone or tablet (Android &amp; iOS). Zero data ever leaves the device.
             </p>
-            <span class="inline-flex items-center gap-2 text-emerald-500 font-bold self-start"><span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span>In development · preview coming soon</span>
+            <div class="self-start">
+              <span class="inline-flex items-center gap-2 text-emerald-500 font-bold"><span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span>Late-stage development · coming early 2027</span>
+              <a href="mailto:hello@mister.cloud?subject=Early%20access%20%E2%80%94%20Message%20Journey" class="block mt-2 text-emerald-600 font-bold hover:text-emerald-800 underline underline-offset-2">Email us for early access &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
@@ -585,6 +611,62 @@
         <h2 class="text-3xl font-bold text-slate-800 brand-font text-center leading-tight">The invisible internet is a physical web.<br><span class="text-sky-500">We give you the map so you don&rsquo;t feel lost.</span></h2>
         <p>Most people are never taught the basics: where their phone or tablet fits into the larger internet, and the order of operations by which a message actually travels from one place to another.</p>
         <p>That single understanding &mdash; that the internet has a physical body, and information moves through it in a predictable order &mdash; transforms how a person navigates the web. A suspicious text becomes easier to question. An urgent pop-up loses its power. Sharing becomes a choice, not a reflex.</p>
+      </div>
+
+      <!-- The Mister Cloud family: the four skies -->
+      <div class="space-y-8 pt-4">
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+          <h2 class="text-3xl font-bold text-slate-800 brand-font">Meet the family: the four skies</h2>
+          <p class="text-slate-600">Real clouds sort themselves by altitude and shape &mdash; and so does the internet. Each member of the Mister Cloud family makes one invisible layer easy to picture.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Cumi -->
+          <div class="bg-white rounded-3xl p-6 soft-shadow border-t-8 border-emerald-400 flex flex-col items-center text-center">
+            <div class="h-20 flex items-center justify-center mb-3">
+              <svg viewBox="0 0 84 66" class="h-16 w-auto" role="img" aria-label="Cumi — a round puffy cloud">
+                <g fill="#34d399"><circle cx="28" cy="38" r="13"/><circle cx="48" cy="31" r="16"/><circle cx="61" cy="39" r="11"/><rect x="18" y="39" width="50" height="16" rx="8"/></g>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 brand-font">Cumi</h3>
+            <p class="text-emerald-600 font-bold text-xs uppercase tracking-wider mb-2">Local Tier · 0–2 km</p>
+            <p class="text-slate-600 text-sm">Your own devices &amp; local storage &mdash; the files right here on your phone, tablet, and hard drive.</p>
+          </div>
+          <!-- Alto -->
+          <div class="bg-white rounded-3xl p-6 soft-shadow border-t-8 border-amber-400 flex flex-col items-center text-center">
+            <div class="h-20 flex items-center justify-center mb-3">
+              <svg viewBox="0 0 84 66" class="h-16 w-auto" role="img" aria-label="Alto — a cluster of linked cloud puffs">
+                <g fill="#fbbf24"><circle cx="26" cy="40" r="11"/><circle cx="42" cy="33" r="14"/><circle cx="57" cy="40" r="11"/><rect x="18" y="40" width="46" height="15" rx="7"/></g>
+                <circle cx="34" cy="37" r="2.5" fill="#fff"/><circle cx="50" cy="37" r="2.5" fill="#fff"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 brand-font">Alto</h3>
+            <p class="text-amber-600 font-bold text-xs uppercase tracking-wider mb-2">Network Tier · 2–7 km</p>
+            <p class="text-slate-600 text-sm">Cloud syncing &amp; collaboration &mdash; the shared drives that patch everyone&rsquo;s copies together.</p>
+          </div>
+          <!-- Ciri -->
+          <div class="bg-white rounded-3xl p-6 soft-shadow border-t-8 border-violet-400 flex flex-col items-center text-center">
+            <div class="h-20 flex items-center justify-center mb-3">
+              <svg viewBox="0 0 84 66" class="h-16 w-auto" role="img" aria-label="Ciri — sleek, swept-back wispy streaks">
+                <g stroke="#a78bfa" stroke-width="5" stroke-linecap="round" fill="none"><path d="M16 24 q22 -7 50 0"/><path d="M20 38 q22 -7 46 0"/><path d="M28 52 q18 -6 38 0"/></g>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 brand-font">Ciri</h3>
+            <p class="text-violet-600 font-bold text-xs uppercase tracking-wider mb-2">Global Tier · 7 km+</p>
+            <p class="text-slate-600 text-sm">High-speed internet &amp; global streams &mdash; fiber, 5G, and the data racing around the world.</p>
+          </div>
+          <!-- Nimbus -->
+          <div class="bg-white rounded-3xl p-6 soft-shadow border-t-8 border-slate-400 flex flex-col items-center text-center">
+            <div class="h-20 flex items-center justify-center mb-3">
+              <svg viewBox="0 0 84 66" class="h-16 w-auto" role="img" aria-label="Nimbus — a towering storm cloud with a lightning bolt">
+                <g fill="#94a3b8"><circle cx="28" cy="28" r="13"/><circle cx="48" cy="22" r="16"/><circle cx="61" cy="30" r="11"/><rect x="18" y="28" width="50" height="15" rx="7"/></g>
+                <path d="M44 38 l-9 15 h7 l-4 13 15 -19 h-7 l5 -9 z" fill="#eab308"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 brand-font">Nimbus</h3>
+            <p class="text-slate-500 font-bold text-xs uppercase tracking-wider mb-2">Processing Tier · the giants</p>
+            <p class="text-slate-600 text-sm">Big data, AI &amp; cybersecurity &mdash; the server farms that crunch, decide, and defend.</p>
+          </div>
+        </div>
       </div>
 
       <!-- Our promise -->
