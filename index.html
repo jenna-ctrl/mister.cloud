@@ -333,12 +333,16 @@
       <div class="text-center bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-3xl soft-shadow p-8 md:p-12 mt-8">
         <h3 class="text-2xl md:text-3xl font-bold brand-font mb-3">Not ready to pre-order? Follow along.</h3>
         <p class="text-sky-50 mb-6 max-w-xl mx-auto">Join the list for launch news, new drops, and free family digital-safety guides. No spam &mdash; just the good stuff.</p>
-        <form class="flex flex-col sm:flex-row max-w-md mx-auto gap-2" onsubmit="return handleWaitlist(event)">
-          <label for="waitlist-email" class="sr-only">Email address</label>
-          <input type="email" id="waitlist-email" name="email" required placeholder="Enter your email address" class="flex-grow px-4 py-3 rounded-full border border-transparent text-slate-800 focus:outline-none focus:ring-2 focus:ring-white">
-          <button type="submit" class="bg-slate-900 text-white font-bold px-6 py-3 rounded-full hover:bg-slate-800 transition">Keep me posted</button>
+        <form class="max-w-md mx-auto space-y-2" onsubmit="return handleWaitlist(event)">
+          <label for="waitlist-name" class="sr-only">First name</label>
+          <input type="text" id="waitlist-name" name="name" placeholder="First name" class="w-full px-4 py-3 rounded-full border border-transparent text-slate-800 focus:outline-none focus:ring-2 focus:ring-white">
+          <div class="flex flex-col sm:flex-row gap-2">
+            <label for="waitlist-email" class="sr-only">Email address</label>
+            <input type="email" id="waitlist-email" name="email" required placeholder="Enter your email address" class="flex-grow px-4 py-3 rounded-full border border-transparent text-slate-800 focus:outline-none focus:ring-2 focus:ring-white">
+            <button type="submit" class="bg-slate-900 text-white font-bold px-6 py-3 rounded-full hover:bg-slate-800 transition whitespace-nowrap">Keep me posted</button>
+          </div>
         </form>
-        <p id="waitlist-msg" class="text-sm font-bold text-white mt-3 hidden">Thanks! We&rsquo;ll keep you posted. ☁️</p>
+        <p id="waitlist-msg" class="text-sm font-bold text-white mt-3 hidden">Almost there &mdash; check your inbox to confirm your email, and you&rsquo;re in. ☁️</p>
       </div>
     </section>
 
@@ -449,7 +453,7 @@
             </p>
             <div class="self-start">
               <span class="inline-flex items-center gap-2 text-indigo-500 font-bold"><span class="w-2 h-2 rounded-full bg-indigo-400" aria-hidden="true"></span>Late-stage development · coming early 2027</span>
-              <a href="mailto:hello@mister.cloud?subject=Early%20access%20%E2%80%94%20Curiosity%20Companion" class="block mt-2 text-indigo-600 font-bold hover:text-indigo-800 underline underline-offset-2">Email us for early access &rarr;</a>
+              <a href="mailto:info@futureprooftmt.com?subject=Early%20access%20%E2%80%94%20Curiosity%20Companion" class="block mt-2 text-indigo-600 font-bold hover:text-indigo-800 underline underline-offset-2">Email us for early access &rarr;</a>
             </div>
           </div>
           <div class="product-card bg-gradient-to-br from-white to-emerald-50 p-8 rounded-3xl border border-emerald-100 soft-shadow flex flex-col">
@@ -465,7 +469,7 @@
             </p>
             <div class="self-start">
               <span class="inline-flex items-center gap-2 text-emerald-500 font-bold"><span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span>Late-stage development · coming early 2027</span>
-              <a href="mailto:hello@mister.cloud?subject=Early%20access%20%E2%80%94%20Message%20Journey" class="block mt-2 text-emerald-600 font-bold hover:text-emerald-800 underline underline-offset-2">Email us for early access &rarr;</a>
+              <a href="mailto:info@futureprooftmt.com?subject=Early%20access%20%E2%80%94%20Message%20Journey" class="block mt-2 text-emerald-600 font-bold hover:text-emerald-800 underline underline-offset-2">Email us for early access &rarr;</a>
             </div>
           </div>
         </div>
@@ -791,7 +795,7 @@
         <p class="text-slate-600 text-lg mb-10 max-w-2xl mx-auto">
           We are actively seeking go-to-market partners, institutional licensees, and investors to expand the reach of our physical curriculum and zero-data applications globally.
         </p>
-        <a href="mailto:hello@mister.cloud?subject=Partnership%20%2F%20investment%20enquiry" class="inline-block px-8 py-4 bg-slate-800 text-white font-bold rounded-full hover:bg-slate-700 transition-colors soft-shadow text-lg">
+        <a href="mailto:info@futureprooftmt.com?subject=Data%20Room%20access%20request" class="inline-block px-8 py-4 bg-slate-800 text-white font-bold rounded-full hover:bg-slate-700 transition-colors soft-shadow text-lg">
           Request Data Room
         </a>
       </div>
@@ -954,9 +958,10 @@
       event.preventDefault();
       const form = event.target;
       const msg = document.getElementById('waitlist-msg');
-      // FORM_ENDPOINT is defined in the storefront config block below.
-      if (typeof FORM_ENDPOINT === 'string' && FORM_ENDPOINT) {
-        fetch(FORM_ENDPOINT, {
+      // NEWSLETTER_ENDPOINT is defined in the storefront config block below.
+      // Double opt-in (email confirmation) is handled by your email service.
+      if (typeof NEWSLETTER_ENDPOINT === 'string' && NEWSLETTER_ENDPOINT) {
+        fetch(NEWSLETTER_ENDPOINT, {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
           body: new FormData(form)
@@ -1016,16 +1021,21 @@
     const SHIP_DATE = 'October 2026';
 
     // Where "Contact for licensing" and free-guide requests are sent.
-    const CONTACT_EMAIL = 'hello@mister.cloud';   // TODO: confirm this inbox exists.
+    const CONTACT_EMAIL = 'info@futureprooftmt.com';   // Data-room, licensing & early-access mail (real inbox; no forwarding needed).
 
     // The Shopify storefront lives here. Once products are live in Shopify we can
     // point the pre-order buttons at their product pages (e.g. `${SHOP_URL}/products/<handle>`)
     // instead of the Stripe links below — a one-line swap per product.
     const SHOP_URL = 'https://shop.mister.cloud';
 
-    // Launch-news signup destination. Paste a form endpoint URL (Formspree,
-    // Getform, Basin, etc.). Leave '' and the form just shows a thank-you.
+    // Attribution / generic log endpoint (the welcome "how did you find us"
+    // answers POST here). Formspree/Getform/Basin, etc. Leave '' to skip.
     const FORM_ENDPOINT = '';   // e.g. 'https://formspree.io/f/xxxxxxx'
+
+    // Parents' newsletter — paste your email service's form ACTION URL
+    // (MailerLite, Kit/ConvertKit, …). Turn on DOUBLE OPT-IN in that service so
+    // subscribers confirm by email before they're added. Sends `name` + `email`.
+    const NEWSLETTER_ENDPOINT = '';
 
     // STRIPE PAYMENT LINKS — paste one Stripe Payment Link URL per product.
     // Key = product id (see the PRODUCTS array below). Create each link in the
