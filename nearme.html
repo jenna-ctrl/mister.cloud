@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Near Me · Find the internet in your neighborhood · Mister Cloud</title>
+  <meta name="description" content="Discover hands-on events, learning spaces and guided infrastructure tours near you. The internet is all around you.">
+  <link rel="canonical" href="https://mister.cloud/nearme">
+  <meta property="og:title" content="Find the internet in your neighborhood · Mister Cloud">
+  <meta property="og:description" content="Hands-on events, learning spaces and guided infrastructure tours for curious families.">
+  <meta property="og:url" content="https://mister.cloud/nearme">
+  <!-- @head -->
+  <meta name="theme-color" content="#C9D2BE">
+  <meta name="author" content="A Futureproof TMT - ClearSkyIP Venture">
+  <meta property="og:site_name" content="Mister Cloud">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mister.cloud/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mister Cloud, the friendly smiling cloud logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mister.cloud/og-image.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <!-- Plausible: privacy-first, cookie-free analytics (see README "Analytics & daily email"). -->
+  <script defer data-domain="mister.cloud" src="https://plausible.io/js/script.js"></script>
+  <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };</script>
+  <!-- /@head -->
+</head>
+<body>
+  <!-- @header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 20V11"/><path d="M12 13c0-4 2.5-7 7-7 0 4.5-3 7-7 7z"/><path d="M12 15c0-3-2-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5z"/></svg>
+    <span>A little pause. A lifelong habit.</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 20V11"/><path d="M12 13c0-4 2.5-7 7-7 0 4.5-3 7-7 7z"/><path d="M12 15c0-3-2-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5z"/></svg>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Mister Cloud home">
+        <img src="/assets/img/mark-128.png" alt="" width="56" height="35">
+        <span class="wordmark">Mister.Cloud<sup>™</sup></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="/play">Play</a>
+        <a class="nav-link" href="/learn">Learn</a>
+        <a class="nav-link" href="/nearme" aria-current="page">Near Me</a>
+        <a class="btn btn-primary" href="/shop">Shop</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /@header -->
+
+  <main id="main">
+    <section class="hero hero--with-crumb" aria-labelledby="hero-title">
+      <div class="container hero-inner" style="min-height:400px">
+        <div class="hero-copy">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Near Me</li></ol></nav>
+          <span class="eyebrow">The internet is all around you</span>
+          <h1 id="hero-title" class="display">Find the internet in your neighborhood.</h1>
+          <p class="lede">Discover hands-on events, learning spaces and guided infrastructure tours.</p>
+        </div>
+        <div class="hero-art">
+          <img src="/assets/img/near-hero.webp" alt="A felt Mister Cloud holding a map beside signposts to the Library, Science Center and Data Center." width="554" height="261" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <form class="panel search-panel" id="near-search" role="search" novalidate>
+        <div class="search-row">
+          <div class="field">
+            <label for="zip">ZIP code</label>
+            <input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" value="10013">
+          </div>
+          <div class="field">
+            <label for="within">Within</label>
+            <select id="within" name="within">
+              <option value="5">5 miles</option>
+              <option value="10">10 miles</option>
+              <option value="25" selected>25 miles</option>
+              <option value="50">50 miles</option>
+            </select>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit">Find discoveries</button>
+        </div>
+        <div class="filter-row">
+          <div class="chips" role="group" aria-label="Type of discovery" id="kind-chips">
+            <button class="chip" type="button" data-kind="all" aria-pressed="true">All discoveries</button>
+            <button class="chip" type="button" data-kind="event" aria-pressed="false">Events</button>
+            <button class="chip" type="button" data-kind="space" aria-pressed="false">Learning spaces</button>
+            <button class="chip" type="button" data-kind="tour" aria-pressed="false">Infrastructure tours</button>
+          </div>
+          <span class="chip-divider" aria-hidden="true"></span>
+          <label class="sr-only" for="f-age">Age</label>
+          <select class="select" id="f-age"><option value="">Age</option><option value="4-7">Ages 4–7</option><option value="8-12">Ages 8–12</option><option value="13-17">Teens</option><option value="18-99">Grown-ups</option></select>
+          <label class="sr-only" for="f-date">Date</label>
+          <select class="select" id="f-date"><option value="">Date</option><option value="week">This week</option><option value="month">This month</option><option value="any">Any time</option></select>
+          <label class="sr-only" for="f-free">Price</label>
+          <select class="select" id="f-free"><option value="">Free</option><option value="free">Free only</option><option value="any">Free &amp; paid</option></select>
+          <label class="sr-only" for="f-access">Accessibility</label>
+          <select class="select" id="f-access"><option value="">Accessibility</option><option value="step-free">Step-free access</option><option value="sensory">Sensory-friendly</option></select>
+        </div>
+      </form>
+
+      <div class="info-banner" style="margin-top:18px">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#5B8FC2"/><path d="M12 10.5v6.5M12 7.2v.1" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <span><b>Design preview</b> &nbsp;·&nbsp; Illustrative listings, not live results.</span>
+      </div>
+    </div>
+
+    <section class="section" style="padding-top:28px" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-head" style="margin-bottom:18px">
+          <h2 id="results-title" class="h2">Explore around <span id="zip-label">10013</span></h2>
+          <div class="view-toggle" role="group" aria-label="View">
+            <button type="button" data-view="list" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg>List</button>
+            <button type="button" data-view="map" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg>Map</button>
+          </div>
+        </div>
+        <div class="results list-only" id="results">
+          <div class="listings" id="listings" aria-live="polite"></div>
+          <div class="map-wrap" id="map">
+            <img src="/assets/img/near-map.webp" alt="Illustrative neighborhood map with three numbered pins: a library, a networks lab and a data center." width="429" height="507" loading="lazy">
+            <span class="map-ring" data-ring="1" style="left:50.8%;top:16.6%"></span>
+            <span class="map-ring" data-ring="2" style="left:77.6%;top:36.2%"></span>
+            <span class="map-ring" data-ring="3" style="left:50.8%;top:66%"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="panel guidance">
+        <div class="icon-row">
+          <div class="icon-item">
+            <svg viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="14" r="4" stroke="#C17337"/><path d="M4 41V29a7 7 0 0114 0v12" stroke="#C17337"/><circle cx="37" cy="11" r="4.5" stroke="#B4573F"/><path d="M29 41V26a8 8 0 0116 0v15" stroke="#B4573F"/><circle cx="24" cy="23" r="3.5" stroke="#687E5B"/><path d="M19 41v-7a5 5 0 0110 0v7" stroke="#687E5B"/></svg>
+            <div><strong>Check age guidance</strong><span class="small">Find activities that match your child’s age range.</span></div>
+          </div>
+          <div class="icon-item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#687E5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="22" cy="7" r="3.5"/><path d="M22 12v14h12l5 12"/><path d="M22 18h10"/><path d="M15 21a12 12 0 1017 16"/></svg>
+            <div><strong>Confirm accessibility</strong><span class="small">Look for details on access and accommodations.</span></div>
+          </div>
+          <div class="icon-item">
+            <svg viewBox="0 0 48 48" fill="none" stroke="#B4573F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="9" width="36" height="33" rx="4"/><path d="M6 18h36M15 5v8M33 5v8"/><path d="M14 26h4M22 26h4M30 26h4M14 33h4M22 33h4" stroke-width="2.6"/></svg>
+            <div><strong>Book with the host</strong><span class="small">Follow the listing for next steps. Tours depend on host availability and advance booking.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="padding:28px 24px 36px">
+      <div class="host-band">
+        <img src="/assets/img/near-host.webp" alt="" width="296" height="108" loading="lazy">
+        <div>
+          <h2>Help little explorers find you.</h2>
+          <p>For libraries, museums, educators and infrastructure hosts.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" id="suggest-link" href="#">Suggest a place</a>
+          <a class="btn btn-outline" id="host-link" href="#">Host a discovery</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="newsletter" aria-labelledby="nl-title">
+      <div class="container newsletter-inner">
+        <img class="newsletter-art" src="/assets/img/newsletter-cloud.webp" alt="" width="205" height="122" loading="lazy">
+        <div>
+          <h2 id="nl-title">Little discoveries, delivered.</h2>
+          <p>Ideas and activities for parents and caregivers.</p>
+        </div>
+        <div>
+          <form class="pill-form" data-newsletter novalidate>
+            <label class="sr-only" for="nl-email">Your email address</label>
+            <input id="nl-email" type="email" name="email" placeholder="Your email address" autocomplete="email" required>
+            <button class="btn btn-primary" type="submit">Keep me in the loop</button>
+          </form>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="modal modal-narrow" id="listing-modal" aria-labelledby="lm-title">
+    <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+    <div class="modal-media" style="aspect-ratio:16/9;min-height:0"><img id="lm-img" src="" alt=""></div>
+    <div class="modal-body">
+      <span class="badge badge-sky" id="lm-kind" style="align-self:flex-start"></span>
+      <h2 id="lm-title"></h2>
+      <p class="card-meta" id="lm-meta"></p>
+      <p id="lm-desc"></p>
+      <ul class="checklist" id="lm-facts"></ul>
+      <div class="callout"><strong>Example listing</strong>This is a design preview. Real listings will link to the host’s own booking page.</div>
+    </div>
+  </dialog>
+
+  <!-- @footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Mister Cloud home">
+            <img src="/assets/img/mark-128.png" alt="" width="46" height="29">
+            <span class="wordmark">Mister.Cloud<sup>™</sup></span>
+          </a>
+          <span>Protecting little footprints.</span>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/play">Play</a></li>
+            <li><a href="/learn">Learn</a></li>
+            <li><a href="/nearme">Near Me</a></li>
+            <li><a href="/shop">Shop</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-row footer-meta">
+        <span>&copy; 2026 A Futureproof TMT - ClearSkyIP Venture &middot; Mister Cloud&trade; &middot; Pre-Orders Open - Official Launch Jan 1, 2027</span>
+        <nav aria-label="Social media">
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/mister.cloud.brand" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://tiktok.com/@mister.cloud_brand" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+            <li><a href="https://facebook.com/mister.cloud" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://reddit.com/user/Mister_Cloud_Brand" target="_blank" rel="noopener noreferrer">Reddit</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <!-- /@footer -->
+  <!-- @scripts -->
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/site.js"></script>
+  <!-- /@scripts -->
+  <script src="/assets/js/nearme.js"></script>
+</body>
+</html>

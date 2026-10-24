@@ -11,26 +11,37 @@ CDN), full SEO + social meta, favicons, manifest, sitemap, robots, a branded 404
 ## What's inside
 
 ```
-index.html            The site (single page; tabs: Home, Our Mission, For You, About, Partners, Regions, Shop)
-styles.css            Precompiled + minified Tailwind (replaces the old cdn.tailwindcss.com script)
-404.html              Branded not-found page (self-contained)
-robots.txt            Allows indexing; points to the sitemap
-sitemap.xml           Single-URL sitemap (https://mister.cloud/)
-site.webmanifest      PWA manifest (name, icons, theme color)
-favicon.ico           Multi-size icon (16/32/48)
-favicon-16.png        Favicons
-favicon-32.png
-apple-touch-icon.png  180px iOS home-screen icon
-icon-192.png          PWA / Android icons
-icon-512.png
-og-image.png          1200×630 social share card (Facebook, X, iMessage, etc.)
-vercel.json           Static hosting config: clean URLs, security headers, caching
-logos/
-  mister-cloud-mark.png   The official cloud mark (used in-page + favicons)
+index.html  about.html  play.html  learn.html  shop.html  nearme.html  404.html
+                      One static HTML file per page. Vercel "cleanUrls" serves
+                      /about → about.html, etc. No build step.
+partials/             Shared head, header, footer, scripts. Stamped into every page
+                      by `node scripts/sync-partials.mjs` (run after editing a partial).
+assets/css/site.css   The design system (brand tokens, components, page styles).
+assets/js/config.js   LAUNCH CONFIG: Stripe links, newsletter endpoint, ship dates, contact.
+assets/js/catalog.js  PRODUCTS + CATS: the single source of truth for the shop
+                      (also read by scripts/shopify-sync.mjs).
+assets/js/*.js        site.js (shared), shop.js, play.js, learn.js, nearme.js.
+assets/img/           Page art (webp). Currently cropped from the design mockups.
+assets/downloads/     The "Internet Has a Body" pack: GIF, ZIP, PDF, poster, slides.
+api/tally.js          Anonymous download counter for /learn (no cookies, no IPs).
+api/daily-analytics-email.js  Plausible → Resend daily email (Vercel Cron).
+scripts/dev.mjs       Local preview server (clean URLs + /api), zero dependencies.
+logos/                The official cloud mark.
 ```
 
-> The store data lives in a `PRODUCTS` array inside `index.html` (near the bottom, in the storefront
-> `<script>`). Edit product name/price/blurb/emoji there and the grid + modal update automatically.
+### Brand rules (Mister Cloud Brand & Design Kit v1.0)
+- **Logo:** the official cloud mark + **MISTER.CLOUD™** wordmark in Fredoka, Mister Cloud Blue
+  `#0A8CF5`. Never recolor, stretch, rotate, or crowd it. The felt plush in illustrations is the
+  mascot, not the logo.
+- **Type:** Fredoka (display, headings) + Nunito (body, UI).
+- **Color:** core blues for the logo; the Clear Sky spectrum (Signal Red `#A5453C`, Amber
+  `#C17337`, Sage `#687E5B`, Slate Teal `#537489`…) is the applied page palette. Tokens live at the
+  top of `assets/css/site.css`.
+
+### Run it locally
+```bash
+node scripts/dev.mjs          # → http://localhost:3000
+```
 
 ---
 
@@ -61,27 +72,18 @@ SSL is issued automatically. Allow up to ~an hour for DNS to propagate.
 
 ---
 
-## Editing after launch (important)
+## Editing after launch
 
-The CSS is **precompiled**. If you edit `index.html` and add **new Tailwind classes**, you must
-recompile so the new styles exist:
-
-```bash
-# from the ClearSkyIP repo (which has the tailwindcss CLI), or `npm i -D tailwindcss@3`
-npx tailwindcss -i input.css -o styles.css --minify \
-  --content ./index.html
-# input.css contains:  @tailwind base; @tailwind components; @tailwind utilities;
-```
-Editing existing text/prices/products needs **no** rebuild. Fonts load from Google Fonts (fine as-is;
-self-host later if you want zero third-party requests).
+Plain HTML + CSS; no compile step. Edit a page, refresh. If you change the header, footer or
+`<head>`, edit the file in `partials/` and run `node scripts/sync-partials.mjs`.
+Fonts load from Google Fonts.
 
 ---
 
 ## ☁️ Soft-launch (pre-order) configuration
 
 The site is now framed as a **new brand in pre-order — everything ships October 2026.** All the
-pre-order plumbing is driven by a single **LAUNCH CONFIG** block at the top of the storefront
-`<script>` in `index.html`. Edit those constants; no other code changes needed.
+pre-order plumbing is driven by the **LAUNCH CONFIG** in `assets/js/config.js`. Edit those constants; no other code changes needed.
 
 - **`STRIPE_LINKS`** — a map of `product id → Stripe Payment Link URL`. Create one Payment Link per
   product in the Stripe Dashboard (Products → Payment links) and paste each URL here. A product left
@@ -92,7 +94,9 @@ pre-order plumbing is driven by a single **LAUNCH CONFIG** block at the top of t
   shows a thank-you and collects nothing.
 - **`CONTACT_EMAIL`** — where "Contact for licensing" (educator kits) and free-guide requests go via
   `mailto:`. Defaults to `hello@mister.cloud` — **confirm this inbox exists.**
-- **`SHIP_DATE`** — the ship month shown everywhere (`October 2026`).
+- **`AVAILABLE_NOW`** — which categories / product ids are sold now ("Buy now") vs. pre-order.
+  Defaults: books, learning programs (educator kits), apparel and merch.
+- **`LAUNCH_DATE` / `PREORDER_SHIPS`** — official launch (`January 1, 2027`) and when pre-orders ship.
 
 **How each product button behaves:** if it has a Stripe link → "Pre-order Now" opens Stripe checkout;
 educator kits → "Contact for licensing" (mailto); the free checklist → "Request the free guide"
@@ -172,7 +176,7 @@ Note: Vercel Cron requires a deployed project; on the Hobby plan crons run about
 
 ## What's already handled for you
 
-- **No CDN dependency** — Tailwind is compiled to `styles.css` (faster, works without JS, no console warning).
+- **No CSS framework or CDN** — one hand-written stylesheet, `assets/css/site.css`.
 - **SEO** — title, meta description, canonical, robots, sitemap.
 - **Social sharing** — Open Graph + Twitter card with a 1200×630 image (`og-image.png`).
 - **Icons** — favicon.ico, PNG favicons, Apple touch icon, PWA manifest + icons.
@@ -189,4 +193,4 @@ Brand & Design Kit** (in the ClearSkyIP repo under `public/brand/`). Core colors
 `#0A8CF5`, Cloud Navy `#0B4EA6`, Cloud Coral `#FC4D4A`, Ink `#0A1B2E`, Sky Mist `#F0F9FF`.
 Fonts: **Fredoka** (display) + **Nunito** (body).
 
-*Protecting little footprints across the globe. — Clear Sky IP Holdings*
+*Protecting little footprints across the globe. — A Futureproof TMT - ClearSkyIP Venture*

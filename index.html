@@ -3,1562 +3,226 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mister Cloud: New Family Digital-Safety Brand · Pre-order Now</title>
-  <meta name="description" content="Mister Cloud is a brand-new family digital-safety brand: books, songs, toys, and tools that make the invisible internet visible. Now in pre-order; shipping from October 2026. Pause before you share.">
+  <title>Mister Cloud · Making the invisible internet visible</title>
+  <meta name="description" content="Books, toys and everyday discoveries that help the whole family understand the digital world. No fear. No jargon. Just better questions. Pre-Orders Open - Official Launch Jan 1, 2027.">
   <link rel="canonical" href="https://mister.cloud/">
-  <meta name="theme-color" content="#0A8CF5">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Clear Sky IP Holdings">
-
-  <!-- Social sharing (Open Graph + Twitter) -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Mister Cloud">
-  <meta property="og:title" content="Mister Cloud: New Brand · Now in Pre-order">
-  <meta property="og:description" content="A brand-new family digital-safety brand: books, songs, toys, and tools that make the invisible internet visible. Pre-order now, shipping from October 2026. Pause before you share.">
+  <meta property="og:title" content="Mister Cloud · Making the invisible internet visible">
+  <meta property="og:description" content="Books, toys and everyday discoveries that help the whole family understand the digital world. Pause before you share.">
   <meta property="og:url" content="https://mister.cloud/">
+  <!-- @head -->
+  <meta name="theme-color" content="#C9D2BE">
+  <meta name="author" content="A Futureproof TMT - ClearSkyIP Venture">
+  <meta property="og:site_name" content="Mister Cloud">
+  <meta property="og:type" content="website">
   <meta property="og:image" content="https://mister.cloud/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Mister Cloud, the friendly smiling cloud logo">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mister Cloud: New Brand · Now in Pre-order">
-  <meta name="twitter:description" content="A brand-new family digital-safety brand. Pre-order now, shipping from October 2026. Pause before you share.">
   <meta name="twitter:image" content="https://mister.cloud/og-image.png">
-
-  <!-- Icons & manifest -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-
-  <!-- Styles: precompiled Tailwind (no runtime CDN) -->
-  <link rel="stylesheet" href="/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Nunito', sans-serif;
-      background-color: #F0F9FF; /* Soft sky blue */
-      color: #0F172A;
-    }
-    h1, h2, h3, h4, h5, .brand-font { font-family: 'Fredoka', sans-serif; }
-
-    .tab-btn.active { color: #0EA5E9; border-bottom: 3px solid #0EA5E9; }
-
-    .tile-content { display: none; animation: fadeIn 0.3s ease-in-out; }
-    .tile-content.active { display: block; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-5px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .soft-shadow {
-      box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1),
-                  0 8px 10px -6px rgba(14, 165, 233, 0.1);
-    }
-
-    .product-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 15px 30px -5px rgba(14, 165, 233, 0.2);
-    }
-
-    /* Reusable mascot placeholder panel */
-    .placeholder-panel {
-      background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.6), transparent 45%),
-                        linear-gradient(135deg, #E0F2FE 0%, #DBEAFE 100%);
-    }
-
-    :focus-visible { outline: 3px solid #0EA5E9; outline-offset: 2px; border-radius: 4px; }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-    }
-
-    /* Launch utilities added for the pre-order pass (not in the purged styles.css).
-       If you ever recompile Tailwind, these become redundant but harmless. */
-    .py-2\.5 { padding-top: .625rem; padding-bottom: .625rem; }
-    .py-1\.5 { padding-top: .375rem; padding-bottom: .375rem; }
-    .gap-1\.5 { gap: .375rem; }
-    .underline { text-decoration-line: underline; }
-    .underline-offset-2 { text-underline-offset: 2px; }
-    .text-\[11px\] { font-size: 11px; }
-    .text-emerald-500 { color: #10b981; }
-    .bg-indigo-400 { background-color: #818cf8; }
-    .bg-emerald-400 { background-color: #34d399; }
-    .animate-pulse { animation: mc-pulse 2s cubic-bezier(.4,0,.6,1) infinite; }
-    @keyframes mc-pulse { 50% { opacity: .5; } }
-    .border-violet-400 { border-color: #a78bfa; }
-    .text-violet-600 { color: #7c3aed; }
-    .border-slate-400 { border-color: #94a3b8; }
-    .border-red-50 { border-color: #fef2f2; }
-    .border-emerald-50 { border-color: #ecfdf5; }
-    .bg-emerald-500 { background-color: #10b981; }
-    .hover\:bg-emerald-600:hover { background-color: #059669; }
-    .hover\:bg-sky-50:hover { background-color: #f0f9ff; }
-    .bg-white\/20 { background-color: rgba(255,255,255,0.2); }
-
-    /* Welcome-intro attribution chips (mobile-friendly tap targets) */
-    .intro-chip {
-      display: flex; align-items: center; gap: .6rem; width: 100%; text-align: left;
-      padding: 1rem 1.1rem; border-radius: 1rem; border: 2px solid #e0f2fe; background: #fff;
-      font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700; color: #334155;
-      cursor: pointer; transition: border-color .2s, background-color .2s;
-    }
-    .intro-chip:hover { border-color: #38bdf8; background: #f0f9ff; }
-
-    /* A couple of layout utilities the restructure uses that may not be in styles.css */
-    .gap-5 { gap: 1.25rem; }
-    @media (min-width: 640px) { .sm\:gap-5 { gap: 1.25rem; } .sm\:col-span-2 { grid-column: span 2 / span 2; } }
-    @media (min-width: 768px) { .md\:text-2xl { font-size: 1.5rem; line-height: 2rem; } .md\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; } }
-    @media (min-width: 1024px) { .lg\:col-span-1 { grid-column: span 1 / span 1; } }
-
-    /* Hover/tap explainer tooltip (e.g. "Zero-Data") */
-    .mc-tip { position: relative; border-bottom: 2px dotted currentColor; cursor: help; }
-    .mc-tip::after {
-      content: attr(data-tip);
-      position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%);
-      width: 230px; max-width: 76vw; background: #0A1B2E; color: #fff;
-      font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 600; line-height: 1.45;
-      text-align: left; padding: 9px 11px; border-radius: 10px;
-      opacity: 0; visibility: hidden; transition: opacity .15s ease; z-index: 60; pointer-events: none;
-      box-shadow: 0 8px 20px rgba(10,27,46,.25);
-    }
-    .mc-tip:hover::after, .mc-tip:focus::after, .mc-tip:focus-visible::after { opacity: 1; visibility: visible; }
-  </style>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <!-- Plausible: privacy-first, cookie-free analytics (see README "Analytics & daily email"). -->
+  <script defer data-domain="mister.cloud" src="https://plausible.io/js/script.js"></script>
+  <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };</script>
+  <!-- /@head -->
 </head>
-
-<body class="min-h-screen flex flex-col relative">
-
-  <!-- Background decorative elements -->
-  <div class="fixed inset-0 w-full h-full overflow-hidden -z-10 pointer-events-none" aria-hidden="true">
-    <div class="absolute top-[-5%] left-[-10%] w-96 h-96 bg-sky-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-    <div class="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+<body>
+  <!-- @header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 20V11"/><path d="M12 13c0-4 2.5-7 7-7 0 4.5-3 7-7 7z"/><path d="M12 15c0-3-2-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5z"/></svg>
+    <span>A little pause. A lifelong habit.</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 20V11"/><path d="M12 13c0-4 2.5-7 7-7 0 4.5-3 7-7 7z"/><path d="M12 15c0-3-2-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5z"/></svg>
   </div>
-
-  <!-- Skip link -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-sky-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-full focus:font-bold">Skip to content</a>
-
-  <!-- Welcome intro (first visit only): asks how they found us -->
-  <div id="welcome-intro" class="hidden fixed inset-0 z-[95] bg-gradient-to-br from-sky-500 to-blue-600 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="welcome-intro-title">
-    <div class="min-h-full flex items-center justify-center p-4 sm:p-6">
-      <div class="bg-white rounded-3xl soft-shadow w-full max-w-lg p-6 sm:p-9 text-center my-6">
-        <img src="logos/mister-cloud-mark.png" alt="" class="h-20 w-auto mx-auto mb-4" aria-hidden="true">
-        <h1 id="welcome-intro-title" class="text-3xl sm:text-4xl font-bold text-slate-800 brand-font mb-2">Welcome to Mister Cloud ☁️</h1>
-        <p class="text-slate-600">A brand-new family digital-safety brand.</p>
-        <p class="text-sm text-sky-600 font-bold mb-6">Now in pre-order · shipping October 2026 to January 2027.</p>
-        <p class="font-bold text-slate-800 mb-4">How did you trace the cloud home?</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <button onclick="traceHome('in-the-wild')" class="intro-chip"><span class="text-2xl" aria-hidden="true">👕</span> Saw it in the wild</button>
-          <button onclick="traceHome('word-of-mouth')" class="intro-chip"><span class="text-2xl" aria-hidden="true">💬</span> Word of mouth</button>
-          <button onclick="traceHome('social-media')" class="intro-chip"><span class="text-2xl" aria-hidden="true">📱</span> Social media</button>
-          <button onclick="traceHome('email')" class="intro-chip"><span class="text-2xl" aria-hidden="true">✉️</span> Email</button>
-          <button onclick="traceHome('search')" class="intro-chip"><span class="text-2xl" aria-hidden="true">🔍</span> Search engine</button>
-          <button onclick="traceHome('other')" class="intro-chip"><span class="text-2xl" aria-hidden="true">✨</span> Somewhere else</button>
-        </div>
-        <button onclick="dismissIntro()" class="mt-6 text-sm font-bold text-slate-400 hover:text-slate-600 underline underline-offset-2">Just looking around &rarr;</button>
-
-        <div class="mt-6 pt-5 border-t border-slate-100">
-          <p class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2">Follow along</p>
-          <div class="flex flex-wrap items-center justify-center gap-2">
-            <a href="https://instagram.com/mister.cloud.brand" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-600 font-bold text-sm transition">Instagram</a>
-            <a href="https://tiktok.com/@mister.cloud_brand" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-600 font-bold text-sm transition">TikTok</a>
-            <span class="px-3 py-1.5 rounded-full bg-slate-100 text-slate-400 font-bold text-sm" title="Coming soon">YouTube · soon</span>
-            <a href="https://facebook.com/mister.cloud" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-600 font-bold text-sm transition">Facebook</a>
-            <a href="https://reddit.com/user/Mister_Cloud_Brand" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-600 font-bold text-sm transition">Reddit</a>
-          </div>
-        </div>
-      </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Mister Cloud home">
+        <img src="/assets/img/mark-128.png" alt="" width="56" height="35">
+        <span class="wordmark">Mister.Cloud<sup>™</sup></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="/play">Play</a>
+        <a class="nav-link" href="/learn">Learn</a>
+        <a class="nav-link" href="/nearme">Near Me</a>
+        <a class="btn btn-primary" href="/shop">Shop</a>
+      </nav>
     </div>
-  </div>
-
-  <!-- Launch announcement bar -->
-  <div class="bg-gradient-to-br from-sky-500 to-blue-600 text-white text-center text-sm font-bold px-4 py-2.5">
-    <span aria-hidden="true">☁️</span>
-    <span class="uppercase tracking-wide text-sky-100">Now launching</span>
-    our brand-new family digital-safety brand.
-    <button onclick="switchTab('shop-final')" class="underline underline-offset-2 hover:text-sky-100">Pre-order now</button>
-    &middot; <span class="whitespace-nowrap">books &amp; apparel ship Oct 2026</span>, the rest Jan 2027.
-  </div>
-
-  <!-- Navigation Header -->
-  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-sky-100 soft-shadow">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20 flex-wrap">
-
-        <!-- Logo -->
-        <button onclick="switchTab('home')" class="flex-shrink-0 flex items-center gap-3" aria-label="Mister Cloud home">
-          <img src="logos/mister-cloud-mark.png" alt="" class="h-12 w-auto object-contain" aria-hidden="true">
-          <span class="brand-font font-semibold text-2xl text-sky-600 tracking-wide">Mister Cloud</span>
-        </button>
-
-        <!-- Desktop Menu -->
-        <nav class="hidden md:flex items-center space-x-6 lg:space-x-8" aria-label="Primary">
-          <button onclick="switchTab('home')"       id="nav-home"       class="tab-btn active text-slate-500 hover:text-sky-600 font-bold px-1 py-5 text-sm transition-colors duration-200">Home</button>
-          <button onclick="switchTab('about')"      id="nav-about"      class="tab-btn text-slate-500 hover:text-sky-600 font-bold px-1 py-5 text-sm transition-colors duration-200">About</button>
-          <button onclick="switchTab('principles')" id="nav-principles" class="tab-btn text-slate-500 hover:text-sky-600 font-bold px-1 py-5 text-sm transition-colors duration-200">Principles</button>
-          <button onclick="switchTab('company')"    id="nav-company"    class="tab-btn text-slate-500 hover:text-sky-600 font-bold px-1 py-5 text-sm transition-colors duration-200">Company</button>
-          <button onclick="switchTab('partners')"   id="nav-partners"   class="tab-btn text-slate-500 hover:text-sky-600 font-bold px-1 py-5 text-sm transition-colors duration-200">Partners</button>
-          <button onclick="switchTab('shop-final')" id="nav-shop-final" class="bg-sky-500 hover:bg-sky-600 text-white font-bold px-4 py-2 rounded-full text-sm transition-colors duration-200 shadow-md">SHOP</button>
-        </nav>
-
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center gap-4">
-          <button onclick="switchTab('shop-final')" class="bg-sky-500 hover:bg-sky-600 text-white font-bold px-4 py-2 rounded-full text-xs transition-colors duration-200">SHOP</button>
-          <button onclick="toggleMobileMenu()" id="mobile-menu-btn" class="text-sky-600 hover:text-sky-800" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Menu (Hidden by default) -->
-    <nav id="mobile-menu" class="hidden md:hidden bg-white border-t border-sky-50 pb-4 px-4 space-y-2 soft-shadow" aria-label="Mobile">
-      <button onclick="switchTab('home'); toggleMobileMenu()"       class="block w-full text-left font-bold text-slate-600 hover:text-sky-600 py-3 border-b border-slate-50">Home</button>
-      <button onclick="switchTab('about'); toggleMobileMenu()"      class="block w-full text-left font-bold text-slate-600 hover:text-sky-600 py-3 border-b border-slate-50">About</button>
-      <button onclick="switchTab('principles'); toggleMobileMenu()" class="block w-full text-left font-bold text-slate-600 hover:text-sky-600 py-3 border-b border-slate-50">Principles</button>
-      <button onclick="switchTab('company'); toggleMobileMenu()"    class="block w-full text-left font-bold text-slate-600 hover:text-sky-600 py-3 border-b border-slate-50">Company &amp; Curriculum</button>
-      <button onclick="switchTab('partners'); toggleMobileMenu()"   class="block w-full text-left font-bold text-slate-600 hover:text-sky-600 py-3">Partners</button>
-    </nav>
   </header>
+  <!-- /@header -->
 
-  <!-- Main Content Area -->
-  <main id="main" class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-
-    <!-- HOME (welcome landing) -->
-    <section id="home" class="tab-section block space-y-12" aria-labelledby="home-heading">
-
-      <!-- Welcome hero -->
-      <div class="text-center space-y-6">
-        <span class="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-sky-100 text-sky-600 font-bold text-xs uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse" aria-hidden="true"></span>
-          New brand · Now in pre-order
-        </span>
-        <h1 id="home-heading" class="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
-          Welcome to <span class="text-sky-500">Mister Cloud</span>
-        </h1>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
-          Making the invisible internet visible for the whole family. Books, songs, toys, and tools that teach one calm habit: <strong class="text-slate-800">pause before you share.</strong>
-        </p>
-        <p class="text-base text-slate-500 max-w-2xl mx-auto">
-          Saw our logo out in the world? Welcome. ☁️ Everything is available to <strong class="text-sky-600">pre-order today</strong>. Books &amp; apparel ship <strong class="text-slate-700">October 2026</strong>, everything else <strong class="text-slate-700">January 2027</strong>.
-        </p>
-      </div>
-
-      <!-- Family welcome -->
-      <section aria-labelledby="welcome-heading" class="bg-white rounded-3xl soft-shadow border border-sky-100 p-8 md:p-10">
-        <div class="grid md:grid-cols-[auto,1fr] gap-6 md:gap-8 items-center">
-          <img src="logos/mister-cloud-mark.png" alt="" class="h-24 w-auto mx-auto md:mx-0" aria-hidden="true">
-          <div class="space-y-4">
-            <h2 id="welcome-heading" class="text-2xl md:text-3xl font-bold text-slate-800 brand-font">A calmer, safer internet for the whole family</h2>
-            <p class="text-slate-600 leading-relaxed">
-              From toddlers who can tap a screen before they can talk, to grandparents facing scams built to exploit their trust, the most vulnerable members of every family are the most overlooked. Mister Cloud protects both ends of the household, turning the invisible internet into plain language and simple, memorable habits.
-            </p>
-            <p class="text-slate-600 leading-relaxed">
-              Because when everyone in the family understands the internet a little better, the whole family is safer, <strong class="text-slate-800">together.</strong>
-            </p>
-            <p class="brand-font text-lg font-bold text-sky-600">Pause before you share.</p>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Big ideas. Little footprints.</span>
+          <h1 id="hero-title" class="display">Making the invisible internet visible.</h1>
+          <p class="lede">Books, toys and everyday discoveries that help the whole family understand the digital world.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="/shop">Explore Books &amp; Play</a>
+            <a class="btn btn-outline btn-lg" href="/about">Meet Mister Cloud</a>
           </div>
+          <p class="hero-note">No fear. No jargon. Just better questions.</p>
+        </div>
+        <div class="hero-art">
+          <img src="/assets/img/home-hero.webp" alt="A felt Mister Cloud plush beside a stack of board books (The Camera Eye, The Microphone Ear, The Forever Box), a wooden yarn lacing board, and a sign reading “Pause before you share.”" width="584" height="428" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature strip -->
+    <div class="container">
+      <div class="feature-strip">
+        <div class="feature">
+          <svg viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 18v19c6.5-2 13-1 19 3 6-4 12.5-5 19-3V18c-6.5-2-13-1-19 3-6-4-12.5-5-19-3z" stroke="#B4573F"/><path d="M24 21v19" stroke="#B4573F"/><path d="M24 5v5M14.5 8.5l2.5 3.5M33.5 8.5L31 12" stroke="#C2963E"/></svg>
+          <span>Learn through play</span>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 44V22" stroke="#687E5B"/><path d="M24 26C24 15 30 8 42 6c0 12-8 19-18 20z" fill="#BBC5B5" stroke="#687E5B"/><path d="M24 31c0-8-5-13-15-14 0 9 6 14 15 14z" fill="#DDE3D3" stroke="#687E5B"/></svg>
+          <span>Build everyday confidence</span>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="14" r="4" stroke="#C17337"/><path d="M4 41V29a7 7 0 0114 0v12" stroke="#C17337"/><circle cx="37" cy="11" r="4.5" stroke="#687E5B"/><path d="M29 41V26a8 8 0 0116 0v15" stroke="#687E5B"/><circle cx="24" cy="23" r="3.5" stroke="#B4573F"/><path d="M19 41v-7a5 5 0 0110 0v7" stroke="#B4573F"/><path d="M17 8l1.5-2.5M24 6V3M31 8l-1.5-2.5" stroke="#C2963E"/></svg>
+          <span>For every generation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Available now -->
+    <div class="container" style="padding-bottom:40px">
+      <section class="panel now-band" aria-labelledby="now-title">
+        <img src="/assets/img/card-books.webp" alt="The Camera Eye, The Microphone Ear and The Forever Box board books." width="304" height="214" loading="lazy">
+        <div>
+          <span class="badge badge-now">Available now</span>
+          <h2 id="now-title">Start today with books &amp; learning programs.</h2>
+          <p>Board books, picture books, learning programs and the Mister Cloud plush are available now. The full collection launches January&nbsp;1,&nbsp;2027.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/shop?avail=now">Shop available now</a>
+          <a class="btn btn-outline" href="/shop?avail=preorder">Preview 2027</a>
         </div>
       </section>
+    </div>
 
-      <!-- Explore cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-        <button onclick="switchTab('about')" class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-sky-300 transition">
-          <div class="text-3xl mb-3" aria-hidden="true">🧭</div>
-          <h3 class="text-xl font-bold text-slate-800 brand-font mb-1">About &amp; Products</h3>
-          <p class="text-slate-500 text-sm">Our mission and the full ecosystem: books, songs, toys, apps, and tools.</p>
-          <span class="inline-block mt-3 text-sky-600 font-bold text-sm">Explore &rarr;</span>
-        </button>
-        <button onclick="switchTab('principles')" class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-sky-300 transition">
-          <div class="text-3xl mb-3" aria-hidden="true">🛡️</div>
-          <h3 class="text-xl font-bold text-slate-800 brand-font mb-1">Principles</h3>
-          <p class="text-slate-500 text-sm">The why, and the real danger to the youngest and the oldest online.</p>
-          <span class="inline-block mt-3 text-sky-600 font-bold text-sm">Read the why &rarr;</span>
-        </button>
-        <button onclick="switchTab('company')" class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 hover:border-sky-300 transition">
-          <div class="text-3xl mb-3" aria-hidden="true">🏢</div>
-          <h3 class="text-xl font-bold text-slate-800 brand-font mb-1">Company &amp; Curriculum</h3>
-          <p class="text-slate-500 text-sm">Our team, the curriculum, partners, and the regions we serve.</p>
-          <span class="inline-block mt-3 text-sky-600 font-bold text-sm">Meet the team &rarr;</span>
-        </button>
-        <button onclick="switchTab('shop-final')" class="text-left bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-2xl p-6 soft-shadow border border-sky-400 hover:-translate-y-1 transition transform">
-          <div class="text-3xl mb-3" aria-hidden="true">🛒</div>
-          <h3 class="text-xl font-bold brand-font mb-1">Shop</h3>
-          <p class="text-sky-50 text-sm">Pre-order now, shipping from October 2026.</p>
-          <span class="inline-block mt-3 font-bold text-sm">Pre-order &rarr;</span>
-        </button>
+    <!-- The internet has a body -->
+    <section class="section section-journey" aria-labelledby="journey-title">
+      <div class="container">
+        <span class="eyebrow">The internet has a body</span>
+        <h2 id="journey-title" class="h2">Follow a message into the real world.</h2>
+        <p class="sub">From your device to cables and data centers, discover where a message goes.</p>
+        <figure class="journey-figure">
+          <img src="/assets/img/home-journey.webp" alt="A felt diorama of a message’s journey: your device at home, local fiber, undersea cables across the ocean, and data centers." width="988" height="208" loading="lazy">
+          <figcaption><a class="link-arrow" href="/learn#body">Take the nine-stop tour</a></figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- SHOP FINAL TAB (Storefront) -->
-    <section id="shop-final" class="tab-section hidden space-y-8" aria-labelledby="shop-heading">
-      <!-- Store header -->
-      <div class="text-center space-y-4 max-w-3xl mx-auto">
-        <span class="inline-block py-1 px-3 rounded-full bg-sky-100 text-sky-600 font-bold text-xs uppercase tracking-wider">The Mister Cloud Shop</span>
-        <h2 id="shop-heading" class="text-4xl md:text-5xl font-bold text-slate-800 brand-font">Everything to protect little footprints</h2>
-        <p class="text-lg text-slate-600 leading-relaxed">
-          Books, songs, toys, zero-data apps, and family tools, one calm ecosystem that teaches the same habit: <strong class="text-slate-800">pause before you share.</strong>
-        </p>
-        <p class="text-sm text-slate-700 bg-sky-50 border border-sky-100 rounded-full inline-block px-4 py-2">
-          🛒 <strong class="text-sky-600">Now in pre-order.</strong> Reserve any product today. Books &amp; apparel ship <strong>October 2026</strong>, the rest <strong>January 2027</strong>.
-        </p>
-      </div>
-
-      <!-- Founding Family -->
-      <div class="bg-amber-50 border border-amber-100 rounded-3xl p-6 md:p-8 text-center max-w-3xl mx-auto">
-        <span class="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-amber-100 text-amber-700 font-bold text-xs uppercase tracking-wider mb-3"><span aria-hidden="true">⭐</span> Founding Family</span>
-        <h3 class="text-2xl font-bold text-slate-800 brand-font mb-2">Be part of the first chapter</h3>
-        <p class="text-slate-600 max-w-xl mx-auto">Every pre-order makes you a Mister Cloud <strong class="text-slate-800">Founding Family</strong>, among the very first to bring these tools home, and the first to hear what comes next.</p>
-        <p id="founding-count" class="mt-3 font-bold text-amber-700 hidden"></p>
-      </div>
-
-      <!-- Filter bar -->
-      <div id="shop-filters" class="flex flex-wrap justify-center gap-2" role="group" aria-label="Filter products by audience"></div>
-
-      <!-- Count + pre-order note -->
-      <div class="flex items-center justify-between gap-4 border-b border-sky-100 pb-4 flex-wrap">
-        <p id="shop-count" class="text-sm font-bold text-slate-500"></p>
-        <p class="text-sm font-bold text-sky-600">Pre-order now · ships Oct 2026 to Jan 2027</p>
-      </div>
-
-      <!-- Product grid -->
-      <div id="shop-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-      <!-- Launch news signup -->
-      <div class="text-center bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-3xl soft-shadow p-8 md:p-12 mt-8">
-        <h3 class="text-2xl md:text-3xl font-bold brand-font mb-3">Join the Cloud Club ☁️</h3>
-        <p class="text-sky-50 mb-6 max-w-xl mx-auto">Members hear it first: launch news, new drops, and free family digital-safety guides. No spam, just the good stuff.</p>
-        <form class="max-w-md mx-auto space-y-2" onsubmit="return handleWaitlist(event)">
-          <label for="waitlist-name" class="sr-only">First name</label>
-          <input type="text" id="waitlist-name" name="name" placeholder="First name" class="w-full px-4 py-3 rounded-full border border-transparent text-slate-800 focus:outline-none focus:ring-2 focus:ring-white">
-          <div class="flex flex-col sm:flex-row gap-2">
-            <label for="waitlist-email" class="sr-only">Email address</label>
-            <input type="email" id="waitlist-email" name="email" required placeholder="Enter your email address" class="flex-grow px-4 py-3 rounded-full border border-transparent text-slate-800 focus:outline-none focus:ring-2 focus:ring-white">
-            <button type="submit" class="bg-slate-900 text-white font-bold px-6 py-3 rounded-full hover:bg-slate-800 transition whitespace-nowrap">Keep me posted</button>
-          </div>
-        </form>
-        <p id="waitlist-msg" class="text-sm font-bold text-white mt-3 hidden">Almost there. Check your inbox to confirm your email, and you&rsquo;re in. ☁️</p>
-      </div>
-    </section>
-
-    <!-- ABOUT (mission + products) -->
-    <section id="about" class="tab-section hidden space-y-12" aria-labelledby="about-heading">
-      <div class="text-center space-y-4 max-w-3xl mx-auto">
-        <span class="inline-block py-1 px-3 rounded-full bg-sky-100 text-sky-600 font-bold text-xs uppercase tracking-wider">Why families trust Mister Cloud</span>
-        <h2 id="about-heading" class="text-4xl md:text-5xl font-bold text-slate-800 brand-font">Built by the people who audit the internet, for their own kids first</h2>
-      </div>
-
-      <!-- Founder trust story -->
-      <div class="bg-white rounded-3xl soft-shadow border border-sky-100 p-8 md:p-10 max-w-4xl mx-auto space-y-4 text-slate-600 leading-relaxed">
-        <p>
-          Mister Cloud was created by a <strong class="text-slate-800">big-tech auditor who has invented patented bot-detection technology since 2017</strong>: the systems that tell real humans apart from automated fraud at internet scale. For years, that deep systems knowledge and investigative experience quietly kept his own family and immediate circle safer online.
-        </p>
-        <p>
-          His wife, a <strong class="text-slate-800">neuropsychology and child-development expert</strong>, helped him turn it into something a child could actually hold: a catalogue of curriculum, books, and toys that taught the children across their family how to be safe online, in language a toddler, a teen, and a grandparent could each understand.
-        </p>
-        <p class="brand-font text-lg font-bold text-sky-600">
-          What they built to protect their own family is now shared with yours.
-        </p>
-      </div>
-
-      <div class="text-center max-w-2xl mx-auto pt-2">
-        <p class="text-lg text-slate-600 leading-relaxed">
-          We turn invisible data centers and subsea cables into familiar stories, teaching families the foundational habits of digital life, starting with <strong class="text-slate-800">pause before you share.</strong>
-        </p>
-      </div>
-
-      <!-- Mission statement -->
-      <div class="bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-3xl soft-shadow p-8 md:p-12 max-w-4xl mx-auto relative overflow-hidden">
-        <img src="logos/mister-cloud-mark.png" alt="" class="absolute -bottom-8 -right-6 w-44 opacity-20" aria-hidden="true">
-        <div class="relative z-10 space-y-4">
-          <h2 class="text-3xl font-bold brand-font">Our Mission</h2>
-          <p class="text-lg md:text-xl text-sky-50 leading-relaxed">
-            To teach data privacy, consent, and safe device habits through books, toys, and zero-data apps <strong class="text-white">before screen habits harden</strong>. We aim to move digital safety education earlier into a child&rsquo;s life through simple recognition and repetition.
-          </p>
-          <p class="text-lg md:text-xl text-sky-50 leading-relaxed">
-            Screens are everywhere, so our goal is to help families live with connected devices safely and without fear, building a population of internet users that do not reflexively share data with &ldquo;the cloud.&rdquo;
-          </p>
+    <!-- Collection -->
+    <section class="section" aria-labelledby="collection-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="collection-title" class="h2">Big discoveries start with little things.</h2>
+          <a class="link-arrow" href="/shop">Explore the collection</a>
         </div>
-      </div>
-
-      <!-- What we make -->
-      <div class="text-center max-w-2xl mx-auto space-y-2 pt-2">
-        <h2 class="text-3xl font-bold text-slate-800 brand-font">The Mister Cloud ecosystem</h2>
-        <p class="text-slate-600">One calm system across books, apps, and tools, all available to pre-order now, shipping from October 2026.</p>
-      </div>
-
-      <!-- Category: Books -->
-      <div class="space-y-8">
-        <div class="flex items-center gap-4 border-b-2 border-sky-100 pb-4">
-          <div class="bg-sky-100 p-3 rounded-xl"><span class="text-2xl" aria-hidden="true">📚</span></div>
-          <h2 class="text-3xl font-bold text-slate-800 brand-font">Books <span class="text-sky-500 text-lg font-semibold">[Education]</span></h2>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="product-card bg-white p-6 rounded-2xl border border-slate-100 soft-shadow flex flex-col h-full">
-            <div class="bg-red-50 text-red-600 text-xs font-bold px-2 py-1 rounded w-max mb-4">TOTS (0-3)</div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">&ldquo;Tap, Tap, Mister Cloud&rdquo;</h3>
-            <p class="text-slate-600 text-sm flex-grow mb-6">A gentle introduction to touchscreen devices and recognizing basic digital icons.</p>
-            <button onclick="switchTab('shop-final')" class="w-full py-2 bg-slate-50 text-slate-600 font-bold rounded-lg hover:bg-sky-50 hover:text-sky-600 transition">View in Shop</button>
-          </div>
-          <div class="product-card bg-white p-6 rounded-2xl border border-slate-100 soft-shadow flex flex-col h-full">
-            <div class="bg-red-50 text-red-600 text-xs font-bold px-2 py-1 rounded w-max mb-4">TOTS (0-3)</div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">&ldquo;Click, Clack, Mister Cloud&rdquo;</h3>
-            <p class="text-slate-600 text-sm flex-grow mb-6">An introduction to keyboard devices and the physical sounds of digital interaction.</p>
-            <button onclick="switchTab('shop-final')" class="w-full py-2 bg-slate-50 text-slate-600 font-bold rounded-lg hover:bg-sky-50 hover:text-sky-600 transition">View in Shop</button>
-          </div>
-          <div class="product-card bg-white p-6 rounded-2xl border border-slate-100 soft-shadow flex flex-col h-full">
-            <div class="bg-amber-50 text-amber-600 text-xs font-bold px-2 py-1 rounded w-max mb-4">KIDS (4-12)</div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">&ldquo;Map The Web&rdquo;</h3>
-            <p class="text-slate-600 text-sm flex-grow mb-6">An introduction to the physical body of the internet and how data and media move around the world.</p>
-            <button onclick="switchTab('shop-final')" class="w-full py-2 bg-slate-50 text-slate-600 font-bold rounded-lg hover:bg-sky-50 hover:text-sky-600 transition">View in Shop</button>
-          </div>
-          <div class="product-card bg-white p-6 rounded-2xl border border-slate-100 soft-shadow flex flex-col h-full">
-            <div class="bg-teal-50 text-teal-600 text-xs font-bold px-2 py-1 rounded w-max mb-4">TEENS (13-18)</div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">&ldquo;What&rsquo;s Wifi?&rdquo;</h3>
-            <p class="text-slate-600 text-sm flex-grow mb-6">Breaking down local networking and signal privacy with Mister Cloud.</p>
-            <button onclick="switchTab('shop-final')" class="w-full py-2 bg-slate-50 text-slate-600 font-bold rounded-lg hover:bg-sky-50 hover:text-sky-600 transition">View in Shop</button>
-          </div>
-          <div class="product-card bg-white p-6 rounded-2xl border border-slate-100 soft-shadow flex flex-col h-full">
-            <div class="bg-teal-50 text-teal-600 text-xs font-bold px-2 py-1 rounded w-max mb-4">TEENS (13-18)</div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">&ldquo;What&rsquo;s Bluetooth?&rdquo;</h3>
-            <p class="text-slate-600 text-sm flex-grow mb-6">Understanding device-to-device connections, proximity, and peripheral permissions.</p>
-            <button onclick="switchTab('shop-final')" class="w-full py-2 bg-slate-50 text-slate-600 font-bold rounded-lg hover:bg-sky-50 hover:text-sky-600 transition">View in Shop</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Category: Apps -->
-      <div class="space-y-8">
-        <div class="flex items-center gap-4 border-b-2 border-indigo-100 pb-4">
-          <div class="bg-indigo-100 p-2 rounded-xl"><img src="logos/mister-cloud-mark.png" alt="" class="h-9 w-auto" aria-hidden="true"></div>
-          <h2 class="text-3xl font-bold text-slate-800 brand-font">Apps <span class="text-indigo-500 text-lg font-semibold mc-tip" tabindex="0" role="note" aria-label="Zero-Data means the app runs entirely on the device: no tracking, no accounts, and no data ever leaves your phone or tablet." data-tip="Runs entirely on the device: no tracking, no accounts, and no data ever leaves your phone or tablet.">[Zero-Data]</span></h2>
-        </div>
-        <p class="text-slate-500 leading-relaxed"><strong class="text-indigo-500">Zero-Data</strong> means the app runs <strong class="text-slate-700">entirely on the device</strong>: no tracking, no accounts, no ads, and no data ever leaves your phone or tablet.</p>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="product-card bg-gradient-to-br from-white to-indigo-50 p-8 rounded-3xl border border-indigo-100 soft-shadow flex flex-col">
-            <div class="flex justify-between items-start gap-4 mb-4">
-              <div class="flex items-center gap-3">
-                <img src="logos/mister-cloud-mark.png" alt="" class="h-10 w-auto flex-shrink-0" aria-hidden="true">
-                <h3 class="text-2xl font-bold text-indigo-700 brand-font">Curiosity Companion</h3>
-              </div>
+        <div class="grid-3">
+          <a class="card card-link" href="/shop?avail=now&amp;tab=books">
+            <div class="card-media"><span class="badge badge-now badge-float">Available now</span><img src="/assets/img/card-books.webp" alt="Three felt-covered board books: The Camera Eye, The Microphone Ear and The Forever Box." width="304" height="214" loading="lazy"></div>
+            <div class="card-body">
+              <span class="card-eyebrow">Read &amp; wonder</span>
+              <h3 class="card-title">Stories for little explorers</h3>
+              <span class="link-arrow">Discover the books</span>
             </div>
-            <p class="text-slate-600 mb-6 leading-relaxed flex-grow">
-              A privacy-safe research and curiosity response app. Utilizing a controlled, small-LM to provide curated and safe-for-home information to your young ones, without compromising diligence or breadth of information. No tracking, no behavioral profiling.
-            </p>
-            <div class="self-start">
-              <span class="inline-flex items-center gap-2 text-indigo-500 font-bold"><span class="w-2 h-2 rounded-full bg-indigo-400" aria-hidden="true"></span>Late-stage development · coming early 2027</span>
-              <a href="mailto:info@futureprooftmt.com?subject=Early%20access%20%E2%80%94%20Curiosity%20Companion" class="block mt-2 text-indigo-600 font-bold hover:text-indigo-800 underline underline-offset-2">Email us for early access &rarr;</a>
+          </a>
+          <a class="card card-link" href="/play">
+            <div class="card-media"><img src="/assets/img/card-yarn.webp" alt="A wooden lacing board threaded with blue, green and coral yarn." width="303" height="214" loading="lazy"></div>
+            <div class="card-body">
+              <span class="card-eyebrow">Touch &amp; discover</span>
+              <h3 class="card-title">Make learning hands-on</h3>
+              <span class="link-arrow">Explore learning tools</span>
             </div>
-          </div>
-          <div class="product-card bg-gradient-to-br from-white to-emerald-50 p-8 rounded-3xl border border-emerald-100 soft-shadow flex flex-col">
-            <div class="flex justify-between items-start gap-4 mb-4">
-              <div class="flex items-center gap-3">
-                <img src="logos/mister-cloud-mark.png" alt="" class="h-10 w-auto flex-shrink-0" aria-hidden="true">
-                <h3 class="text-2xl font-bold text-emerald-700 brand-font">Message Journey</h3>
-              </div>
+          </a>
+          <a class="card card-link" href="/learn">
+            <div class="card-media"><img src="/assets/img/card-together.webp" alt="A grandmother and child reading a tablet together on the sofa." width="304" height="214" loading="lazy"></div>
+            <div class="card-body">
+              <span class="card-eyebrow">Learn together</span>
+              <h3 class="card-title">Good habits for every age</h3>
+              <span class="link-arrow">Find your starting point</span>
             </div>
-            <p class="text-slate-600 mb-6 leading-relaxed flex-grow">
-              How does an email, image, or video travel from departure to destination? This entire interactive map is pre-coded and runs <strong>100% offline</strong> once installed on a smartphone or tablet (Android &amp; iOS). Zero data ever leaves the device.
-            </p>
-            <div class="self-start">
-              <span class="inline-flex items-center gap-2 text-emerald-500 font-bold"><span class="w-2 h-2 rounded-full bg-emerald-400" aria-hidden="true"></span>Late-stage development · coming early 2027</span>
-              <a href="mailto:info@futureprooftmt.com?subject=Early%20access%20%E2%80%94%20Message%20Journey" class="block mt-2 text-emerald-600 font-bold hover:text-emerald-800 underline underline-offset-2">Email us for early access &rarr;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Category: Devices -->
-      <div class="space-y-8">
-        <div class="flex items-center gap-4 border-b-2 border-amber-100 pb-4">
-          <div class="bg-amber-100 p-3 rounded-xl"><span class="text-2xl" aria-hidden="true">🛡️</span></div>
-          <h2 class="text-3xl font-bold text-slate-800 brand-font">Devices &amp; Accessories <span class="text-amber-500 text-lg font-semibold">[Tools]</span></h2>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Armor Pack -->
-          <div class="product-card bg-white rounded-2xl border border-slate-100 soft-shadow flex flex-col h-full overflow-hidden">
-            <div class="aspect-[4/3] bg-gradient-to-br from-sky-50 to-blue-100 flex items-center justify-center p-4">
-              <svg viewBox="0 0 150 120" class="h-full w-auto" role="img" aria-label="Branded sliding camera cover and microphone cover">
-                <rect x="20" y="30" width="72" height="42" rx="13" fill="#0B4EA6"/>
-                <circle cx="47" cy="51" r="13" fill="#0A1B2E"/><circle cx="47" cy="51" r="7" fill="#0A8CF5"/><circle cx="44" cy="48" r="2.5" fill="#fff" opacity="0.85"/>
-                <rect x="58" y="37" width="44" height="28" rx="14" fill="#FC4D4A" stroke="#fff" stroke-width="2"/>
-                <circle cx="61" cy="51" r="3" fill="#fff"/>
-                <path d="M78 55 a5 5 0 0 1 9 -3 a4.5 4.5 0 0 1 2 8 h-11 a4 4 0 0 1 0 -5 z" fill="#fff"/>
-                <g transform="translate(112,86)">
-                  <rect x="-7" y="-16" width="14" height="22" rx="7" fill="#0A8CF5"/>
-                  <path d="M-11 -2 a11 11 0 0 0 22 0" fill="none" stroke="#0B4EA6" stroke-width="2.5"/>
-                  <line x1="0" y1="8" x2="0" y2="14" stroke="#0B4EA6" stroke-width="2.5"/>
-                  <path d="M-9 -14 a9 6 0 0 1 18 0 z" fill="#FC4D4A"/>
-                  <line x1="-14" y1="-20" x2="14" y2="12" stroke="#0A1B2E" stroke-width="2.5" stroke-linecap="round"/>
-                </g>
-                <text x="20" y="104" font-family="Fredoka,sans-serif" font-weight="700" font-size="13" fill="#0B4EA6">See &amp; hear only when you choose</text>
-              </svg>
-            </div>
-            <div class="p-6 flex flex-col flex-grow">
-              <div class="bg-slate-100 text-slate-600 text-xs font-bold px-2 py-1 rounded w-max mb-3">EVERYONE</div>
-              <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">Mister Cloud Armor Pack</h3>
-              <p class="text-slate-600 text-sm flex-grow mb-4">Branded sliding camera covers and microphone blockers for phones, tablets, and laptops, so the camera eye only sees, and the microphone only hears, when your family chooses. Includes RFID-protection sleeves.</p>
-              <button onclick="switchTab('shop-final')" class="w-full py-2 bg-slate-50 text-slate-600 font-bold rounded-lg hover:bg-amber-50 hover:text-amber-600 transition">Pre-order in Shop</button>
-            </div>
-          </div>
-          <!-- Tower Catcher -->
-          <div class="product-card bg-white rounded-2xl border border-slate-100 soft-shadow flex flex-col h-full overflow-hidden">
-            <div class="aspect-[4/3] bg-gradient-to-br from-sky-50 to-blue-100 flex items-center justify-center p-4">
-              <svg viewBox="0 0 130 130" class="h-full w-auto" role="img" aria-label="Tower Catcher, a Game Boy-style handheld mapping cell towers from a car">
-                <rect x="20" y="6" width="90" height="120" rx="15" fill="#FBBF24" stroke="#0A1B2E" stroke-width="2.5"/>
-                <rect x="29" y="15" width="72" height="58" rx="7" fill="#0B4EA6"/>
-                <rect x="34" y="20" width="62" height="48" rx="3" fill="#DFF3D8"/>
-                <rect x="34" y="20" width="62" height="20" fill="#BEE3FF"/>
-                <path d="M34 66 Q65 50 96 60" fill="none" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
-                <g stroke="#0A1B2E" stroke-width="1.4" fill="none"><path d="M46 52 l-3 8 M46 52 l3 8 M44 56 h4"/><path d="M86 46 l-3 8 M86 46 l3 8 M84 50 h4"/></g>
-                <path d="M49 46 q3 -3 6 0" stroke="#FC4D4A" stroke-width="1.4" fill="none"/>
-                <rect x="60" y="55" width="12" height="7" rx="2" fill="#0A8CF5"/><circle cx="63" cy="63" r="1.5" fill="#0A1B2E"/><circle cx="69" cy="63" r="1.5" fill="#0A1B2E"/>
-                <text x="65" y="87" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="8.5" fill="#FC4D4A">TOWER CATCHER</text>
-                <g fill="#0B4EA6"><rect x="33" y="96" width="8" height="22" rx="2"/><rect x="26" y="103" width="22" height="8" rx="2"/></g>
-                <circle cx="90" cy="99" r="6" fill="#FC4D4A"/><circle cx="99" cy="108" r="6" fill="#22c55e"/>
-                <circle cx="58" cy="114" r="2.5" fill="#eab308"/><circle cx="68" cy="114" r="2.5" fill="#22c55e"/><circle cx="78" cy="114" r="2.5" fill="#ef4444"/>
-              </svg>
-            </div>
-            <div class="p-6 flex flex-col flex-grow">
-              <div class="bg-sky-100 text-sky-600 text-xs font-bold px-2 py-1 rounded w-max mb-3">KIDS / TEENS</div>
-              <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">The Tower Catcher</h3>
-              <p class="text-slate-600 text-sm flex-grow mb-4">A Game Boy-style handheld that maps live cell-tower handoffs from the backseat. Watch the signal jump tower to tower, measure its strength, and chart the invisible network rolling by, turning every road trip into proof that the internet has a body.</p>
-              <button onclick="switchTab('shop-final')" class="w-full py-2 bg-slate-50 text-slate-600 font-bold rounded-lg hover:bg-amber-50 hover:text-amber-600 transition">Pre-order in Shop</button>
-            </div>
-          </div>
-          <!-- Cone of Digital Silence -->
-          <div class="product-card bg-white rounded-2xl border border-slate-100 soft-shadow flex flex-col h-full overflow-hidden">
-            <div class="aspect-[4/3] bg-gradient-to-br from-sky-50 to-blue-100 flex items-center justify-center p-4">
-              <svg viewBox="0 0 150 120" class="h-full w-auto" role="img" aria-label="A mesh Faraday tent for phones, blocking notifications">
-                <defs><pattern id="mc-mesh" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 0 L8 8 M8 0 L0 8" stroke="#0B4EA6" stroke-width="0.7" opacity="0.45"/></pattern></defs>
-                <line x1="18" y1="104" x2="132" y2="104" stroke="#cbd5e1" stroke-width="2"/>
-                <path d="M32 104 Q32 34 75 34 Q118 34 118 104 Z" fill="#EAF6FF" stroke="#0A8CF5" stroke-width="2.5"/>
-                <path d="M32 104 Q32 34 75 34 Q118 34 118 104 Z" fill="url(#mc-mesh)"/>
-                <path d="M75 34 L75 104" stroke="#0A8CF5" stroke-width="1.4" opacity="0.6"/>
-                <rect x="57" y="76" width="15" height="26" rx="3" fill="#0B4EA6"/><rect x="79" y="80" width="15" height="22" rx="3" fill="#0A8CF5"/>
-                <g transform="translate(75,22)"><path d="M-6 4 a6 6 0 0 1 12 0 v4 l2 3 h-16 l2 -3 z" fill="#FC4D4A"/><line x1="-10" y1="-5" x2="10" y2="11" stroke="#0A1B2E" stroke-width="2.2" stroke-linecap="round"/></g>
-              </svg>
-            </div>
-            <div class="p-6 flex flex-col flex-grow">
-              <div class="bg-purple-100 text-purple-600 text-xs font-bold px-2 py-1 rounded w-max mb-3">FAMILY</div>
-              <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">Cone of Digital Silence</h3>
-              <p class="text-slate-600 text-sm flex-grow mb-4">A space-saving mesh Faraday tent for phones. Slip everyone&rsquo;s devices inside and the signal simply can&rsquo;t reach them (no jammer, just physics), so families and loved ones share real time together, free of Mister Cloud&rsquo;s interruptions. An hour, or a whole evening, without notifications; step out any moment a real emergency needs you.</p>
-              <button onclick="switchTab('shop-final')" class="w-full py-2 bg-slate-50 text-slate-600 font-bold rounded-lg hover:bg-amber-50 hover:text-amber-600 transition">Pre-order in Shop</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center pt-4">
-        <button onclick="switchTab('shop-final')" class="bg-sky-500 text-white font-bold py-4 px-12 rounded-full text-xl hover:bg-sky-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-          Pre-order in the Shop
-        </button>
-      </div>
-    </section>
-
-    <!-- PRINCIPLES (the why) -->
-    <section id="principles" class="tab-section hidden space-y-12" aria-labelledby="principles-heading">
-      <!-- Hero -->
-      <div class="text-center space-y-6">
-        <span class="inline-block py-1 px-3 rounded-full bg-red-100 text-red-500 font-bold text-xs uppercase tracking-wider mb-2">Digital Privacy for the Next Generation</span>
-        <h1 id="principles-heading" class="text-4xl md:text-6xl font-bold text-slate-800 leading-tight">
-          The internet is not invisible.<br>
-          It has a body. <span class="text-sky-500">Let&rsquo;s map it.</span>
-        </h1>
-        <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-semibold">
-          The Infrastructure of Trust to Protect Little Footprints across the Globe.
-        </p>
-      </div>
-
-      <!-- Narrative body -->
-      <div class="max-w-3xl mx-auto space-y-6 text-lg text-slate-600 leading-relaxed">
-        <p>
-          The internet wasn&rsquo;t built with children and toddlers in mind. Now, kids are interacting with connected devices, creating digital footprints before they can tie their shoes or even walk.
-        </p>
-        <p>
-          Mister Cloud is a pioneering digital safety, literacy, and education platform designed to teach the youngest (0&ndash;5) and oldest (60+) internet users in families how to safely navigate the ever-growing digital world. By turning invisible data centers and subsea cables into familiar stories, we teach families and their loved ones the foundational habits of digital life that typically are exclusive to industry leaders and experts: <strong class="text-slate-800">Pause before you share.</strong>
-        </p>
-      </div>
-
-      <!-- Pull quote -->
-      <div class="max-w-3xl mx-auto text-center py-4">
-        <p class="text-2xl md:text-3xl font-bold text-slate-700 brand-font">
-          Teach them to say, <span class="text-sky-500">&ldquo;No thank you, Mister Cloud.&rdquo;</span>
-        </p>
-      </div>
-
-      <!-- Who we protect -->
-      <div class="space-y-8 pt-4">
-        <div class="text-center max-w-2xl mx-auto space-y-3">
-          <h2 class="text-3xl font-bold text-slate-800 brand-font">The danger to the youngest and the oldest</h2>
-          <p class="text-slate-600">The two ends of every family are the most exposed, and the most overlooked. We build for both.</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white p-8 rounded-3xl soft-shadow border border-sky-50">
-            <div class="w-14 h-14 bg-sky-100 rounded-2xl flex items-center justify-center mb-4"><span class="text-2xl" aria-hidden="true">&#129528;</span></div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">Our little ones</h3>
-            <p class="text-slate-600 leading-relaxed">Children are on connected screens before they can talk, walk, read, or type. A toddler can summon the cloud with a single tap. We give them their first, gentle framework for consent and privacy, built around one memorable boundary: <strong class="text-slate-800">&ldquo;No thank you, Mister Cloud.&rdquo;</strong></p>
-          </div>
-          <div class="bg-white p-8 rounded-3xl soft-shadow border border-amber-50">
-            <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-4"><span class="text-2xl" aria-hidden="true">&#128155;</span></div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">Our elders</h3>
-            <p class="text-slate-600 leading-relaxed">Grandparents face calls, texts, and emails engineered to exploit their love and their fears: the &ldquo;your grandchild is in trouble&rdquo; call, the &ldquo;you owe back taxes&rdquo; threat. Grandparent Mode gives them the context and the calm to recognize a scam before it works.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Habits that grow with your child -->
-      <div class="space-y-8 pt-4">
-        <div class="text-center max-w-2xl mx-auto space-y-3">
-          <h2 class="text-3xl font-bold text-slate-800 brand-font">Habits that grow with your child</h2>
-          <p class="text-slate-600">One family language, spoken a little differently at every age.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white p-8 rounded-3xl soft-shadow border-t-8 border-sky-400">
-            <p class="text-sky-600 font-bold text-xs uppercase tracking-wider mb-2">Early years · 0–5</p>
-            <p class="brand-font text-2xl font-bold text-slate-800 mb-3">&ldquo;No thank you, Mister Cloud.&rdquo;</p>
-            <p class="text-slate-600 leading-relaxed">Devices have more senses than we can see: an eye that wants to look, an ear that wants to listen. We plant a gentle, friendly skepticism of big digital systems before it&rsquo;s even a lesson.</p>
-          </div>
-          <div class="bg-white p-8 rounded-3xl soft-shadow border-t-8 border-amber-400">
-            <p class="text-amber-600 font-bold text-xs uppercase tracking-wider mb-2">Kids · 5–12</p>
-            <p class="brand-font text-2xl font-bold text-slate-800 mb-3">&ldquo;Pause before you share.&rdquo;</p>
-            <p class="text-slate-600 leading-relaxed">A single beat of thought, before you tap, post, or send, turns sharing from a reflex into a choice.</p>
-          </div>
-          <div class="bg-white p-8 rounded-3xl soft-shadow border-t-8 border-violet-400">
-            <p class="text-violet-600 font-bold text-xs uppercase tracking-wider mb-2">Adolescents · 13+</p>
-            <p class="brand-font text-2xl font-bold text-slate-800 mb-3">&ldquo;Free still has a cost: your attention.&rdquo;</p>
-            <p class="text-slate-600 leading-relaxed">The apps and feeds that charge nothing are paid for with time, focus, and data. We teach teens to see the trade, and decide it on purpose.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- The internet has a body -->
-      <div class="max-w-3xl mx-auto space-y-5 pt-4 text-lg text-slate-600 leading-relaxed">
-        <h2 class="text-3xl font-bold text-slate-800 brand-font text-center leading-tight">The invisible internet is a physical web.<br><span class="text-sky-500">We give you the map so you don&rsquo;t feel lost.</span></h2>
-        <p>Most people are never taught the basics: where their phone or tablet fits into the larger internet, and the order of operations by which a message actually travels from one place to another.</p>
-        <p>That single understanding, that the internet has a physical body and information moves through it in a predictable order, transforms how a person navigates the web. A suspicious text becomes easier to question. An urgent pop-up loses its power. Sharing becomes a choice, not a reflex.</p>
-      </div>
-
-      <!-- The Mister Cloud family: the four skies -->
-      <div class="space-y-8 pt-4">
-        <div class="text-center max-w-2xl mx-auto space-y-3">
-          <h2 class="text-3xl font-bold text-slate-800 brand-font">Meet the family: the four skies</h2>
-          <p class="text-slate-600">Real clouds sort themselves by altitude and shape, and so does the internet. Each member of the Mister Cloud family makes one invisible layer easy to picture.</p>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Cumi -->
-          <div class="bg-white rounded-3xl p-6 soft-shadow border-t-8 border-emerald-400 flex flex-col items-center text-center">
-            <div class="h-20 flex items-center justify-center mb-3">
-              <svg viewBox="0 0 84 66" class="h-16 w-auto" role="img" aria-label="Cumi, a round puffy cloud">
-                <g fill="#34d399"><circle cx="28" cy="38" r="13"/><circle cx="48" cy="31" r="16"/><circle cx="61" cy="39" r="11"/><rect x="18" y="39" width="50" height="16" rx="8"/></g>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font">Cumi</h3>
-            <p class="text-emerald-600 font-bold text-xs uppercase tracking-wider mb-2">Local Tier · 0–2 km</p>
-            <p class="text-slate-600 text-sm">Your own devices &amp; local storage: the files right here on your phone, tablet, and hard drive.</p>
-          </div>
-          <!-- Alto -->
-          <div class="bg-white rounded-3xl p-6 soft-shadow border-t-8 border-amber-400 flex flex-col items-center text-center">
-            <div class="h-20 flex items-center justify-center mb-3">
-              <svg viewBox="0 0 84 66" class="h-16 w-auto" role="img" aria-label="Alto, a cluster of linked cloud puffs">
-                <g fill="#fbbf24"><circle cx="26" cy="40" r="11"/><circle cx="42" cy="33" r="14"/><circle cx="57" cy="40" r="11"/><rect x="18" y="40" width="46" height="15" rx="7"/></g>
-                <circle cx="34" cy="37" r="2.5" fill="#fff"/><circle cx="50" cy="37" r="2.5" fill="#fff"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font">Alto</h3>
-            <p class="text-amber-600 font-bold text-xs uppercase tracking-wider mb-2">Network Tier · 2–7 km</p>
-            <p class="text-slate-600 text-sm">Cloud syncing &amp; collaboration: the shared drives that patch everyone&rsquo;s copies together.</p>
-          </div>
-          <!-- Ciri -->
-          <div class="bg-white rounded-3xl p-6 soft-shadow border-t-8 border-violet-400 flex flex-col items-center text-center">
-            <div class="h-20 flex items-center justify-center mb-3">
-              <svg viewBox="0 0 84 66" class="h-16 w-auto" role="img" aria-label="Ciri, sleek swept-back wispy streaks">
-                <g stroke="#a78bfa" stroke-width="5" stroke-linecap="round" fill="none"><path d="M16 24 q22 -7 50 0"/><path d="M20 38 q22 -7 46 0"/><path d="M28 52 q18 -6 38 0"/></g>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font">Ciri</h3>
-            <p class="text-violet-600 font-bold text-xs uppercase tracking-wider mb-2">Global Tier · 7 km+</p>
-            <p class="text-slate-600 text-sm">High-speed internet &amp; global streams: fiber, 5G, and the data racing around the world.</p>
-          </div>
-          <!-- Nimbus -->
-          <div class="bg-white rounded-3xl p-6 soft-shadow border-t-8 border-slate-400 flex flex-col items-center text-center">
-            <div class="h-20 flex items-center justify-center mb-3">
-              <svg viewBox="0 0 84 66" class="h-16 w-auto" role="img" aria-label="Nimbus, a towering storm cloud with a lightning bolt">
-                <g fill="#94a3b8"><circle cx="28" cy="28" r="13"/><circle cx="48" cy="22" r="16"/><circle cx="61" cy="30" r="11"/><rect x="18" y="28" width="50" height="15" rx="7"/></g>
-                <path d="M44 38 l-9 15 h7 l-4 13 15 -19 h-7 l5 -9 z" fill="#eab308"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font">Nimbus</h3>
-            <p class="text-slate-500 font-bold text-xs uppercase tracking-wider mb-2">Processing Tier · the giants</p>
-            <p class="text-slate-600 text-sm">Big data, AI &amp; cybersecurity: the server farms that crunch, decide, and defend.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- What we believe -->
-      <div class="space-y-8 pt-4">
-        <div class="text-center max-w-2xl mx-auto space-y-3">
-          <h2 class="text-3xl font-bold text-slate-800 brand-font">What we believe</h2>
-          <p class="text-slate-600">A few principles that shape everything we make.</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <!-- Intangible → tangible -->
-          <div class="bg-white p-8 rounded-3xl soft-shadow border border-sky-50">
-            <div class="w-14 h-14 bg-sky-100 rounded-2xl flex items-center justify-center mb-4"><span class="text-2xl" aria-hidden="true">🌤️</span></div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">From the real sky to the digital cloud</h3>
-            <p class="text-slate-600 leading-relaxed">We connect the intangible to the tangible. A child who can read the real sky (the afternoon &ldquo;popcorn&rdquo; clouds, a rain curtain sweeping the coast, the bruise-dark belly of a storm) can learn to read the digital &ldquo;cloud&rdquo; the same way. We teach the light behind the screens they see everywhere, so the invisible internet stops feeling like magic and starts feeling like weather: physical, patterned, and knowable.</p>
-          </div>
-          <!-- Privacy as a jungle game -->
-          <div class="bg-white p-8 rounded-3xl soft-shadow border border-emerald-50">
-            <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4"><span class="text-2xl" aria-hidden="true">🦎</span></div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">Privacy, taught like a jungle game</h3>
-            <p class="text-slate-600 leading-relaxed">Data privacy is usually a scary conversation. We make it a safari. In the Digital Jungle, animal friends outsmart the &ldquo;Without-Asking Watchers&rdquo; with camouflage: the Moth confuses a camera, the Zebra&rsquo;s stripes scramble the sorters, the Chameleon says &ldquo;no thank you&rdquo; to being tracked. It teaches our most vulnerable to be protective and nimble about the data their devices generate, playfully and without fear.</p>
-          </div>
-          <!-- Content over hours -->
-          <div class="bg-white p-8 rounded-3xl soft-shadow border border-amber-50">
-            <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-4"><span class="text-2xl" aria-hidden="true">🎯</span></div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">It&rsquo;s not the hours, it&rsquo;s the choices</h3>
-            <p class="text-slate-600 leading-relaxed">Screen time isn&rsquo;t the whole story. <strong class="text-slate-800">What</strong> a child watches, plays, and listens to shapes them more than whether it was one hour or five. We help families focus on content and intention over a stopwatch. Choosing well beats simply choosing less.</p>
-          </div>
-          <!-- Child safety -->
-          <div class="bg-white p-8 rounded-3xl soft-shadow border border-red-50">
-            <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-4"><span class="text-2xl" aria-hidden="true">🛡️</span></div>
-            <h3 class="text-xl font-bold text-slate-800 brand-font mb-2">Safer citizens, safer children, online and off</h3>
-            <p class="text-slate-600 leading-relaxed">Child safety doesn&rsquo;t stop at the screen. We stand firmly against the exploitation of children online, including CSAM, and we believe the strongest protection is a population of aware, skeptical, caring internet citizens. Every family that understands how the internet really works makes every child a little safer, everywhere.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Our promise -->
-      <div class="text-center bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-3xl soft-shadow p-8 md:p-12 max-w-4xl mx-auto">
-        <p class="text-sky-100 font-bold uppercase tracking-widest text-xs mb-2">Our promise</p>
-        <h2 class="text-2xl md:text-3xl font-bold brand-font mb-3">Keeping entire families safer, together</h2>
-        <p class="text-sky-50 max-w-2xl mx-auto leading-relaxed">Protect our elders&rsquo; hearts. Protect our little ones&rsquo; footprints. Peace of mind for parents and heads of household, because when everyone in the family understands the internet a little better, the whole family is safer, together.</p>
-      </div>
-    </section>
-
-    <!-- COMPANY & CURRICULAR BACKGROUND -->
-    <section id="company" class="tab-section hidden space-y-16" aria-labelledby="company-heading">
-
-      <!-- About Us & Co. -->
-      <div class="max-w-3xl mx-auto text-center space-y-6">
-        <img src="logos/mister-cloud-mark.png" alt="" class="h-20 w-auto mx-auto" aria-hidden="true">
-        <span class="inline-block py-1 px-3 rounded-full bg-sky-100 text-sky-600 font-bold text-xs uppercase tracking-wider">Company &amp; Curricular Background</span>
-        <h2 id="company-heading" class="text-4xl font-bold text-slate-800 brand-font">About Us &amp; Co.</h2>
-        <p class="text-xl text-slate-600 leading-relaxed">
-          We are professional digital auditors and child-development specialists, the team behind a globally recognized anti-bot, media-verification, and user-privacy technology business. We bring enterprise-grade expertise home to families.
-        </p>
-        <p class="text-xl text-slate-600 leading-relaxed font-semibold">
-          Building a better future internet by helping the people who use it.
-        </p>
-        <div class="flex flex-wrap justify-center gap-2 pt-1">
-          <span class="px-4 py-1.5 rounded-full bg-sky-50 text-sky-600 font-bold text-sm">Anti-Bot &amp; Fraud</span>
-          <span class="px-4 py-1.5 rounded-full bg-sky-50 text-sky-600 font-bold text-sm">Media Verification</span>
-          <span class="px-4 py-1.5 rounded-full bg-sky-50 text-sky-600 font-bold text-sm">User Privacy</span>
-          <span class="px-4 py-1.5 rounded-full bg-sky-50 text-sky-600 font-bold text-sm">Child Development</span>
-        </div>
-        <div class="pt-4">
-          <p class="text-slate-500 mb-4">Learn more about our parent company and IP holding structure:</p>
-          <a href="https://www.clearskyip.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 bg-sky-500 text-white font-bold rounded-full hover:bg-sky-600 transition-colors soft-shadow gap-2 text-lg">
-            Visit Clear Sky IP
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
           </a>
         </div>
       </div>
-
-      <!-- Curriculum (by audience) -->
-      <div class="space-y-8">
-        <div class="text-center max-w-2xl mx-auto space-y-2">
-          <h2 class="text-3xl font-bold text-slate-800 brand-font">Our curriculum, by audience</h2>
-          <p class="text-slate-600">Tailored resources for every role and age group in the family&rsquo;s digital learning journey.</p>
-        </div>
-      <div id="curriculum-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
-      <p class="text-center text-sm text-slate-400 mt-4 italic">Expand any tile to see more information.</p>
-      </div>
-
-      <!-- Regions -->
-      <div class="space-y-8">
-        <div class="text-center space-y-4">
-          <h2 class="text-3xl font-bold text-slate-800 brand-font">Brands &amp; Regions</h2>
-          <p class="text-lg text-slate-500 max-w-2xl mx-auto">Build Once, Localize Globally. Our core educational architecture is culturally localized to protect little footprints worldwide.</p>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <!-- Mister Cloud -->
-          <div class="bg-white rounded-3xl p-8 soft-shadow border-t-8 border-sky-400 flex flex-col items-center text-center">
-            <div class="w-28 h-28 flex items-center justify-center mb-6">
-              <img src="logos/mister-cloud-mark.png" alt="Mister Cloud logo" class="max-h-28 w-auto object-contain">
-            </div>
-            <h3 class="text-2xl font-bold text-slate-800 brand-font mb-2">Mister Cloud</h3>
-            <p class="text-sky-600 font-bold mb-4 uppercase tracking-wider text-sm">Flagship</p>
-            <p class="text-slate-600">Serving the Anglosphere and English-speaking populations. Establishing foundational trust across North America and the UK.</p>
-          </div>
-          <!-- Señor Nube -->
-          <div class="bg-white rounded-3xl p-8 soft-shadow border-t-8 border-emerald-400 flex flex-col items-center text-center">
-            <div class="w-28 h-28 flex items-center justify-center mb-6">
-              <img src="logos/mister-cloud-mark.png" alt="Señor Nube logo (placeholder)" class="max-h-28 w-auto object-contain">
-            </div>
-            <h3 class="text-2xl font-bold text-slate-800 brand-font mb-2">Señor Nube</h3>
-            <p class="text-emerald-600 font-bold mb-4 uppercase tracking-wider text-sm">Americas</p>
-            <p class="text-slate-600">Culturally tailored for Spanish-speaking families across North America, Central America, and South America.</p>
-          </div>
-          <!-- Badal Sahib -->
-          <div class="bg-white rounded-3xl p-8 soft-shadow border-t-8 border-amber-400 flex flex-col items-center text-center sm:col-span-2 lg:col-span-1">
-            <div class="w-28 h-28 flex items-center justify-center mb-6">
-              <img src="logos/mister-cloud-mark.png" alt="Badal Sahib logo (placeholder)" class="max-h-28 w-auto object-contain">
-            </div>
-            <h3 class="text-2xl font-bold text-slate-800 brand-font mb-2">Badal Sahib</h3>
-            <p class="text-amber-600 font-bold mb-4 uppercase tracking-wider text-sm">South Asia</p>
-            <p class="text-slate-600">Made for the world&rsquo;s most populous region, the families living under the clouds of the Himalayas: India, Pakistan, Bangladesh, Nepal, and Sri Lanka.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- PARTNERS -->
-    <section id="partners" class="tab-section hidden space-y-12" aria-labelledby="partners-heading">
-      <div class="text-center space-y-4 max-w-3xl mx-auto">
-        <span class="inline-block py-1 px-3 rounded-full bg-sky-100 text-sky-600 font-bold text-xs uppercase tracking-wider">Partner with Mister Cloud</span>
-        <h2 id="partners-heading" class="text-4xl md:text-5xl font-bold text-slate-800 brand-font">Put digital safety in more little hands</h2>
-        <p class="text-lg text-slate-600 leading-relaxed">Our mission lines up with the goals of the companies and institutions that already care about fraud, privacy, and children&rsquo;s wellbeing. Three ways to work with us:</p>
-      </div>
-
-      <!-- 1. Co-brand -->
-      <div class="bg-white rounded-3xl soft-shadow border border-sky-100 p-8 md:p-10 space-y-5">
-        <div class="flex items-center gap-4">
-          <div class="bg-sky-100 p-3 rounded-xl"><span class="text-2xl" aria-hidden="true">🤝</span></div>
-          <h3 class="text-2xl md:text-3xl font-bold text-slate-800 brand-font">Co-brand a kit for your customers or team</h3>
-        </div>
-        <p class="text-slate-600 leading-relaxed max-w-3xl">Add your logo to a Mister Cloud kit and give it to the families you serve. A warm, genuinely useful gift that shows you take their safety seriously, the way leading brands hand out more than a mug.</p>
-        <ul class="grid sm:grid-cols-3 gap-4">
-          <li class="bg-sky-50 rounded-2xl p-4 text-sm text-slate-600"><strong class="block text-slate-800 mb-1">Banks &amp; insurers</strong>Co-branded Scam-Spotter &amp; Grandparent kits: fraud prevention that protects your customers and your losses.</li>
-          <li class="bg-sky-50 rounded-2xl p-4 text-sm text-slate-600"><strong class="block text-slate-800 mb-1">Cybersecurity &amp; telecom</strong>The Armor Pack and privacy tools, in your brand: security made tangible for whole families.</li>
-          <li class="bg-sky-50 rounded-2xl p-4 text-sm text-slate-600"><strong class="block text-slate-800 mb-1">Pediatric, parenting &amp; benefits</strong>New-family starter bundles for the parents and grandparents you already reach.</li>
-        </ul>
+    <!-- Newsletter -->
+    <section class="newsletter" aria-labelledby="nl-title">
+      <div class="container newsletter-inner">
+        <img class="newsletter-art" src="/assets/img/newsletter-cloud.webp" alt="" width="205" height="122" loading="lazy">
         <div>
-          <a href="mailto:info@futureprooftmt.com?subject=Co-brand%20%2F%20partnership%20enquiry" class="inline-block px-8 py-4 bg-sky-500 text-white font-bold rounded-full hover:bg-sky-600 transition soft-shadow text-lg">Design yours &rarr;</a>
+          <h2 id="nl-title">A safer digital world starts at home.</h2>
+          <p>Ideas, activities and little discoveries for your family.</p>
         </div>
-        <p class="text-xs text-slate-400">Partner logos will appear here as programs launch.</p>
-      </div>
-
-      <!-- 2. Schools & organizations -->
-      <div class="bg-white rounded-3xl soft-shadow border border-emerald-50 p-8 md:p-10 space-y-5">
-        <div class="flex items-center gap-4">
-          <div class="bg-emerald-100 p-3 rounded-xl"><span class="text-2xl" aria-hidden="true">🏫</span></div>
-          <h3 class="text-2xl md:text-3xl font-bold text-slate-800 brand-font">For schools &amp; organizations</h3>
+        <div>
+          <form class="pill-form" data-newsletter novalidate>
+            <label class="sr-only" for="nl-email">Your email address</label>
+            <input id="nl-email" type="email" name="email" placeholder="Your email address" autocomplete="email" required>
+            <button class="btn btn-primary" type="submit">Keep me in the loop</button>
+          </form>
+          <p class="form-msg" role="status" aria-live="polite"></p>
         </div>
-        <p class="text-slate-600 leading-relaxed max-w-3xl">License the curriculum and kits so every child in your care shares one calm vocabulary for staying safe online.</p>
-        <ul class="grid sm:grid-cols-2 gap-4">
-          <li class="bg-emerald-50 rounded-2xl p-4 text-sm text-slate-600"><strong class="block text-slate-800 mb-1">Preschools &amp; early learning</strong>Curriculum kits, books, songs, and daily routines.</li>
-          <li class="bg-emerald-50 rounded-2xl p-4 text-sm text-slate-600"><strong class="block text-slate-800 mb-1">Libraries</strong>Ready-to-run story-time kits + take-home cards.</li>
-          <li class="bg-emerald-50 rounded-2xl p-4 text-sm text-slate-600"><strong class="block text-slate-800 mb-1">Pediatric &amp; waiting rooms</strong>Durable books and posters that start the conversation.</li>
-          <li class="bg-emerald-50 rounded-2xl p-4 text-sm text-slate-600"><strong class="block text-slate-800 mb-1">Elder-care networks</strong>Grandparent Mode materials for staff and residents.</li>
-        </ul>
-        <a href="mailto:info@futureprooftmt.com?subject=Institutional%20licensing%20enquiry" class="inline-block px-8 py-4 bg-emerald-500 text-white font-bold rounded-full hover:bg-emerald-600 transition soft-shadow text-lg">Contact for licensing &rarr;</a>
-      </div>
-
-      <!-- 3. Sponsor / give-back -->
-      <div class="bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-3xl soft-shadow p-8 md:p-10 space-y-4">
-        <div class="flex items-center gap-4">
-          <div class="bg-white/20 p-3 rounded-xl"><span class="text-2xl" aria-hidden="true">💙</span></div>
-          <h3 class="text-2xl md:text-3xl font-bold brand-font">Sponsor kits for families who need them</h3>
-        </div>
-        <p class="text-sky-50 leading-relaxed max-w-3xl">Fund Mister Cloud kits for under-resourced schools and senior centers. A visible, meaningful way to put an impact or CSR budget to work protecting little footprints.</p>
-        <a href="mailto:info@futureprooftmt.com?subject=Sponsorship%20%2F%20give-back%20enquiry" class="inline-block px-8 py-4 bg-white text-sky-600 font-bold rounded-full hover:bg-sky-50 transition soft-shadow text-lg">Start a sponsorship &rarr;</a>
-      </div>
-
-      <!-- 4. Investors -->
-      <div class="max-w-4xl mx-auto text-center bg-white p-8 md:p-12 rounded-3xl soft-shadow border border-sky-50">
-        <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-5"><span class="text-2xl" aria-hidden="true">📈</span></div>
-        <h3 class="text-2xl md:text-3xl font-bold text-slate-800 brand-font mb-4">Investors</h3>
-        <p class="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">Back a globally recognized privacy &amp; anti-fraud team building the trusted digital-safety brand for families. Request access to our data room.</p>
-        <a href="mailto:info@futureprooftmt.com?subject=Data%20Room%20access%20request" class="inline-block px-8 py-4 bg-slate-800 text-white font-bold rounded-full hover:bg-slate-700 transition-colors soft-shadow text-lg">Request Data Room</a>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-white border-t border-sky-100 py-8 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 text-sm">
-      <p class="font-bold text-slate-600 mb-3">Follow along ☁️</p>
-      <nav aria-label="Social media" class="flex flex-wrap items-center justify-center gap-2 mb-6">
-        <a href="https://instagram.com/mister.cloud.brand" target="_blank" rel="noopener noreferrer" class="px-4 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-600 font-bold transition">Instagram</a>
-        <a href="https://tiktok.com/@mister.cloud_brand" target="_blank" rel="noopener noreferrer" class="px-4 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-600 font-bold transition">TikTok</a>
-          <span class="px-4 py-1.5 rounded-full bg-slate-100 text-slate-400 font-bold" title="Coming soon">YouTube · soon</span>
-        <a href="https://facebook.com/mister.cloud" target="_blank" rel="noopener noreferrer" class="px-4 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-600 font-bold transition">Facebook</a>
-        <a href="https://reddit.com/user/Mister_Cloud_Brand" target="_blank" rel="noopener noreferrer" class="px-4 py-1.5 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-600 font-bold transition">Reddit</a>
-      </nav>
-      <p>&copy; 2026 ClearSkyIP, Inc. &amp; Mister Cloud Education. All rights reserved.</p>
-      <p class="mt-2 font-medium text-sky-500">Protecting little footprints across the globe.</p>
-      <p class="mt-2 text-xs text-slate-400">New brand · Now in pre-order · Books &amp; apparel ship October 2026 · the rest January 2027.</p>
+  <!-- @footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Mister Cloud home">
+            <img src="/assets/img/mark-128.png" alt="" width="46" height="29">
+            <span class="wordmark">Mister.Cloud<sup>™</sup></span>
+          </a>
+          <span>Protecting little footprints.</span>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/play">Play</a></li>
+            <li><a href="/learn">Learn</a></li>
+            <li><a href="/nearme">Near Me</a></li>
+            <li><a href="/shop">Shop</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-row footer-meta">
+        <span>&copy; 2026 A Futureproof TMT - ClearSkyIP Venture &middot; Mister Cloud&trade; &middot; Pre-Orders Open - Official Launch Jan 1, 2027</span>
+        <nav aria-label="Social media">
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/mister.cloud.brand" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://tiktok.com/@mister.cloud_brand" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+            <li><a href="https://facebook.com/mister.cloud" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://reddit.com/user/Mister_Cloud_Brand" target="_blank" rel="noopener noreferrer">Reddit</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </footer>
-
-  <!-- Product interstitial (modal) -->
-  <div id="product-modal" class="fixed inset-0 z-[80] hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" onclick="closeProduct()"></div>
-    <div class="absolute inset-0 overflow-y-auto p-4 flex items-start sm:items-center justify-center">
-      <div class="relative bg-white rounded-3xl soft-shadow w-full max-w-4xl my-8 overflow-hidden animate-[fadeIn_.3s_ease]">
-        <button onclick="closeProduct()" aria-label="Close" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-slate-500 hover:text-slate-800 flex items-center justify-center font-bold text-xl shadow">&times;</button>
-        <div class="grid md:grid-cols-2">
-          <!-- Image side -->
-          <div id="modal-img" class="min-h-[240px] md:min-h-full flex items-center justify-center p-8 relative"></div>
-          <!-- Info side -->
-          <div class="p-8 flex flex-col">
-            <div class="flex flex-wrap items-center gap-2 mb-3">
-              <span id="modal-cat" class="text-xs font-bold px-2 py-1 rounded-full"></span>
-              <span id="modal-age" class="text-xs font-bold px-2 py-1 rounded-full bg-slate-100 text-slate-600"></span>
-            </div>
-            <h3 id="modal-title" class="text-2xl md:text-3xl font-bold text-slate-800 brand-font mb-3"></h3>
-            <p id="modal-desc" class="text-slate-600 leading-relaxed mb-5"></p>
-            <div id="modal-teaches" class="mb-6"></div>
-            <div class="mt-auto">
-              <p id="modal-price" class="text-2xl font-bold text-slate-800 mb-1"></p>
-              <p id="modal-preorder-tag" class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 bg-sky-50 rounded-full px-3 py-1 mb-4">
-                <span aria-hidden="true">☁️</span> Pre-order · ships October 2026
-              </p>
-              <button id="modal-buy" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-full transition shadow-md">Pre-order Now</button>
-              <p id="modal-fineprint" class="text-xs text-slate-400 mt-3 text-center">Pre-order: you&rsquo;ll be charged today to reserve your order, which ships in October 2026. Secure checkout via Stripe.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Curriculum interstitial (modal) -->
-  <div id="curriculum-modal" class="fixed inset-0 z-[80] hidden" role="dialog" aria-modal="true" aria-labelledby="curr-title">
-    <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" onclick="closeCurriculum()"></div>
-    <div class="absolute inset-0 overflow-y-auto p-4 flex items-start sm:items-center justify-center">
-      <div class="relative bg-white rounded-3xl soft-shadow w-full max-w-2xl my-8 p-6 sm:p-9 animate-[fadeIn_.3s_ease]">
-        <button onclick="closeCurriculum()" aria-label="Close" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-slate-500 hover:text-slate-800 flex items-center justify-center font-bold text-xl shadow">&times;</button>
-        <span id="curr-badge" class="inline-block text-xs font-bold px-2 py-1 rounded-full mb-3"></span>
-        <h3 id="curr-title" class="text-2xl md:text-3xl font-bold text-slate-800 brand-font mb-2"></h3>
-        <p id="curr-focus" class="text-slate-600 leading-relaxed mb-5"></p>
-        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">What they learn</p>
-        <ul id="curr-learn" class="space-y-2 mb-6"></ul>
-        <div class="bg-sky-50 border border-sky-100 rounded-2xl p-4">
-          <p class="text-xs font-bold uppercase tracking-wider text-sky-500 mb-1">Core habit</p>
-          <p id="curr-habit" class="text-slate-800 font-bold brand-font text-lg"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast -->
-  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[90] hidden bg-slate-900 text-white font-bold px-6 py-3 rounded-full shadow-lg text-sm"></div>
-
-  <!-- Interactive Scripts -->
-  <script>
-    const TABS = ['home', 'about', 'principles', 'company', 'partners', 'shop-final'];
-
-    function switchTab(tabId, updateHash = true) {
-      if (!TABS.includes(tabId)) tabId = 'home';
-
-      document.querySelectorAll('.tab-section').forEach(section => {
-        section.classList.add('hidden');
-        section.classList.remove('block');
-      });
-      const target = document.getElementById(tabId);
-      target.classList.remove('hidden');
-      target.classList.add('block');
-
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        if (btn.id !== 'nav-shop-final') {
-          btn.classList.remove('active', 'text-sky-600');
-          btn.classList.add('text-slate-500');
-        }
-      });
-      const activeNav = document.getElementById(`nav-${tabId}`);
-      if (activeNav && tabId !== 'shop-final') {
-        activeNav.classList.remove('text-slate-500');
-        activeNav.classList.add('active', 'text-sky-600');
-      }
-
-      if (updateHash) history.replaceState(null, '', `#${tabId}`);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobile-menu');
-      const btn = document.getElementById('mobile-menu-btn');
-      const isHidden = menu.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', String(!isHidden));
-    }
-
-    function toggleTile(tileId, btn) {
-      const content = document.getElementById(tileId);
-      const isOpen = content.classList.toggle('active');
-      if (btn) btn.setAttribute('aria-expanded', String(isOpen));
-    }
-
-    function handleWaitlist(event) {
-      event.preventDefault();
-      const form = event.target;
-      const msg = document.getElementById('waitlist-msg');
-      // NEWSLETTER_ENDPOINT is defined in the storefront config block below.
-      // Double opt-in (email confirmation) is handled by your email service.
-      if (typeof NEWSLETTER_ENDPOINT === 'string' && NEWSLETTER_ENDPOINT) {
-        fetch(NEWSLETTER_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
-        }).catch(() => {});
-      }
-      msg.classList.remove('hidden');
-      form.reset();
-      return false;
-    }
-
-    // ---- Welcome intro (first visit): "How did you trace the cloud home?" ----
-    const WELCOME_KEY = 'mc_welcomed';
-
-    function showIntro() {
-      const el = document.getElementById('welcome-intro');
-      if (el) { el.classList.remove('hidden'); document.body.classList.add('overflow-hidden'); }
-    }
-    function dismissIntro() {
-      const el = document.getElementById('welcome-intro');
-      if (el) { el.classList.add('hidden'); document.body.classList.remove('overflow-hidden'); }
-      try { localStorage.setItem(WELCOME_KEY, '1'); } catch (e) {}
-    }
-    function traceHome(source) {
-      // 1) Plausible custom event → shows in your analytics + daily email.
-      try { if (window.plausible) window.plausible('Traced Home', { props: { source: source } }); } catch (e) {}
-      // 2) Also log to the form endpoint (a raw record of responses).
-      if (typeof FORM_ENDPOINT === 'string' && FORM_ENDPOINT) {
-        const fd = new FormData();
-        fd.append('type', 'traced-home');
-        fd.append('source', source);
-        fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd }).catch(() => {});
-      }
-      dismissIntro();
-    }
-
-    // Deep-linking + first-visit welcome.
-    window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash.replace('#', '');
-      if (hash && TABS.includes(hash)) {
-        switchTab(hash, false);
-        dismissIntro();   // deep-linked visitors skip the welcome
-        return;
-      }
-      let welcomed = false;
-      try { welcomed = localStorage.getItem(WELCOME_KEY) === '1'; } catch (e) {}
-      if (!welcomed) showIntro();
-    });
-  </script>
-
-  <!-- Storefront -->
-  <script>
-    /* =========================================================================
-       LAUNCH CONFIG. Edit these, no other code changes needed.
-       ========================================================================= */
-
-    // The month/year everything ships. Shown across the site.
-    // "Founding Family" momentum counter. Set this to your REAL pre-order count
-    // once orders come in (via Stripe). Leave 0 and the counter stays hidden;
-    // never ship a fabricated number.
-    const FOUNDING_FAMILIES = 0;
-
-    const SHIP_DATE = 'October 2026';        // books & apparel ship first
-    const SHIP_DATE_REST = 'January 2027';   // everything else
-    // Books & apparel ship October 2026; all other categories January 2027.
-    function shipDateFor(p) {
-      return ['board', 'book', 'jungle', 'teen', 'apparel'].includes(p.cat) ? SHIP_DATE : SHIP_DATE_REST;
-    }
-
-    // Where "Contact for licensing" and free-guide requests are sent.
-    const CONTACT_EMAIL = 'info@futureprooftmt.com';   // Data-room, licensing & early-access mail (real inbox; no forwarding needed).
-
-    // The Shopify storefront lives here. Once products are live in Shopify we can
-    // point the pre-order buttons at their product pages (e.g. `${SHOP_URL}/products/<handle>`)
-    // instead of the Stripe links below, a one-line swap per product.
-    const SHOP_URL = 'https://shop.mister.cloud';
-
-    // Attribution / generic log endpoint (the welcome "how did you find us"
-    // answers POST here). Formspree/Getform/Basin, etc. Leave '' to skip.
-    const FORM_ENDPOINT = '';   // e.g. 'https://formspree.io/f/xxxxxxx'
-
-    // Parents' newsletter: paste your email service's form ACTION URL
-    // (MailerLite, Kit/ConvertKit, …). Turn on DOUBLE OPT-IN in that service so
-    // subscribers confirm by email before they're added. Sends `name` + `email`.
-    const NEWSLETTER_ENDPOINT = '';
-
-    // STRIPE PAYMENT LINKS: paste one Stripe Payment Link URL per product.
-    // Key = product id (see the PRODUCTS array below). Create each link in the
-    // Stripe Dashboard (Products → Payment links). Any product left '' shows a
-    // friendly "link coming soon" message instead of a broken button.
-    const STRIPE_LINKS = {
-      // Board books (Tots)
-      'tap-tap': '', 'click-clack': '', 'camera-eye': '', 'microphone-ear': '',
-      'forever-box': '', 'cloud-lock-camera': '', 'peekaboo': '',
-      // Physical-Internet picture books (Kids)
-      'where-picture-go': '', 'ocean-road': '', 'cloud-sleeps': '', 'this-town': '',
-      'sky-internet': '', 'map-the-web': '', 'message-journey-book': '', 'coastal-lab': '',
-      // Digital Jungle (Kids)
-      'magic-moth': '', 'dazzle-zebra': '', 'quiet-chameleon': '', 'leopard-leaves': '', 'jungle-set': '',
-      // Teens
-      'whats-wifi': '', 'whats-bluetooth': '', 'whats-vpn': '', 'whats-cookie': '', 'whats-cloud-really': '',
-      // Songs & Music
-      'songbook': '', 'no-thank-you-single': '', 'sing-along-album': '', 'song-cards': '',
-      // Toys & Plush
-      'mc-plush': '', 'yarn-board': '',
-      // Devices & Tools
-      'armor-pack': '', 'tower-catcher': '', 'cone-silence': '', 'camera-covers': '', 'privacy-cards': '', 'no-thank-you-buttons': '', 'permission-cards': '',
-      // Grandparent Mode
-      'grandparent-kit': '', 'scam-guide': '', 'password-kit': '', 'concierge-audit': '',
-      // Bundles
-      'first-launch': '', 'armor-kit': '',
-      // (safety-checklist = free, educator kits = contact; handled without a link)
-    };
-
-    /* ===================== end launch config ===================== */
-
-    const LOGO = {
-      rainbow: 'logos/mister-cloud-mark.png',
-      idea: 'logos/mister-cloud-mark.png',
-      lock: 'logos/mister-cloud-mark.png',
-      explorer: 'logos/mister-cloud-mark.png',
-    };
-
-    const THEMES = {
-      sky:    { grad: 'from-sky-100 to-blue-100',      badge: 'bg-sky-100 text-sky-700' },
-      blue:   { grad: 'from-blue-100 to-indigo-100',   badge: 'bg-blue-100 text-blue-700' },
-      green:  { grad: 'from-emerald-100 to-green-100', badge: 'bg-emerald-100 text-emerald-700' },
-      teal:   { grad: 'from-teal-100 to-cyan-100',     badge: 'bg-teal-100 text-teal-700' },
-      purple: { grad: 'from-purple-100 to-fuchsia-100',badge: 'bg-purple-100 text-purple-700' },
-      pink:   { grad: 'from-pink-100 to-rose-100',     badge: 'bg-pink-100 text-pink-700' },
-      amber:  { grad: 'from-amber-100 to-orange-100',  badge: 'bg-amber-100 text-amber-700' },
-      indigo: { grad: 'from-indigo-100 to-violet-100', badge: 'bg-indigo-100 text-indigo-700' },
-      orange: { grad: 'from-orange-100 to-amber-100',  badge: 'bg-orange-100 text-orange-700' },
-      slate:  { grad: 'from-slate-100 to-slate-200',   badge: 'bg-slate-200 text-slate-700' },
-      bundle: { grad: 'from-sky-200 to-indigo-200',    badge: 'bg-indigo-100 text-indigo-700' },
-    };
-
-    const CATS = {
-      board:  { label: 'Board Book',       theme: 'sky',    logo: 'idea' },
-      book:   { label: 'Picture Book',     theme: 'blue',   logo: 'idea' },
-      jungle: { label: 'Digital Jungle',   theme: 'green',  logo: 'explorer' },
-      teen:   { label: 'Teen Guide',       theme: 'teal',   logo: 'idea' },
-      music:  { label: 'Songs & Music',    theme: 'purple', logo: 'rainbow' },
-      toy:    { label: 'Toy & Plush',      theme: 'pink',   logo: 'rainbow' },
-      device: { label: 'Device & Tool',    theme: 'amber',  logo: 'lock' },
-      app:    { label: 'Zero-Data App',    theme: 'indigo', logo: 'lock' },
-      elder:  { label: 'Grandparent Mode', theme: 'orange', logo: 'lock' },
-      edu:    { label: 'For Educators',    theme: 'slate',  logo: 'rainbow' },
-      bundle: { label: 'Bundle',           theme: 'bundle', logo: 'rainbow' },
-    };
-
-    const FILTERS = [
-      { key: 'all',          label: 'All Products' },
-      { key: 'tots',         label: 'Tots · 0–3' },
-      { key: 'kids',         label: 'Kids · 4–12' },
-      { key: 'teens',        label: 'Teens · 13–18' },
-      { key: 'family',       label: 'Parents & Family' },
-      { key: 'grandparents', label: 'Grandparents · 60+' },
-      { key: 'educators',    label: 'Educators' },
-    ];
-
-    // Each product: id, name, cat, age[], ageLabel, price (0 = use priceLabel), priceLabel?, emoji, blurb, desc?, teaches?, logo?
-    const PRODUCTS = [
-      // Board books (Tots)
-      { id:'tap-tap', name:'“Tap, Tap, Mister Cloud”', cat:'board', age:['tots'], ageLabel:'Tots 0–3', price:9, emoji:'👆', blurb:'A gentle first look at touchscreens and the friendly icons a child taps every day.', teaches:['Recognize the screen and its basic icons','First words: yes, no, and ask'] },
-      { id:'click-clack', name:'“Click, Clack, Mister Cloud”', cat:'board', age:['tots'], ageLabel:'Tots 0–3', price:9, emoji:'⌨️', blurb:'An introduction to keyboard devices and the physical sounds of digital interaction.' },
-      { id:'camera-eye', name:'The Camera Eye', cat:'board', age:['tots','kids'], ageLabel:'Tots & Kids', price:9, emoji:'📷', blurb:'Meet the little lens that can see, and learn to say “off you go” until we choose to share.', teaches:['Cameras and consent','“Wait until someone we know says hello.”'] },
-      { id:'microphone-ear', name:'The Microphone Ear', cat:'board', age:['tots','kids'], ageLabel:'Tots & Kids', price:9, emoji:'🎤', blurb:'What can the microphone ear hear? A calm intro to when a device is listening.' },
-      { id:'forever-box', name:'The Forever Box', cat:'board', age:['tots','kids'], ageLabel:'Tots & Kids', price:9, emoji:'📦', blurb:'Some things, once shared, stay forever. A gentle first idea about the permanence of posting.' },
-      { id:'cloud-lock-camera', name:'“Cloud, Lock, Camera”', cat:'board', age:['tots'], ageLabel:'Tots 0–3', price:8, emoji:'🔒', blurb:'A high-contrast first-words board book of the icons that run a child’s digital world.' },
-      { id:'peekaboo', name:'“Peekaboo, Mister Cloud”', cat:'board', age:['tots'], ageLabel:'Tots 0–3', price:10, emoji:'👀', blurb:'A lift-the-flap game of hide-and-seek that introduces cameras, sensors, and permission.' },
-
-      // Physical-Internet mini-series (Kids)
-      { id:'where-picture-go', name:'Where Does My Picture Go?', cat:'book', age:['kids'], ageLabel:'Kids 4–7', price:12, emoji:'🖼️', blurb:'A slider book that follows a photo from tablet to router, through a path, to a family member.', desc:'A slider book that follows a photo from tablet to router, through a path, to a family member. It ends where every Mister Cloud story ends: pause before sharing.', teaches:['The internet has a body','Pause before you share'] },
-      { id:'ocean-road', name:'Under the Ocean Internet Road', cat:'book', age:['kids'], ageLabel:'Kids 4–7', price:12, emoji:'🌊', blurb:'A lift-the-flap ocean book revealing that some messages travel through cables under the sea.' },
-      { id:'cloud-sleeps', name:'Where Mister Cloud Sleeps', cat:'book', age:['kids'], ageLabel:'Kids 4–7', price:12, emoji:'🏢', blurb:'A data-center book showing that “the cloud” is real computer buildings, not just sky clouds.' },
-      { id:'this-town', name:'This Town, That Town', cat:'book', age:['kids'], ageLabel:'Kids 5–8', price:12, emoji:'🗺️', blurb:'A comparison book: why places with different ground infrastructure can have different internet.' },
-      { id:'sky-internet', name:'Internet From the Sky', cat:'book', age:['kids'], ageLabel:'Kids 5–8', price:12, emoji:'🛰️', blurb:'A later-stage satellite book showing how new pathways reach places that are hard to wire.' },
-      { id:'map-the-web', name:'Map The Web', cat:'book', age:['kids'], ageLabel:'Kids 4–12', price:13, emoji:'🕸️', blurb:'An introduction to the physical body of the internet and how data and media move around the world.' },
-      { id:'message-journey-book', name:'The Message Journey Storybook', cat:'book', age:['kids'], ageLabel:'Kids 4–12', price:14, emoji:'✉️', blurb:'The printed companion to the app: follow a photo through 13 real stops from your device to grandma’s.' },
-      { id:'coastal-lab', name:'Coastal Weather Lab Activity Guide', cat:'book', age:['kids'], ageLabel:'Kids 6–12', price:12, emoji:'⛅', blurb:'An explorer’s guide to reading the sky: sea breezes, rain curtains, and cloud “traffic,” all linking real clouds to Mister Cloud.' },
-
-      // Digital Jungle (Kids)
-      { id:'magic-moth', name:'The Magic Moth', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🦋', blurb:'Book 1: Facial recognition. The Snapping Bird photographs everyone without asking; the Moth’s owl-eye patterns confuse the camera.', teaches:['Cameras and consent','Automated vision can be imperfect'] },
-      { id:'dazzle-zebra', name:'The Dazzle Zebra', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🦓', blurb:'Book 2: Data profiling. When the zebras run together their stripes become a puzzle, and the Sorting Lion drops his labels.', teaches:['Data obfuscation','Say no to unnecessary collection'] },
-      { id:'quiet-chameleon', name:'The Quiet Chameleon', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🦎', blurb:'Book 3: Geolocation. The Chameleon changes colors, says “No thank you,” and the Seeking Snake slides past.', teaches:['Opting out of location sharing'] },
-      { id:'leopard-leaves', name:'The Leopard in the Leaves', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🐆', blurb:'Book 4: Phishing & scams. A tricky link hides like a leopard in leaves; pausing reveals the clues.', teaches:['The power of the pause','Ask a trusted grown-up'] },
-      { id:'jungle-set', name:'Digital Jungle: Complete 4-Book Set', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:40, emoji:'📚', blurb:'All four Masters of Camouflage stories in one gift box.' },
-
-      // Teens
-      { id:'whats-wifi', name:'“What’s Wi-Fi?”', cat:'teen', age:['teens'], ageLabel:'Teens 13–18', price:11, emoji:'📶', blurb:'Breaking down local networking and signal privacy with Mister Cloud.' },
-      { id:'whats-bluetooth', name:'“What’s Bluetooth?”', cat:'teen', age:['teens'], ageLabel:'Teens 13–18', price:11, emoji:'🔵', blurb:'Understanding device-to-device connections, proximity, and peripheral permissions.' },
-      { id:'whats-vpn', name:'“What’s a VPN?”', cat:'teen', age:['teens'], ageLabel:'Teens 13–18', price:11, emoji:'🛡️', blurb:'What a private tunnel really does, and what it doesn’t hide.' },
-      { id:'whats-cookie', name:'“What’s a Cookie?”', cat:'teen', age:['teens'], ageLabel:'Teens 13–18', price:11, emoji:'🍪', blurb:'Trackers, sessions, and the crumbs we leave behind as we browse.' },
-      { id:'whats-cloud-really', name:'“What’s the Cloud, Really?”', cat:'teen', age:['teens'], ageLabel:'Teens 13–18', price:11, emoji:'☁️', blurb:'The teen-level truth: the cloud is someone else’s computer, in a real building, run by a real company.' },
-
-      // Songs & Music
-      { id:'songbook', name:'“Tap-Tap, Mister Cloud!” Songbook', cat:'music', age:['tots','kids'], ageLabel:'Tots & Kids', price:15, emoji:'🎵', blurb:'A choose-it-yourself learning song in ten verses: Read. Point. Wiggle. Sing!', desc:'A choose-it-yourself learning song in ten verses: Read. Point. Wiggle. Sing! Camera Eye, Microphone, Location Dot, the Nosy Question Parade, and more, each ending on “I choose yes. I choose no.”' },
-      { id:'no-thank-you-single', name:'“No Thank You, Mister Cloud” (Single)', cat:'music', age:['tots','kids'], ageLabel:'Tots & Kids', price:3, emoji:'🎶', blurb:'The family anthem for the pause before sharing.' },
-      { id:'sing-along-album', name:'Mister Cloud Sing-Along Album', cat:'music', age:['tots','kids'], ageLabel:'Tots & Kids', price:12, emoji:'💿', blurb:'Every Mister Cloud song in one calm, ad-free album for car rides and quiet time.' },
-      { id:'song-cards', name:'Sing & Signal Card Deck', cat:'music', age:['kids'], ageLabel:'Kids 4–12', price:14, emoji:'🃏', blurb:'Illustrated lyric cards for the ten songs, with the hand-signals that go with each verse.' },
-
-      // Toys & Plush
-      { id:'mc-plush', name:'Mister Cloud Plush', cat:'toy', age:['tots','kids'], ageLabel:'Tots & Kids', price:12, emoji:'🧸', blurb:'The friendly face of the whole system: soft, huggable, and always ready to pause.' },
-      { id:'yarn-board', name:'Message Route Yarn-Board', cat:'toy', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🧶', blurb:'A hands-on lacing toy: thread yarn from device to router to data center to family, and trace the route.' },
-
-      // Devices & Tools
-      { id:'armor-pack', name:'Mister Cloud Armor Pack', cat:'device', age:['family'], ageLabel:'Everyone', price:24, emoji:'🛡️', blurb:'Sliding camera covers, microphone blockers, and RFID-protection cases for phones, tablets, and computers.' },
-      { id:'tower-catcher', name:'The Tower Catcher', cat:'device', age:['kids','teens','family'], ageLabel:'Kids & Teens', price:99, emoji:'🎮', blurb:'A Game Boy-style handheld that maps live cell-tower handoffs from the backseat, turning every road trip into proof that the internet has a body.', desc:'A Game Boy-style handheld that maps live cell-tower handoffs from the backseat. Watch the signal jump tower to tower, measure its strength, and record the route: an interactive lesson in networks, geography, and the physical internet.', teaches:['The internet has a physical body','Networks, geography & infrastructure'] },
-      { id:'cone-silence', name:'Cone of Digital Silence', cat:'device', age:['family'], ageLabel:'Family', price:0, priceLabel:'Pre-order', emoji:'⛺', blurb:'A space-saving mesh Faraday tent for phones: slip devices inside and notifications simply stop, so families share an unbroken hour together. No jammer, just physics.' },
-      { id:'camera-covers', name:'Sliding Camera-Cover Kit', cat:'device', age:['family'], ageLabel:'Everyone', price:8, emoji:'📸', blurb:'A pack of thin sliding covers so the camera eye only opens when you choose.' },
-      { id:'privacy-cards', name:'Family Privacy Card Deck', cat:'device', age:['family'], ageLabel:'Family', price:12, emoji:'🗃️', blurb:'Conversation and routine cards built around “Do we need to share this with Mister Cloud?”' },
-      { id:'no-thank-you-buttons', name:'“No Thank You” Button Pack', cat:'device', age:['kids','family'], ageLabel:'Kids & Family', price:6, emoji:'🔘', blurb:'Real press-me buttons for practicing the calm, confident “no thank you.”' },
-      { id:'permission-cards', name:'Permission Routine Cards', cat:'device', age:['family'], ageLabel:'Family', price:10, emoji:'✅', blurb:'Step-by-step cards for the pause: ask first, check where it goes, then choose.' },
-
-      // Zero-Data Apps
-
-      // Grandparent Mode
-      { id:'grandparent-kit', name:'Grandparent Device-Safety Kit', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents 60+', price:29, emoji:'🧰', blurb:'A plain-language kit for phones, tablets, smart TVs, and voice assistants: setup, permissions, and kid-safe settings.' },
-      { id:'scam-guide', name:'Scam-Spotter Field Guide', cat:'elder', age:['grandparents'], ageLabel:'Grandparents 60+', price:12, emoji:'🔎', blurb:'Recognize phishing, fake prizes, and manipulative interfaces, and the pause that stops a scam.' },
-      { id:'password-kit', name:'Password Hygiene Starter Kit', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents 60+', price:14, emoji:'🔑', blurb:'A simple, paper-first system for strong passwords without the overwhelm.' },
-      { id:'safety-checklist', name:'Family Device-Safety Checklist', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents & Family', price:0, priceLabel:'Free', emoji:'📋', blurb:'A free printable checklist for safer shared-device use with grandchildren.' },
-      { id:'concierge-audit', name:'Concierge Device Audit', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents & Family', price:0, priceLabel:'From $79', emoji:'🤝', blurb:'A guided one-on-one session to set up and secure the whole household’s devices.' },
-
-      // For Educators
-      { id:'preschool-kit', name:'Preschool Curriculum Kit', cat:'edu', age:['educators'], ageLabel:'Educators', price:0, priceLabel:'Contact for licensing', emoji:'🏫', blurb:'Classroom licensing: books, songs, routines, and lesson cards for preschools and early-learning centers.' },
-      { id:'library-kit', name:'Library Story-Time Kit', cat:'edu', age:['educators'], ageLabel:'Educators', price:0, priceLabel:'Contact for licensing', emoji:'📖', blurb:'A ready-to-run story-time program with big-book editions and take-home cards.' },
-      { id:'pediatric-pack', name:'Pediatric Waiting-Room Pack', cat:'edu', age:['educators','family'], ageLabel:'Educators', price:0, priceLabel:'Contact for licensing', emoji:'🩺', blurb:'Durable books and posters that start the digital-safety conversation in clinics.' },
-      { id:'eldercare-kit', name:'Elder-Care Provider Kit', cat:'edu', age:['educators','grandparents'], ageLabel:'Educators', price:0, priceLabel:'Contact for licensing', emoji:'🏡', blurb:'Grandparent Mode materials licensed for elder-care networks and community centers.' },
-
-      // Bundles
-      { id:'first-launch', name:'The First-Launch Family Bundle', cat:'bundle', age:['family','tots','kids'], ageLabel:'Family', price:45, emoji:'🎁', blurb:'The recommended starter set for a new Mister Cloud family.', desc:'The recommended starter set: the “No Thank You” board book, a Mister Cloud plush, the family privacy cards, a grandparent device-safety checklist, and the zero-data mini app.', teaches:['One shared family language across generations'] },
-      { id:'armor-kit', name:'Mister Cloud Armor Kit', cat:'bundle', age:['kids','family'], ageLabel:'Kids & Family', price:55, emoji:'🧱', blurb:'The Digital Jungle four-book set plus the physical tools: camouflage caps and the Spot-the-Trick magnifying glass.' },
-    ];
-
-    let activeFilter = 'all';
-
-    function priceLabelFor(p) {
-      if (p.priceLabel) return p.priceLabel;
-      return p.price > 0 ? '$' + p.price.toFixed(2) : 'Free';
-    }
-
-    // Decide how a product's primary button behaves.
-    function actionFor(p) {
-      const url = STRIPE_LINKS[p.id];
-      if (url) return { kind: 'stripe', url, label: 'Pre-order Now' };
-      if (p.cat === 'edu' || /contact|licens/i.test(p.priceLabel || '')) return { kind: 'contact', label: 'Contact for licensing' };
-      if ((p.priceLabel || '').toLowerCase() === 'free') return { kind: 'free', label: 'Request the free guide' };
-      return { kind: 'soon', label: 'Pre-order Now' };
-    }
-
-    // Small label under each product card.
-    function preorderNote(p) {
-      const a = actionFor(p);
-      if (a.kind === 'contact') return '<p class="text-[11px] font-bold text-slate-400 mt-2">Institutional licensing</p>';
-      if (a.kind === 'free') return '<p class="text-[11px] font-bold text-emerald-500 mt-2">Free download</p>';
-      return `<p class="text-[11px] font-bold text-sky-500 mt-2">☁️ Pre-order · ships ${shipDateFor(p)}</p>`;
-    }
-
-    function themeFor(p) { return THEMES[CATS[p.cat].theme]; }
-    function logoFor(p) { return LOGO[p.logo || CATS[p.cat].logo]; }
-
-    function imageBlock(p, big) {
-      const t = themeFor(p);
-      const size = big ? 'text-8xl' : 'text-6xl';
-      const logoSize = big ? 'h-12' : 'h-8';
-      return `<div class="w-full h-full bg-gradient-to-br ${t.grad} flex items-center justify-center relative">
-        <span class="${size}" aria-hidden="true">${p.emoji}</span>
-        <img src="${logoFor(p)}" alt="" class="absolute bottom-3 right-3 ${logoSize} w-auto drop-shadow" aria-hidden="true">
-      </div>`;
-    }
-
-    function renderFilters() {
-      const wrap = document.getElementById('shop-filters');
-      wrap.innerHTML = FILTERS.map(f => {
-        const on = f.key === activeFilter;
-        const cls = on
-          ? 'bg-sky-500 text-white border-sky-500'
-          : 'bg-white text-slate-600 border-slate-200 hover:border-sky-300';
-        return `<button onclick="setFilter('${f.key}')" aria-pressed="${on}" class="text-sm font-bold px-4 py-2 rounded-full border transition ${cls}">${f.label}</button>`;
-      }).join('');
-    }
-
-    function setFilter(key) {
-      activeFilter = key;
-      renderFilters();
-      renderGrid();
-    }
-
-    function visibleProducts() {
-      if (activeFilter === 'all') return PRODUCTS;
-      return PRODUCTS.filter(p => p.age.includes(activeFilter));
-    }
-
-    function renderGrid() {
-      const grid = document.getElementById('shop-grid');
-      const list = visibleProducts();
-      document.getElementById('shop-count').textContent =
-        `Showing ${list.length} of ${PRODUCTS.length} products`;
-      grid.innerHTML = list.map(p => {
-        const t = themeFor(p);
-        return `<button onclick="openProduct('${p.id}')" class="product-card text-left bg-white rounded-2xl border border-slate-100 soft-shadow overflow-hidden flex flex-col h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
-          <div class="relative aspect-[4/3]">
-            ${imageBlock(p, false)}
-            <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full ${t.badge}">${CATS[p.cat].label}</span>
-          </div>
-          <div class="p-5 flex flex-col flex-grow">
-            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 w-max mb-2">${p.ageLabel}</span>
-            <h3 class="text-lg font-bold text-slate-800 brand-font mb-1 leading-snug">${p.name}</h3>
-            <p class="text-slate-500 text-sm flex-grow mb-4">${p.blurb}</p>
-            <div class="flex items-center justify-between mt-auto">
-              <span class="font-bold text-slate-800">${priceLabelFor(p)}</span>
-              <span class="text-sky-600 font-bold text-sm">Pre-order &rarr;</span>
-            </div>
-            ${preorderNote(p)}
-          </div>
-        </button>`;
-      }).join('');
-    }
-
-    function openProduct(id) {
-      const p = PRODUCTS.find(x => x.id === id);
-      if (!p) return;
-      const t = themeFor(p);
-      document.getElementById('modal-img').innerHTML = imageBlock(p, true);
-      const catEl = document.getElementById('modal-cat');
-      catEl.textContent = CATS[p.cat].label;
-      catEl.className = `text-xs font-bold px-2 py-1 rounded-full ${t.badge}`;
-      document.getElementById('modal-age').textContent = p.ageLabel;
-      document.getElementById('modal-title').textContent = p.name;
-      document.getElementById('modal-desc').textContent = p.desc || p.blurb;
-      const teaches = document.getElementById('modal-teaches');
-      teaches.innerHTML = (p.teaches && p.teaches.length)
-        ? `<p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">What it teaches</p>
-           <ul class="space-y-1">${p.teaches.map(t => `<li class="flex items-start gap-2 text-sm text-slate-600"><span class="text-sky-500 font-bold">✓</span><span>${t}</span></li>`).join('')}</ul>`
-        : '';
-      document.getElementById('modal-price').textContent = priceLabelFor(p);
-
-      const a = actionFor(p);
-      const buyBtn = document.getElementById('modal-buy');
-      const tag = document.getElementById('modal-preorder-tag');
-      const fine = document.getElementById('modal-fineprint');
-      buyBtn.textContent = a.label;
-      if (a.kind === 'stripe') {
-        tag.style.display = '';
-        tag.textContent = `☁️ Pre-order · ships ${shipDateFor(p)}`;
-        fine.textContent = `Pre-order: you’ll be charged today to reserve your order, which ships in ${shipDateFor(p)}. Secure checkout via Stripe.`;
-        buyBtn.onclick = () => window.open(a.url, '_blank', 'noopener');
-      } else if (a.kind === 'contact') {
-        tag.style.display = 'none';
-        fine.textContent = 'We’ll reply with licensing options and pricing for your organization.';
-        buyBtn.onclick = () => { window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Licensing enquiry: ' + p.name)}`; };
-      } else if (a.kind === 'free') {
-        tag.style.display = 'none';
-        fine.textContent = 'We’ll email you the free guide.';
-        buyBtn.onclick = () => { window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Free guide request: ' + p.name)}`; };
-      } else {
-        tag.style.display = '';
-        tag.textContent = `☁️ Pre-order · ships ${shipDateFor(p)}`;
-        fine.textContent = 'Pre-order link is being added. Join the Cloud Club below and we’ll email you the moment it’s ready.';
-        buyBtn.onclick = () => showToast('Pre-order link is being added. Join the Cloud Club below. ☁️');
-      }
-
-      const modal = document.getElementById('product-modal');
-      modal.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    }
-
-    function closeProduct() {
-      document.getElementById('product-modal').classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    let toastTimer;
-    function showToast(msg) {
-      const el = document.getElementById('toast');
-      el.textContent = msg;
-      el.classList.remove('hidden');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => el.classList.add('hidden'), 2600);
-    }
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeProduct();
-    });
-
-    // Init storefront
-    renderFilters();
-    renderGrid();
-
-    // Founding Family momentum counter: only shows when a real count is set.
-    (function () {
-      const el = document.getElementById('founding-count');
-      if (el && typeof FOUNDING_FAMILIES === 'number' && FOUNDING_FAMILIES > 0) {
-        el.textContent = `Join ${FOUNDING_FAMILIES.toLocaleString()} founding families and counting ☁️`;
-        el.classList.remove('hidden');
-      }
-    })();
-  </script>
-
-  <!-- Curriculum by audience -->
-  <script>
-    const CURR_THEME = {
-      sky:   { title: 'text-sky-600',   badge: 'bg-sky-100 text-sky-600',     hover: 'hover:border-sky-300' },
-      amber: { title: 'text-amber-500', badge: 'bg-amber-100 text-amber-600', hover: 'hover:border-amber-300' },
-      teal:  { title: 'text-teal-500',  badge: 'bg-teal-100 text-teal-600',   hover: 'hover:border-teal-300' },
-    };
-
-    const CURRICULUM = [
-      { key: 'tots', name: 'Tots', age: '0–3 yrs', theme: 'sky',
-        focus: 'Before words, before rules: the three things a device can want, and a first memorable boundary. Every icon is Mister Cloud (the device, and the whole network behind it) asking for something.',
-        preview: ['📷 Camera = wants to SEE', '🎤 Microphone = wants to HEAR', '📍 Location = wants to know WHERE'],
-        learn: [
-          'The camera icon means Mister Cloud wants to SEE: the device, and the network behind it.',
-          'The microphone icon means Mister Cloud wants to HEAR.',
-          'The location pin means Mister Cloud wants to know WHERE you are.',
-          'The first three responses (yes, no, and “ask”) long before the words for privacy exist.',
-          'Sensory play and board books that name what a device can see, hear, and locate.',
-        ],
-        habit: '“No thank you, Mister Cloud.”' },
-
-      { key: 'kids4', name: 'Kids', age: '4–7 yrs', theme: 'sky',
-        focus: 'The internet is a real place, and sharing is a choice you get to make.',
-        preview: ['Meet the sensors', '“Private” vs “shared”', 'Practice the pause'],
-        learn: [
-          'Meet the sensors (camera, microphone, location) and learn each one can be turned off.',
-          '“Private” vs “shared,” and asking a trusted grown-up before sending anything.',
-          'The internet has a body: your tap travels somewhere real.',
-          'Practice the pause before tapping “yes” or “allow.”',
-        ],
-        habit: '“Pause before you share.”' },
-
-      { key: 'kids8', name: 'Kids', age: '8–12 yrs', theme: 'sky',
-        focus: 'Follow a photo or message on its real journey, and meet who watches along the way.',
-        preview: ['Where your data travels', 'Cookies & trackers', '“Free” isn’t free'],
-        learn: [
-          'The internet has a body: device → router → cables → data centers, and back.',
-          'Cookies and trackers are “crumbs” that follow you from site to site.',
-          '“Free” apps and games are paid for with data and attention; someone profits.',
-          'Companies guess things about you (profiling); strong passwords; think before you click.',
-        ],
-        habit: '“If it’s free, ask what they’re really collecting.”' },
-
-      { key: 'teens', name: 'Teens', age: '13–18 yrs', theme: 'sky',
-        focus: 'Understand the tech you live on, and how attention and personal data are bought, sold, and used to shape what you see.',
-        preview: ['What is Wi-Fi?', 'What is Bluetooth?', 'Footprint & the data economy'],
-        learn: [
-          'What Wi-Fi actually is: local networks, signals, and who can see them.',
-          'What Bluetooth is: device-to-device links, proximity, and permissions.',
-          'Digital footprint and permanence; a public self vs a private self.',
-          'How feeds and ads are targeted: behavioral profiling, data brokers, and the attention economy.',
-          'Spotting manipulation: manufactured urgency, phishing, and social engineering.',
-        ],
-        habit: '“When it’s free, you’re the product, so decide what you’ll trade.”' },
-
-      { key: 'parents', name: 'Parents', age: null, theme: 'amber',
-        focus: 'Set up a calm, low-tracking home, and see what’s really collecting on your family, from apps to the car in the driveway.',
-        preview: ['Device & privacy setup', 'What does my connected car know about my kids?', 'Reduce household tracking'],
-        learn: [
-          'Device and account setup: permissions hygiene, privacy settings, and age-gating.',
-          'A simple family media agreement built around “pause before you share.”',
-          'What does my connected car know about my kids? The surprising trackers hiding in everyday things (cars, smart TVs, toys, and apps).',
-          'Recognize and reduce the ad-tech quietly tracking the whole household.',
-        ],
-        habit: '“Model the pause; children copy what we do, not what we say.”' },
-
-      { key: 'grandparents', name: 'Grandparents', age: '60+', theme: 'amber',
-        focus: 'Calm, plain-language protection, because a grandparent’s device security is the grandchildren’s security too.',
-        preview: ['Robocalls & scam calls', 'Password hygiene', 'Reduce ads & tracking', 'Device security = grandkids’ security'],
-        learn: [
-          'Robocalls and scam calls: recognize the classics like the “grandchild in trouble” call, fake prizes, tax threats, and tech-support pop-ups.',
-          'Password hygiene without the overwhelm.',
-          'Reducing ads and avoiding tracking on phones, smart TVs, and browsers.',
-          'Device security as family security: a compromised grandparent device can expose the grandchildren.',
-          'Verify before you act: hang up, look it up, and call back on a number you trust.',
-        ],
-        habit: '“When it’s urgent and scary, slow down and check.”' },
-
-      { key: 'educators', name: 'Educators & Admins', age: null, theme: 'teal',
-        focus: 'A ready-to-run digital-citizenship program for preschools, libraries, and community centers.',
-        preview: ['Age-banded lesson sequences', 'Story-time & take-home kits', 'Standards-aligned'],
-        learn: [
-          'Age-banded lesson sequences (Tots → Teens) with books, songs, and routines.',
-          'Story-time kits, big-book editions, and take-home cards for families.',
-          'Alignment to digital-citizenship and media-literacy standards.',
-          'Simple ways to check understanding and reinforce one shared vocabulary.',
-        ],
-        habit: '“One vocabulary, repeated across every grade.”' },
-
-      { key: 'caregivers', name: 'Caregivers', age: null, theme: 'teal',
-        focus: 'Nannies, elder-care providers, and extended family keeping the boundaries consistent across every home.',
-        preview: ['Reinforce the family’s language', 'Supervise shared devices', 'Protect both ends'],
-        learn: [
-          'Reinforce the same phrases and routines the family already uses.',
-          'Supervise shared devices, and protect both the youngest and the oldest.',
-          'Spot exploitation aimed at either end of the household.',
-          'Know when to pause, and who to check with.',
-        ],
-        habit: '“Same boundaries, every home, every caregiver.”' },
-    ];
-
-    function renderCurriculum() {
-      const wrap = document.getElementById('curriculum-grid');
-      if (!wrap) return;
-      wrap.innerHTML = CURRICULUM.map(c => {
-        const t = CURR_THEME[c.theme];
-        const badge = c.age
-          ? `<span class="text-xs font-bold ${t.badge} px-2 py-1 rounded-full whitespace-nowrap">${c.age}</span>` : '';
-        const preview = c.preview.map(p =>
-          `<li class="flex items-start gap-2"><span class="${t.title} font-bold">•</span><span>${p}</span></li>`).join('');
-        return `<button onclick="openCurriculum('${c.key}')" class="text-left bg-white rounded-2xl p-6 soft-shadow border border-slate-100 ${t.hover} transition flex flex-col h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
-          <div class="flex justify-between items-center gap-2 mb-3">
-            <h3 class="text-xl font-bold ${t.title} brand-font">${c.name}</h3>
-            ${badge}
-          </div>
-          <ul class="space-y-1 text-slate-600 text-sm flex-grow">${preview}</ul>
-          <span class="mt-4 ${t.title} font-bold text-sm">Expand For More &rarr;</span>
-        </button>`;
-      }).join('');
-    }
-
-    function openCurriculum(key) {
-      const c = CURRICULUM.find(x => x.key === key);
-      if (!c) return;
-      const t = CURR_THEME[c.theme];
-      const badge = document.getElementById('curr-badge');
-      badge.textContent = 'Curriculum';
-      badge.className = `inline-block text-xs font-bold px-2 py-1 rounded-full mb-3 ${t.badge}`;
-      document.getElementById('curr-title').textContent = c.age ? `${c.name} · ${c.age}` : c.name;
-      document.getElementById('curr-focus').textContent = c.focus;
-      document.getElementById('curr-learn').innerHTML = c.learn.map(item =>
-        `<li class="flex items-start gap-2 text-slate-600"><span class="${t.title} font-bold">•</span><span>${item}</span></li>`).join('');
-      document.getElementById('curr-habit').textContent = c.habit;
-      document.getElementById('curriculum-modal').classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    }
-
-    function closeCurriculum() {
-      document.getElementById('curriculum-modal').classList.add('hidden');
-      if (document.getElementById('product-modal').classList.contains('hidden')) {
-        document.body.classList.remove('overflow-hidden');
-      }
-    }
-
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCurriculum(); });
-
-    renderCurriculum();
-  </script>
-
-  <!-- Plausible Analytics: privacy-friendly, cookie-free (no consent banner).
-       Dashboard/login at plausible.io; a daily summary is emailed via the
-       /api/daily-analytics-email Vercel Cron. Add the site as "mister.cloud"
-       in Plausible for this to report data. -->
-  <script defer data-domain="mister.cloud" src="https://plausible.io/js/script.js"></script>
-  <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };</script>
+  <!-- /@footer -->
+  <!-- @scripts -->
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/site.js"></script>
+  <!-- /@scripts -->
 </body>
 </html>

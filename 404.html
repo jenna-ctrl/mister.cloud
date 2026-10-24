@@ -3,35 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page not found — Mister Cloud</title>
+  <title>Page not found · Mister Cloud</title>
   <meta name="robots" content="noindex">
+  <!-- @head -->
+  <meta name="theme-color" content="#C9D2BE">
+  <meta name="author" content="A Futureproof TMT - ClearSkyIP Venture">
+  <meta property="og:site_name" content="Mister Cloud">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mister.cloud/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mister Cloud, the friendly smiling cloud logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mister.cloud/og-image.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    html,body{margin:0;height:100%}
-    body{
-      font-family:'Nunito',sans-serif;background:#F0F9FF;color:#0F172A;
-      display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;
-    }
-    img{width:120px;height:auto;margin-bottom:8px}
-    h1{font-family:'Fredoka',sans-serif;font-size:2rem;margin:.2em 0;color:#0A1B2E}
-    p{color:#475569;max-width:34rem;line-height:1.6;margin:.4em 0 1.4em}
-    .code{font-family:'Fredoka',sans-serif;color:#0A8CF5;font-weight:700;letter-spacing:.1em;font-size:.85rem}
-    a.btn{
-      display:inline-block;background:#0A8CF5;color:#fff;font-weight:700;text-decoration:none;
-      padding:12px 28px;border-radius:9999px;box-shadow:0 10px 25px -5px rgba(10,140,245,.35);
-    }
-    a.btn:hover{background:#0B4EA6}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <!-- Plausible: privacy-first, cookie-free analytics (see README "Analytics & daily email"). -->
+  <script defer data-domain="mister.cloud" src="https://plausible.io/js/script.js"></script>
+  <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };</script>
+  <!-- /@head -->
 </head>
 <body>
-  <img src="/logos/mister-cloud-mark.png" alt="Mister Cloud">
-  <div class="code">ERROR 404</div>
-  <h1>This little cloud drifted off.</h1>
-  <p>The page you're looking for isn't here. Let's get you back to safer skies.</p>
-  <a class="btn" href="/">Back to Mister Cloud</a>
+  <!-- @header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 20V11"/><path d="M12 13c0-4 2.5-7 7-7 0 4.5-3 7-7 7z"/><path d="M12 15c0-3-2-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5z"/></svg>
+    <span>A little pause. A lifelong habit.</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 20V11"/><path d="M12 13c0-4 2.5-7 7-7 0 4.5-3 7-7 7z"/><path d="M12 15c0-3-2-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5z"/></svg>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Mister Cloud home">
+        <img src="/assets/img/mark-128.png" alt="" width="56" height="35">
+        <span class="wordmark">Mister.Cloud<sup>™</sup></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="/play">Play</a>
+        <a class="nav-link" href="/learn">Learn</a>
+        <a class="nav-link" href="/nearme">Near Me</a>
+        <a class="btn btn-primary" href="/shop">Shop</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /@header -->
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Error 404 · A little pause</span>
+          <h1 id="hero-title" class="display">This page drifted away.</h1>
+          <p class="lede">Even Mister Cloud loses his way sometimes. Let’s float you back somewhere friendly.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="/">Back to home</a>
+            <a class="btn btn-outline btn-lg" href="/shop">Visit the shop</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="/assets/img/near-hero.webp" alt="A felt Mister Cloud holding a map beside signposts." width="554" height="261">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- @footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Mister Cloud home">
+            <img src="/assets/img/mark-128.png" alt="" width="46" height="29">
+            <span class="wordmark">Mister.Cloud<sup>™</sup></span>
+          </a>
+          <span>Protecting little footprints.</span>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-links">
+            <li><a href="/about">About</a></li>
+            <li><a href="/play">Play</a></li>
+            <li><a href="/learn">Learn</a></li>
+            <li><a href="/nearme">Near Me</a></li>
+            <li><a href="/shop">Shop</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-row footer-meta">
+        <span>&copy; 2026 A Futureproof TMT - ClearSkyIP Venture &middot; Mister Cloud&trade; &middot; Pre-Orders Open - Official Launch Jan 1, 2027</span>
+        <nav aria-label="Social media">
+          <ul class="footer-links">
+            <li><a href="https://instagram.com/mister.cloud.brand" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://tiktok.com/@mister.cloud_brand" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+            <li><a href="https://facebook.com/mister.cloud" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://reddit.com/user/Mister_Cloud_Brand" target="_blank" rel="noopener noreferrer">Reddit</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <!-- /@footer -->
+  <!-- @scripts -->
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/site.js"></script>
+  <!-- /@scripts -->
 </body>
 </html>

@@ -1,0 +1,6 @@
+# Source-only files: used locally, not served on mister.cloud
+partials
+scripts
+docs
+README.md
+.env.example

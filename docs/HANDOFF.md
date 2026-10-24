@@ -1,5 +1,14 @@
 # Mister Cloud — Soft-Launch Handoff
 
+> **Oct 2026 redesign:** the single-page tab site was replaced by six real pages
+> (`/`, `/about`, `/play`, `/learn`, `/shop`, `/nearme`) built from the new mockups and the Brand &
+> Design Kit. Config moved to `assets/js/config.js`, products to `assets/js/catalog.js`; see the
+> README "What's inside". Old `/#shop-final`-style links redirect to the new pages. Sections 1–2
+> below describe the previous single-page build and are kept for history.
+>
+> **Availability:** books, learning programs, apparel and merch are sold now; everything else is a
+> pre-order for the official launch on Jan 1, 2027. Controlled by `AVAILABLE_NOW` in `assets/js/config.js`.
+
 **Status: LIVE** at **https://mister.cloud**. Last updated at workspace close (Oct 2026).
 
 This doc is the single place to get up to speed. Everything described here is in the repo

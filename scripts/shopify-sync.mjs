@@ -3,7 +3,7 @@
  * Mister Cloud → Shopify product sync
  * ----------------------------------------------------------------------------
  * Creates the Mister Cloud catalogue in a Shopify store from the single source
- * of truth: the PRODUCTS array inside ../index.html.
+ * of truth: the PRODUCTS array in ../assets/js/catalog.js.
  *
  * SAFE BY DEFAULT:
  *   - Runs a DRY RUN unless you pass --apply.
@@ -48,12 +48,12 @@ const ONLY = args.includes('--only') && onlyArg ? new Set(onlyArg.split(',').map
   }
 })();
 
-// ---- pull PRODUCTS + CATS out of index.html (source of truth) --------------
+// ---- pull PRODUCTS + CATS out of assets/js/catalog.js (source of truth) ----
 function loadCatalogue() {
-  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const html = fs.readFileSync(path.join(ROOT, 'assets', 'js', 'catalog.js'), 'utf8');
   const grab = (name) => {
     const m = html.match(new RegExp(`const ${name}\\s*=\\s*(\\[[\\s\\S]*?\\]|\\{[\\s\\S]*?\\});`, 'm'));
-    if (!m) throw new Error(`Could not find ${name} in index.html`);
+    if (!m) throw new Error(`Could not find ${name} in assets/js/catalog.js`);
     // eslint-disable-next-line no-eval
     return eval('(' + m[1] + ')');
   };
