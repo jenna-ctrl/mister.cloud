@@ -107,6 +107,7 @@ p { margin: 0; }
   font-weight: 600;
   letter-spacing: -0.025em;
 }
+.display-warm { display: block; color: var(--clay); font-size: .7em; margin-top: .06em; letter-spacing: -0.015em; }
 .h2 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; }
 .h3 { font-size: 1.35rem; line-height: 1.2; font-weight: 600; }
 .lede { font-size: clamp(1.08rem, 1.6vw, 1.3rem); line-height: 1.45; color: var(--text); max-width: 34ch; }
