@@ -1,21 +1,22 @@
-/* /shop: renders the catalogue (assets/js/catalog.js) in two groups:
-   "Available now" (AVAILABLE_NOW in config.js) and "Pre-order 2027".
+/* /shop: renders the catalogue (assets/js/catalog.js) in three audience
+   sections: Books for kids, Programs for grown-ups, Plush & family tools.
+   Each card is badged "Available now" (AVAILABLE_NOW in config.js) or "Pre-order".
    Age chips, availability chips, type tabs and sort narrow it down; the product
    dialog handles Buy now / Pre-order / licensing / free-guide buttons.
    Deep links: /shop?avail=now|preorder   /shop?age=tots|kids|teens|grownups|educators
-               /shop?tab=books|play|tools|merch   /shop?cat=<CATS key, e.g. music>
+               /shop?tab=books|programs|tools|merch   /shop?cat=<CATS key, e.g. music>
                /shop?product=<id> opens that product */
 (function () {
   'use strict';
 
   const TABS = {
     all: null,
-    books: ['board', 'book', 'jungle', 'teen'],
-    play: ['toy', 'music'],
-    programs: ['edu'],
-    tools: ['device', 'elder', 'bundle', 'app'],
+    books: ['board', 'book', 'jungle', 'teen'],          // books for kids & teens
+    programs: ['edu', 'elder'],                         // book + workbook programs and guides for grown-ups
+    tools: ['toy', 'music', 'device', 'bundle', 'app'],  // plush & family tools
     merch: ['apparel', 'merch'],
   };
+  TABS.play = TABS.tools;   // old /shop?tab=play links
   const AGES = {
     all: null,
     tots: ['tots'], kids: ['kids'], teens: ['teens'],
@@ -41,6 +42,7 @@
     cat: CATS[params.get('cat')] ? params.get('cat') : null,   // narrow deep-link filter
     sort: 'featured',
   };
+  if (state.tab === 'play') state.tab = 'tools';   // old links
   const ORDER = new Map(PRODUCTS.map((p, i) => [p.id, i]));
   const priceLabel = (p) => p.priceLabel || (p.price > 0 ? '$' + (Number.isInteger(p.price) ? p.price : p.price.toFixed(2)) : 'Free');
 
@@ -95,13 +97,25 @@
         </div>
       </article>`;
 
-  function group(id, badge, title, sub, list, more) {
+  function group(id, eyebrow, title, sub, list, more) {
     return `<section class="shop-group" id="${id}" aria-labelledby="${id}-title">
-      <div class="group-head">${badge}<h3 class="h3" id="${id}-title">${title}</h3><p class="muted">${sub}</p></div>
+      <div class="group-head"><span class="eyebrow">${eyebrow}</span><h3 class="h3" id="${id}-title">${title}</h3><p class="muted">${sub}</p></div>
       <div class="grid-3">${list.map(card).join('')}</div>
-      ${more ? `<div class="show-all"><button class="btn btn-outline" type="button" data-avail-more="${more.avail}">${more.label}</button></div>` : ''}
+      ${more ? `<div class="show-all"><button class="btn btn-outline" type="button" data-tab-more="${more.tab}">${more.label}</button></div>` : ''}
     </section>`;
   }
+
+  // Default view: one section per audience. Within each, what you can buy today comes first.
+  const SECTIONS = [
+    { tab: 'books', id: 'kids-books', eyebrow: 'For kids', title: 'Books for kids',
+      sub: 'Board books for little ones, picture books for curious kids, and guides for teens.', show: 6 },
+    { tab: 'programs', id: 'programs', eyebrow: 'For grown-ups', title: 'Programs for grown-ups',
+      sub: 'Book + workbook programs for parents, teachers, grandparents and home-schoolers, plus plain-language guides.', show: 6 },
+    { tab: 'tools', id: 'tools', eyebrow: 'For the whole family', title: 'Plush &amp; family tools',
+      sub: 'The Mister Cloud plush, everyday privacy tools and family bundles.', show: 6 },
+  ];
+  const nowFirst = (arr) => arr.filter(isNow).concat(arr.filter((p) => !isNow(p)));
+  const availLine = (arr) => { const n = arr.filter(isNow).length; return [n && `${n} available now`, arr.length - n && `${arr.length - n} pre-order`].filter(Boolean).join(' · '); };
 
   const results = document.getElementById('shop-results');
   const count = document.getElementById('shop-count');
@@ -111,15 +125,13 @@
     const list = visible();
 
     if (!filtered && state.sort === 'featured') {
-      // Default view: a few highlights from each group, so visitors see what they can buy today first.
-      const now = list.filter(isNow), pre = list.filter((p) => !isNow(p));
-      const top = (arr) => arr.slice(0, 3);   // already sorted featured-first
-      count.textContent = `${NOW_COUNT} available now · ${PRE_COUNT} in pre-order for ${LAUNCH_DATE}`;
-      results.innerHTML =
-        group('available-now', '<span class="badge badge-now">Available now</span>', 'Start today',
-          'Board books, learning programs, grandparent guides and the Mister Cloud plush. Order now; these don’t wait for launch day.', top(now), { avail: 'now', label: `See all ${NOW_COUNT} available now` }) +
-        group('preorder', '<span class="badge badge-sage">Pre-order</span>', `The 2027 collection`,
-          `Reserve yours now. Official launch ${LAUNCH_DATE}; pre-orders ship from ${PREORDER_SHIPS}.`, top(pre), { avail: 'preorder', label: `See all ${PRE_COUNT} pre-order products` });
+      count.textContent = `${PRODUCTS.length} products · ${NOW_COUNT} available now · ${PRE_COUNT} in pre-order for ${LAUNCH_DATE}`;
+      results.innerHTML = SECTIONS.map((sec) => {
+        const items = nowFirst(list.filter((p) => TABS[sec.tab].includes(p.cat)));
+        if (!items.length) return '';
+        const more = items.length > sec.show ? { tab: sec.tab, label: `See all ${items.length}` } : null;
+        return group(sec.id, sec.eyebrow, sec.title, `${sec.sub} <b>${availLine(items)}.</b>`, items.slice(0, sec.show), more);
+      }).join('');
     } else {
       const label = state.avail === 'now' ? ' available now' : state.avail === 'preorder' ? ' in pre-order' : '';
       count.textContent = `Showing ${list.length} of ${PRODUCTS.length} products${label}${state.cat ? ` · ${CATS[state.cat].label}` : ''}`;
@@ -157,11 +169,13 @@
   const sortEl = document.getElementById('sort');
   sortEl.addEventListener('change', () => { state.sort = sortEl.value; render(); });
 
-  // hero buttons + "See all …" buttons switch to that availability
+  // hero buttons switch to an availability; "See all" buttons open that section's tab
   document.addEventListener('click', (e) => {
-    const b = e.target.closest('[data-avail-more]'); if (!b) return;
+    const b = e.target.closest('[data-avail-more], [data-tab-more]'); if (!b) return;
     e.preventDefault();
-    state.avail = b.dataset.availMore; render();
+    if (b.dataset.availMore) state.avail = b.dataset.availMore;
+    if (b.dataset.tabMore) { state.tab = b.dataset.tabMore; state.cat = null; }
+    render();
     document.getElementById('products').scrollIntoView();
   });
 

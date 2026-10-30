@@ -16,8 +16,8 @@ const CATS = {
   toy:    { label: 'Toy & Plush',      theme: 'pink',   logo: 'rainbow' },
   device: { label: 'Device & Tool',    theme: 'amber',  logo: 'lock' },
   app:    { label: 'Zero-Data App',    theme: 'indigo', logo: 'lock' },
-  elder:  { label: 'Grandparent Mode', theme: 'orange', logo: 'lock' },
-  edu:    { label: 'Learning Program', theme: 'slate',  logo: 'rainbow' },
+  elder:  { label: 'Grown-up Guide',   theme: 'orange', logo: 'lock' },
+  edu:    { label: 'Book + Workbook',  theme: 'slate',  logo: 'rainbow' },
   bundle: { label: 'Bundle',           theme: 'bundle', logo: 'rainbow' },
   apparel: { label: 'Apparel',         theme: 'sky',    logo: 'rainbow' },
   merch:  { label: 'Merch',            theme: 'amber',  logo: 'rainbow' },
@@ -67,11 +67,11 @@ const PRODUCTS = [
   { id:'safety-checklist', name:'Family Device-Safety Checklist', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents & Family', price:0, priceLabel:'Free', emoji:'📋', blurb:'A free printable checklist for safer shared-device use with grandchildren.' },
   { id:'concierge-audit', name:'Concierge Device Audit', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents & Family', price:0, priceLabel:'From $79', emoji:'🤝', blurb:'A guided one-on-one session to set up and secure the whole household’s devices.' },
 
-  // Learning programs (available now; prices to be set: price 0 + priceLabel 'Pricing soon')
-  { id:'program-babies-tots', featured:7, name:'Babies and Tots', cat:'edu', age:['tots','family'], ageLabel:'Babies & Tots 0–3', price:0, priceLabel:'Pricing soon', emoji:'🍼', blurb:'A gentle first program for the youngest explorers: board books, songs and tiny daily routines that start the pause habit early.', teaches:['First words for cameras, microphones and screens','The pause before sharing, as a song and a game'] },
-  { id:'program-tech-at-school', featured:8, name:'Tech At School', cat:'edu', age:['kids','teens','educators'], ageLabel:'Kids, Teens & Educators', price:0, priceLabel:'Pricing soon', emoji:'🏫', blurb:'Classroom-ready lessons that make the internet’s body visible: devices, routers, cables, data centers and the choices we make.', teaches:['The internet has a physical body','Consent, permissions and the pause'] },
-  { id:'program-grandparent-mode', featured:9, name:'Grandparent Mode', cat:'edu', age:['grandparents','family'], ageLabel:'Grandparents & Family', price:0, priceLabel:'Pricing soon', emoji:'👵', blurb:'Plain-language sessions for grandparents: device setup, scam spotting, and kid-safe settings for time with the grandchildren.', teaches:['Spot scams and tricky links','Shared-device settings that protect little ones'] },
-  { id:'program-home-schooler', featured:10, name:'Home Schooler’s Guide', cat:'edu', age:['kids','family','educators'], ageLabel:'Kids & Families', price:0, priceLabel:'Pricing soon', emoji:'🏡', blurb:'A flexible, self-paced guide for home-schooling families, with activities you can run at the kitchen table.', teaches:['Week-by-week activities for every age','Hands-on, off-screen discovery'] },
+  // Programs for grown-ups: book + workbook bundles (available now; prices to be set: price 0 + priceLabel 'Pricing soon')
+  { id:'program-babies-tots', featured:7, name:'Babies and Tots', cat:'edu', age:['tots','family'], ageLabel:'For parents of 0–3', price:0, priceLabel:'Pricing soon', emoji:'🍼', blurb:'A book + workbook for parents and caregivers of babies and toddlers: first words for screens, cameras and microphones, and tiny daily routines that start the pause habit early.', teaches:['First words for cameras, microphones and screens','The pause before sharing, as a song and a game'] },
+  { id:'program-tech-at-school', featured:8, name:'Tech At School', cat:'edu', age:['kids','teens','educators'], ageLabel:'For teachers & schools', price:0, priceLabel:'Pricing soon', emoji:'🏫', blurb:'A book + workbook for teachers: classroom-ready lessons that make the internet’s body visible, from devices and routers to cables, data centers and the choices we make.', teaches:['The internet has a physical body','Consent, permissions and the pause'] },
+  { id:'program-grandparent-mode', featured:9, name:'Grandparent Mode', cat:'edu', age:['grandparents','family'], ageLabel:'For grandparents', price:0, priceLabel:'Pricing soon', emoji:'👵', blurb:'A book + workbook for grandparents, in plain language: device setup, scam spotting, and kid-safe settings for time with the grandchildren.', teaches:['Spot scams and tricky links','Shared-device settings that protect little ones'] },
+  { id:'program-home-schooler', featured:10, name:'Home Schooler’s Guide', cat:'edu', age:['kids','family','educators'], ageLabel:'For home-schooling parents', price:0, priceLabel:'Pricing soon', emoji:'🏡', blurb:'A book + workbook for home-schooling families: a flexible, self-paced plan with activities you can run at the kitchen table.', teaches:['Week-by-week activities for every age','Hands-on, off-screen discovery'] },
 
   // Bundles
   { id:'first-launch', name:'The First-Launch Family Bundle', cat:'bundle', age:['family','tots','kids'], ageLabel:'Family', price:45, emoji:'🎁', blurb:'The recommended starter set for a new Mister Cloud family.', desc:'The recommended starter set: the “No Thank You” board book, a Mister Cloud plush, the family privacy cards, a grandparent device-safety checklist, and the zero-data mini app.', teaches:['One shared family language across generations'] },
