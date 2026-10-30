@@ -24,7 +24,7 @@ const TYPES = {
   '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.gif': 'image/gif', '.svg': 'image/svg+xml', '.ico': 'image/x-icon',
   '.pdf': 'application/pdf', '.zip': 'application/zip', '.xml': 'application/xml', '.txt': 'text/plain; charset=utf-8',
 };
-const BLOCKED = /^\/(\.git|\.context|node_modules|scripts|partials|api\/.*\.js$)/;
+const BLOCKED = /^\/(\.git|\.context|node_modules|scripts|partials|docs|api\/.*\.js$)/;
 
 function resolveFile(urlPath) {
   const p = path.normalize(decodeURIComponent(urlPath)).replace(/^(\.\.[/\\])+/, '');

@@ -17,8 +17,10 @@ const PREORDER_SHIPS = 'January 2027';
 // product as pre-order even when its category is available now.
 const AVAILABLE_NOW = {
   cats: ['board', 'book', 'jungle', 'teen', 'edu', 'apparel', 'merch'],   // books, learning programs, apparel & merch
-  ids: ['mc-plush', 'mc-plush-handmade', 'scam-guide', 'password-kit', 'safety-checklist'],
-  except: [],
+  ids: ['mc-plush', 'scam-guide', 'password-kit', 'safety-checklist'],
+  // Picture books + teen guides: still being finalized for production → pre-order.
+  except: ['where-picture-go', 'ocean-road', 'cloud-sleeps', 'this-town', 'sky-internet', 'coastal-lab',
+           'whats-wifi', 'whats-bluetooth', 'whats-vpn', 'whats-cookie', 'whats-cloud-really'],
 };
 
 // Licensing, "suggest a place", "host a discovery", and free-guide mail.
@@ -47,9 +49,8 @@ const STRIPE_LINKS = {
   'forever-box': '', 'cloud-lock-camera': '', 'peekaboo': '',
   'where-picture-go': '', 'ocean-road': '', 'cloud-sleeps': '', 'this-town': '',
   'sky-internet': '', 'map-the-web': '', 'message-journey-book': '', 'coastal-lab': '',
-  'magic-moth': '', 'dazzle-zebra': '', 'quiet-chameleon': '', 'leopard-leaves': '', 'jungle-set': '',
   'whats-wifi': '', 'whats-bluetooth': '', 'whats-vpn': '', 'whats-cookie': '', 'whats-cloud-really': '',
-  'mc-plush': '', 'mc-plush-handmade': '',
+  'mc-plush': '',
   'program-babies-tots': '', 'program-tech-at-school': '', 'program-grandparent-mode': '', 'program-home-schooler': '',
   'armor-pack': '', 'cone-silence': '', 'no-thank-you-buttons': '',
   'scam-guide': '', 'password-kit': '', 'concierge-audit': '',

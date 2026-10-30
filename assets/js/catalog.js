@@ -43,12 +43,6 @@ const PRODUCTS = [
   { id:'message-journey-book', name:'The Message Journey Storybook', cat:'book', age:['kids'], ageLabel:'Kids 4–12', price:14, emoji:'✉️', blurb:'The printed companion to the app: follow a photo through 13 real stops from your device to grandma’s.' },
   { id:'coastal-lab', name:'Coastal Weather Lab Activity Guide', cat:'book', age:['kids'], ageLabel:'Kids 6–12', price:12, emoji:'⛅', blurb:'An explorer’s guide to reading the sky: sea breezes, rain curtains, and cloud “traffic,” all linking real clouds to Mister Cloud.' },
 
-  // Digital Jungle (Kids)
-  { id:'magic-moth', name:'The Magic Moth', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🦋', blurb:'Book 1: Facial recognition. The Snapping Bird photographs everyone without asking; the Moth’s owl-eye patterns confuse the camera.', teaches:['Cameras and consent','Automated vision can be imperfect'] },
-  { id:'dazzle-zebra', name:'The Dazzle Zebra', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🦓', blurb:'Book 2: Data profiling. When the zebras run together their stripes become a puzzle, and the Sorting Lion drops his labels.', teaches:['Data obfuscation','Say no to unnecessary collection'] },
-  { id:'quiet-chameleon', name:'The Quiet Chameleon', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🦎', blurb:'Book 3: Geolocation. The Chameleon changes colors, says “No thank you,” and the Seeking Snake slides past.', teaches:['Opting out of location sharing'] },
-  { id:'leopard-leaves', name:'The Leopard in the Leaves', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🐆', blurb:'Book 4: Phishing & scams. A tricky link hides like a leopard in leaves; pausing reveals the clues.', teaches:['The power of the pause','Ask a trusted grown-up'] },
-  { id:'jungle-set', name:'Digital Jungle: Complete 4-Book Set', cat:'jungle', age:['kids'], ageLabel:'Kids 4–12', price:40, emoji:'📚', blurb:'All four Masters of Camouflage stories in one gift box.' },
 
   // Teens
   { id:'whats-wifi', name:'“What’s Wi-Fi?”', cat:'teen', age:['teens'], ageLabel:'Teens 13–18', price:11, emoji:'📶', blurb:'Breaking down local networking and signal privacy with Mister Cloud.' },
@@ -59,7 +53,6 @@ const PRODUCTS = [
 
   // Toys & Plush
   { id:'mc-plush', img:'/assets/img/p-plush.webp', featured:4, name:'Mister Cloud Plush', cat:'toy', age:['tots','kids'], ageLabel:'Tots & Kids', price:15, emoji:'🧸', blurb:'The friendly face of the whole system: soft, huggable, and always ready to pause. Machine-made.' },
-  { id:'mc-plush-handmade', img:'/assets/img/p-plush.webp', name:'Hand-Stitched Mister Cloud + Book of Choice', cat:'toy', age:['tots','kids','family'], ageLabel:'Tots, Kids & Gifts', price:150, emoji:'🪡', blurb:'A hand-stitched Mister Cloud, made one at a time, paired with the Mister Cloud book of your choice.', desc:'A hand-stitched Mister Cloud, made one at a time, paired with the Mister Cloud book of your choice. A keepsake for a new baby, a grandchild, or a first library.', teaches:['A keepsake that starts the pause habit','Pick any Mister Cloud book to go with it'] },
 
   // Devices & Tools
   { id:'armor-pack', img:'/assets/img/p-armor-pack.webp', featured:6, name:'Mister Cloud Armor Pack', cat:'device', age:['family'], ageLabel:'Everyone', price:24, emoji:'🛡️', blurb:'Sliding camera covers, microphone blockers, and RFID-protection cases for phones, tablets, and computers.' },
