@@ -42,12 +42,12 @@
       cta: { href: '/shop?tab=books', label: 'See the board books' },
     },
     {
-      id: 'tech-tea', img: '/assets/img/card-together.webp?v=3', alt: 'A grandmother and child reading a tablet together.',
-      eyebrow: 'Learn together', title: 'Grandparent tech tea', meta: 'All ages · Together',
+      id: 'tech-tea', img: '/assets/img/card-together.webp?v=3', alt: 'An older adult and child reading a tablet together.',
+      eyebrow: 'Learn together', title: 'Tech tea together', meta: 'All ages · Together',
       types: ['hands-on'], ages: ['k812', 'together'],
-      intro: 'Swap roles: the child becomes the guide and shows a grandparent one setting, one sensor and one pause.',
+      intro: 'Swap roles: the child becomes the guide and shows an older family member one setting, one sensor and one pause.',
       need: ['A cup of tea', 'One shared device', 'Twenty calm minutes'],
-      steps: ['The child picks one device and explains what it can see or hear.', 'Together, find one privacy setting and read it aloud.', 'Grandparent shares one thing they would never post, and why.'],
+      steps: ['The child picks one device and explains what it can see or hear.', 'Together, find one privacy setting and read it aloud.', 'The older family member shares one thing they would never post, and why.'],
       talk: 'What did each of us learn from the other today?',
     },
   ];

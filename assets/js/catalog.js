@@ -16,7 +16,7 @@ const CATS = {
   toy:    { label: 'Toy & Plush',      theme: 'pink',   logo: 'rainbow' },
   device: { label: 'Device & Tool',    theme: 'amber',  logo: 'lock' },
   app:    { label: 'Zero-Data App',    theme: 'indigo', logo: 'lock' },
-  elder:  { label: 'Grown-up Guide',   theme: 'orange', logo: 'lock' },
+  elder:  { label: 'Digital Confidence 65+', theme: 'orange', logo: 'lock' },
   edu:    { label: 'Book + Workbook',  theme: 'slate',  logo: 'rainbow' },
   bundle: { label: 'Bundle',           theme: 'bundle', logo: 'rainbow' },
   apparel: { label: 'Apparel',         theme: 'sky',    logo: 'rainbow' },
@@ -40,7 +40,7 @@ const PRODUCTS = [
   { id:'this-town', name:'This Town, That Town', cat:'book', age:['kids'], ageLabel:'Kids 5–8', price:12, emoji:'🗺️', blurb:'A comparison book: why places with different ground infrastructure can have different internet.' },
   { id:'sky-internet', name:'Internet From the Sky', cat:'book', age:['kids'], ageLabel:'Kids 5–8', price:12, emoji:'🛰️', blurb:'A later-stage satellite book showing how new pathways reach places that are hard to wire.' },
   { id:'map-the-web', name:'Map The Web', cat:'book', age:['kids'], ageLabel:'Kids 4–12', price:13, emoji:'🕸️', blurb:'An introduction to the physical body of the internet and how data and media move around the world.' },
-  { id:'message-journey-book', name:'The Message Journey Storybook', cat:'book', age:['kids'], ageLabel:'Kids 4–12', price:14, emoji:'✉️', blurb:'The printed companion to the app: follow a photo through 13 real stops from your device to grandma’s.' },
+  { id:'message-journey-book', name:'The Message Journey Storybook', cat:'book', age:['kids'], ageLabel:'Kids 4–12', price:14, emoji:'✉️', blurb:'The printed companion to the app: follow a photo through 13 real stops from your device to a family member’s.' },
   { id:'coastal-lab', name:'Coastal Weather Lab Activity Guide', cat:'book', age:['kids'], ageLabel:'Kids 6–12', price:12, emoji:'⛅', blurb:'An explorer’s guide to reading the sky: sea breezes, rain curtains, and cloud “traffic,” all linking real clouds to Mister Cloud.' },
 
 
@@ -61,19 +61,19 @@ const PRODUCTS = [
 
   // Zero-Data Apps
 
-  // Grandparent Mode
-  { id:'scam-guide', name:'Scam-Spotter Field Guide', cat:'elder', age:['grandparents'], ageLabel:'Grandparents 60+', price:12, emoji:'🔎', blurb:'Recognize phishing, fake prizes, and manipulative interfaces, and the pause that stops a scam.' },
-  { id:'password-kit', name:'Password Hygiene Starter Kit', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents 60+', price:14, emoji:'🔑', blurb:'A simple, paper-first system for strong passwords without the overwhelm.' },
-  { id:'safety-checklist', name:'Family Device-Safety Checklist', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents & Family', price:0, priceLabel:'Free', emoji:'📋', blurb:'A free printable checklist for safer shared-device use with grandchildren.' },
-  { id:'concierge-audit', name:'Concierge Device Audit', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents & Family', price:0, priceLabel:'From $79', emoji:'🤝', blurb:'A guided one-on-one session to set up and secure the whole household’s devices.' },
+  // Digital Confidence 65+
+  { id:'scam-guide', name:'Scam-Spotter Field Guide', cat:'elder', age:['grandparents'], ageLabel:'Adults 65+', price:12, emoji:'🔎', blurb:'Recognize phishing, fake prizes, and manipulative interfaces, and learn the pause that stops a scam.' },
+  { id:'password-kit', name:'Password Confidence Starter Kit', cat:'elder', age:['grandparents','family'], ageLabel:'Adults 65+', price:14, emoji:'🔑', blurb:'A simple, paper-first system for creating and managing strong passwords without the overwhelm.' },
+  { id:'safety-checklist', name:'Family Device-Safety Checklist', cat:'elder', age:['grandparents','family'], ageLabel:'Adults 65+ & Family', price:0, priceLabel:'Free', emoji:'📋', blurb:'A free printable checklist for safer shared-device use across generations.' },
+  { id:'concierge-audit', name:'One-to-One Device Checkup', cat:'elder', age:['grandparents','family'], ageLabel:'Adults 65+ & Family', price:0, priceLabel:'From $79', emoji:'🤝', blurb:'A friendly, guided session to set up and secure the devices you use every day.' },
 
   // Programs for grown-ups: book + workbook bundles (available now; prices to be set: price 0 + priceLabel 'Pricing soon')
   { id:'program-babies-tots', featured:7, name:'Babies and Tots', cat:'edu', age:['tots','family'], ageLabel:'For parents of 0–3', price:0, priceLabel:'Pricing soon', emoji:'🍼', blurb:'A book + workbook for parents and caregivers of babies and toddlers: first words for screens, cameras and microphones, and tiny daily routines that start the pause habit early.', teaches:['First words for cameras, microphones and screens','The pause before sharing, as a song and a game'] },
   { id:'program-tech-at-school', featured:8, name:'Tech At School', cat:'edu', age:['kids','teens','educators'], ageLabel:'For teachers & schools', price:0, priceLabel:'Pricing soon', emoji:'🏫', blurb:'A book + workbook for teachers: classroom-ready lessons that make the internet’s body visible, from devices and routers to cables, data centers and the choices we make.', teaches:['The internet has a physical body','Consent, permissions and the pause'] },
-  { id:'program-grandparent-mode', featured:9, name:'Grandparent Mode', cat:'edu', age:['grandparents','family'], ageLabel:'For grandparents', price:0, priceLabel:'Pricing soon', emoji:'👵', blurb:'A book + workbook for grandparents, in plain language: device setup, scam spotting, and kid-safe settings for time with the grandchildren.', teaches:['Spot scams and tricky links','Shared-device settings that protect little ones'] },
+  { id:'program-grandparent-mode', featured:9, name:'Digital Confidence 65+', cat:'edu', age:['grandparents','family'], ageLabel:'For adults 65+', price:0, priceLabel:'Pricing soon', emoji:'🔐', blurb:'A book + workbook for adults 65+, in plain language: everyday device setup, scam spotting, privacy and safer shared-device settings.', teaches:['Use everyday devices with confidence','Spot scams and tricky links'] },
   { id:'program-home-schooler', featured:10, name:'Home Schooler’s Guide', cat:'edu', age:['kids','family','educators'], ageLabel:'For home-schooling parents', price:0, priceLabel:'Pricing soon', emoji:'🏡', blurb:'A book + workbook for home-schooling families: a flexible, self-paced plan with activities you can run at the kitchen table.', teaches:['Week-by-week activities for every age','Hands-on, off-screen discovery'] },
 
   // Bundles
-  { id:'first-launch', name:'The First-Launch Family Bundle', cat:'bundle', age:['family','tots','kids'], ageLabel:'Family', price:45, emoji:'🎁', blurb:'The recommended starter set for a new Mister Cloud family.', desc:'The recommended starter set: the “No Thank You” board book, a Mister Cloud plush, the family privacy cards, a grandparent device-safety checklist, and the zero-data mini app.', teaches:['One shared family language across generations'] },
+  { id:'first-launch', name:'The First-Launch Family Bundle', cat:'bundle', age:['family','tots','kids'], ageLabel:'Family', price:45, emoji:'🎁', blurb:'The recommended starter set for a new Mister Cloud family.', desc:'The recommended starter set: the “No Thank You” board book, a Mister Cloud plush, the family privacy cards, an everyday device-safety checklist, and the zero-data mini app.', teaches:['One shared family language across generations'] },
   { id:'armor-kit', name:'Mister Cloud Armor Kit', cat:'bundle', age:['kids','family'], ageLabel:'Kids & Family', price:55, emoji:'🧱', blurb:'The Digital Jungle four-book set plus the physical tools: camouflage caps and the Spot-the-Trick magnifying glass.' },
 ];
