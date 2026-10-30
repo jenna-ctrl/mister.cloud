@@ -17,7 +17,7 @@ const PREORDER_SHIPS = 'January 2027';
 // product as pre-order even when its category is available now.
 const AVAILABLE_NOW = {
   cats: ['board', 'book', 'jungle', 'teen', 'edu', 'apparel', 'merch'],   // books, learning programs, apparel & merch
-  ids: ['mc-plush', 'mc-plush-handmade'],
+  ids: ['mc-plush', 'mc-plush-handmade', 'scam-guide', 'password-kit', 'safety-checklist'],
   except: [],
 };
 

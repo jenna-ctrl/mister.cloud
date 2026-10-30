@@ -117,7 +117,7 @@
       count.textContent = `${NOW_COUNT} available now · ${PRE_COUNT} in pre-order for ${LAUNCH_DATE}`;
       results.innerHTML =
         group('available-now', '<span class="badge badge-now">Available now</span>', 'Start today',
-          'Books, learning programs and the Mister Cloud plush. Order now; these don’t wait for launch day.', top(now), { avail: 'now', label: `See all ${NOW_COUNT} available now` }) +
+          'Books, learning programs, grandparent guides and the Mister Cloud plush. Order now; these don’t wait for launch day.', top(now), { avail: 'now', label: `See all ${NOW_COUNT} available now` }) +
         group('preorder', '<span class="badge badge-sage">Pre-order</span>', `The 2027 collection`,
           `Reserve yours now. Official launch ${LAUNCH_DATE}; pre-orders ship from ${PREORDER_SHIPS}.`, top(pre), { avail: 'preorder', label: `See all ${PRE_COUNT} pre-order products` });
     } else {
