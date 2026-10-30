@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  // type: hands-on | songs | digital   ages: tots | k47 | k812 | together
+  // type: hands-on | songs   ages: tots | k47 | k812 | together
   const ACTIVITIES = [
     {
       id: 'spot-the-sensor', img: '/assets/img/activity-sensor.webp', alt: 'Felt toys: a camera, a microphone and a phone.',
@@ -33,7 +33,7 @@
       talk: 'What is one thing we would always pause before sharing?',
     },
     {
-      id: 'story-time', img: '/assets/img/card-books.webp', alt: 'Three felt-covered board books.',
+      id: 'story-time', img: '/assets/img/card-books.webp?v=3', alt: 'Three felt-covered board books.',
       eyebrow: 'Read & wonder', title: 'Story time: The Camera Eye', meta: 'Ages 0–3 · Read together',
       types: ['songs'], ages: ['tots', 'together'],
       intro: 'A gentle first story about the little lens that can see, and how we choose when to share.',
@@ -43,17 +43,7 @@
       cta: { href: '/shop?tab=books', label: 'See the board books' },
     },
     {
-      id: 'internet-has-a-body', img: '/assets/img/body-01.webp', pos: 'center top', alt: 'Mister Cloud waving: “The internet has a body.”',
-      eyebrow: 'Swipe & learn', title: 'The internet has a body', meta: 'Ages 6+ · Nine slides',
-      types: ['digital'], ages: ['k47', 'k812', 'together'],
-      intro: 'Nine friendly slides that follow a request from your device to a router, fiber, cell towers, data centers and subsea cables.',
-      need: ['A screen, or the free printable version'],
-      steps: ['Open the slideshow on the Learn page.', 'At each slide, find the matching thing in your home or street.', 'Save or print the pack and stick your favourite slide on the fridge.'],
-      talk: 'Which part of the internet’s body would you most like to visit?',
-      cta: { href: '/learn#body', label: 'Open the slideshow' },
-    },
-    {
-      id: 'tech-tea', img: '/assets/img/card-together.webp', alt: 'A grandmother and child reading a tablet together.',
+      id: 'tech-tea', img: '/assets/img/card-together.webp?v=3', alt: 'A grandmother and child reading a tablet together.',
       eyebrow: 'Learn together', title: 'Grandparent tech tea', meta: 'All ages · Together',
       types: ['hands-on'], ages: ['k812', 'together'],
       intro: 'Swap roles: the child becomes the guide and shows a grandparent one setting, one sensor and one pause.',

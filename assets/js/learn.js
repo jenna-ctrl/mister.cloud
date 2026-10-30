@@ -44,13 +44,13 @@
 
   dots.innerHTML = SLIDES.map((s, k) => `<button type="button" aria-label="Slide ${k + 1}: ${MC.esc(s[0])}"><img src="/assets/img/body-${pad(k + 1)}.webp" alt="" loading="lazy"></button>`).join('');
   // warm the cache so slide changes are instant
-  SLIDES.forEach((_, k) => { const im = new Image(); im.src = `/assets/img/body-${pad(k + 1)}.webp?v=2`; });
+  SLIDES.forEach((_, k) => { const im = new Image(); im.src = `/assets/img/body-${pad(k + 1)}.webp?v=3`; });
 
   function show(n) {
     i = (n + SLIDES.length) % SLIDES.length;
-    img.src = `/assets/img/body-${pad(i + 1)}.webp?v=2`;
+    img.src = `/assets/img/body-${pad(i + 1)}.webp?v=3`;
     img.alt = `Slide ${i + 1} of 9. ${SLIDES[i][0]} ${SLIDES[i][1]}`;
-    caption.innerHTML = `<b>${i + 1} / 9 · ${MC.esc(SLIDES[i][0].replace(/\.$/, ''))}.</b> ${MC.esc(SLIDES[i][1])} <a class="link-arrow" style="margin-left:4px" href="/assets/downloads/internet-has-a-body/mister-cloud-${pad(i + 1)}-${FILES[i]}.jpg?v=2" download data-tally="slide">Save this slide</a>`;
+    caption.innerHTML = `<b>${i + 1} / 9 · ${MC.esc(SLIDES[i][0].replace(/\.$/, ''))}.</b> ${MC.esc(SLIDES[i][1])} <a class="link-arrow" style="margin-left:4px" href="/assets/downloads/internet-has-a-body/mister-cloud-${pad(i + 1)}-${FILES[i]}.jpg?v=3" download data-tally="slide">Save this slide</a>`;
     dots.querySelectorAll('button').forEach((b, k) => b.setAttribute('aria-current', String(k === i)));
   }
   document.getElementById('slide-prev').addEventListener('click', () => show(i - 1));
@@ -84,7 +84,7 @@
   document.getElementById('share-btn').addEventListener('click', async () => {
     try {
       if (navigator.canShare) {
-        const blob = await fetch('/assets/downloads/internet-has-a-body/mister-cloud-internet-has-a-body.gif?v=2').then((r) => r.blob());
+        const blob = await fetch('/assets/downloads/internet-has-a-body/mister-cloud-internet-has-a-body.gif?v=3').then((r) => r.blob());
         const file = new File([blob], 'mister-cloud-internet-has-a-body.gif', { type: 'image/gif' });
         if (navigator.canShare({ files: [file] })) {
           await navigator.share({ files: [file], title: 'The internet has a body', text: shareText + ' ' + shareUrl });

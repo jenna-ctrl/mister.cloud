@@ -59,7 +59,7 @@
     if (p.img) return `<img src="${p.img}" alt="${MC.esc(p.name)}" loading="lazy">`;
     return `<div class="product-ph" style="--ph:${TINT[p.cat] || '#F6EFE3'}">
       <span class="ph-emoji" aria-hidden="true" style="${big ? 'font-size:96px' : ''}">${p.emoji || '☁️'}</span>
-      <img class="ph-mark" src="/assets/img/mark-128.png" alt="" aria-hidden="true">
+      <img class="ph-mark" src="/assets/img/mark-512.webp?v=3" alt="" aria-hidden="true">
     </div>`;
   }
 

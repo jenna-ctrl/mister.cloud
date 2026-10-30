@@ -139,6 +139,9 @@ p { margin: 0; }
 .btn-sm { min-height: 40px; padding: 0 18px; font-size: 14.5px; }
 .btn-lg { min-height: 54px; padding: 0 32px; font-size: 17px; }
 .btn[disabled] { opacity: .55; cursor: not-allowed; }
+.text-link { color: var(--signal-red); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.text-link:hover { color: var(--clay); }
+.person .text-link b { color: inherit; }
 .link-arrow {
   display: inline-flex; align-items: center; gap: 6px;
   color: var(--signal-red); font-weight: 700; text-decoration: none;
@@ -146,7 +149,10 @@ p { margin: 0; }
 }
 .link-arrow::after { content: "→"; transition: transform .18s; }
 .link-arrow:hover::after { transform: translateX(3px); }
-button.link-arrow { background: none; border-top: 0; border-left: 0; border-right: 0; padding: 0 0 1px; cursor: pointer; font-size: inherit; }
+button.text-link { color: var(--signal-red); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.text-link:hover { color: var(--clay); }
+.person .text-link b { color: inherit; }
+.link-arrow { background: none; border-top: 0; border-left: 0; border-right: 0; padding: 0 0 1px; cursor: pointer; font-size: inherit; }
 
 /* ---------- top bar & header ---------- */
 .topbar {
@@ -227,8 +233,8 @@ button.link-arrow { background: none; border-top: 0; border-left: 0; border-righ
 .hero-art { position: relative; align-self: stretch; margin-right: calc((100vw - min(100vw, var(--container))) / -2 - 24px); }
 .hero-art img {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 30%);
-          mask-image: linear-gradient(90deg, transparent 0, #000 30%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 14%);
 }
 .hero--with-crumb .hero-copy { padding-top: 22px; }
 @media (max-width: 860px) {
@@ -269,7 +275,10 @@ button.link-arrow { background: none; border-top: 0; border-left: 0; border-righ
 .card-title { font-family: var(--font-display); font-weight: 600; font-size: 1.45rem; line-height: 1.15; color: var(--ink); letter-spacing: -0.01em; }
 .card-text { color: var(--text); }
 .card-meta { color: var(--text); font-size: 16px; }
-.card-body .link-arrow { margin-top: auto; align-self: flex-start; padding-top: 8px; }
+.card-body .text-link { color: var(--signal-red); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.text-link:hover { color: var(--clay); }
+.person .text-link b { color: inherit; }
+.link-arrow { margin-top: auto; align-self: flex-start; padding-top: 8px; }
 .card-link { text-decoration: none; color: inherit; }
 .card-link:hover .card-title { color: var(--signal-red); }
 
@@ -318,7 +327,7 @@ button.link-arrow { background: none; border-top: 0; border-left: 0; border-righ
   padding: 26px 0;
 }
 .newsletter-inner { display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 430px); align-items: center; gap: 28px; }
-.newsletter-art { width: 200px; height: auto; -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 48%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 72% 70% at 50% 48%, #000 62%, transparent 100%); }
+.newsletter-art { width: 200px; height: auto; border-radius: 18px; box-shadow: 0 1px 2px rgba(60, 44, 20, .08); }
 .newsletter h2 { font-size: clamp(1.5rem, 2.6vw, 2.05rem); font-weight: 600; letter-spacing: -0.02em; }
 .newsletter p { color: var(--text); margin-top: 4px; }
 .pill-form { display: flex; background: #fff; border: 1.5px solid #D6CBB8; border-radius: 999px; padding: 4px; box-shadow: var(--shadow); }
@@ -407,7 +416,7 @@ dialog.modal[open] { animation: pop .22s ease; }
 /* Home: message journey diorama */
 .journey-figure { margin: 26px 0 0; }
 .section-journey { background: #FAF4EB; }
-.journey-figure img { width: 100%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent); mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent); }
+.journey-figure img { width: 100%; border-radius: var(--radius-lg); }
 .journey-figure figcaption { margin-top: 12px; text-align: right; }
 
 /* About */
