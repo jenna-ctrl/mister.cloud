@@ -49,11 +49,10 @@ const STRIPE_LINKS = {
   'sky-internet': '', 'map-the-web': '', 'message-journey-book': '', 'coastal-lab': '',
   'magic-moth': '', 'dazzle-zebra': '', 'quiet-chameleon': '', 'leopard-leaves': '', 'jungle-set': '',
   'whats-wifi': '', 'whats-bluetooth': '', 'whats-vpn': '', 'whats-cookie': '', 'whats-cloud-really': '',
-  'songbook': '', 'no-thank-you-single': '', 'sing-along-album': '', 'song-cards': '',
-  'mc-plush': '', 'mc-plush-handmade': '', 'yarn-board': '',
+  'mc-plush': '', 'mc-plush-handmade': '',
   'program-babies-tots': '', 'program-tech-at-school': '', 'program-grandparent-mode': '', 'program-home-schooler': '',
-  'armor-pack': '', 'tower-catcher': '', 'cone-silence': '', 'camera-covers': '', 'privacy-cards': '', 'no-thank-you-buttons': '', 'permission-cards': '',
-  'grandparent-kit': '', 'scam-guide': '', 'password-kit': '', 'concierge-audit': '',
+  'armor-pack': '', 'cone-silence': '', 'no-thank-you-buttons': '',
+  'scam-guide': '', 'password-kit': '', 'concierge-audit': '',
   'first-launch': '', 'armor-kit': '',
   // (safety-checklist = free, educator kits = contact; handled without a link)
 };

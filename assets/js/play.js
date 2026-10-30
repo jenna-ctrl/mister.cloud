@@ -21,7 +21,6 @@
       need: ['Yarn or string', 'Four paper cards: Device, Router, Data center, Family', 'Tape'],
       steps: ['Tape the four cards around the room, far apart.', 'Start at Device. Unroll the yarn to Router, then Data center, then Family.', 'Walk the path together, saying each stop out loud.', 'Ask: if we cut the yarn, would the message still arrive?'],
       talk: 'Where do you think a photo goes after you press send?',
-      cta: { href: '/shop?cat=toy', label: 'See the Message Route Yarn-Board' },
     },
     {
       id: 'practice-the-pause', img: '/assets/img/activity-pause.webp', alt: 'Hands holding a card that reads “Pause before you share.”',

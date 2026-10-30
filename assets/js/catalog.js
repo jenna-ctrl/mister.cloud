@@ -57,30 +57,18 @@ const PRODUCTS = [
   { id:'whats-cookie', name:'“What’s a Cookie?”', cat:'teen', age:['teens'], ageLabel:'Teens 13–18', price:11, emoji:'🍪', blurb:'Trackers, sessions, and the crumbs we leave behind as we browse.' },
   { id:'whats-cloud-really', name:'“What’s the Cloud, Really?”', cat:'teen', age:['teens'], ageLabel:'Teens 13–18', price:11, emoji:'☁️', blurb:'The teen-level truth: the cloud is someone else’s computer, in a real building, run by a real company.' },
 
-  // Songs & Music
-  { id:'songbook', name:'“Tap-Tap, Mister Cloud!” Songbook', cat:'music', age:['tots','kids'], ageLabel:'Tots & Kids', price:15, emoji:'🎵', blurb:'A choose-it-yourself learning song in ten verses: Read. Point. Wiggle. Sing!', desc:'A choose-it-yourself learning song in ten verses: Read. Point. Wiggle. Sing! Camera Eye, Microphone, Location Dot, the Nosy Question Parade, and more, each ending on “I choose yes. I choose no.”' },
-  { id:'no-thank-you-single', name:'“No Thank You, Mister Cloud” (Single)', cat:'music', age:['tots','kids'], ageLabel:'Tots & Kids', price:3, emoji:'🎶', blurb:'The family anthem for the pause before sharing.' },
-  { id:'sing-along-album', name:'Mister Cloud Sing-Along Album', cat:'music', age:['tots','kids'], ageLabel:'Tots & Kids', price:12, emoji:'💿', blurb:'Every Mister Cloud song in one calm, ad-free album for car rides and quiet time.' },
-  { id:'song-cards', name:'Sing & Signal Card Deck', cat:'music', age:['kids'], ageLabel:'Kids 4–12', price:14, emoji:'🃏', blurb:'Illustrated lyric cards for the ten songs, with the hand-signals that go with each verse.' },
-
   // Toys & Plush
   { id:'mc-plush', img:'/assets/img/p-plush.webp', featured:4, name:'Mister Cloud Plush', cat:'toy', age:['tots','kids'], ageLabel:'Tots & Kids', price:15, emoji:'🧸', blurb:'The friendly face of the whole system: soft, huggable, and always ready to pause. Machine-made.' },
   { id:'mc-plush-handmade', img:'/assets/img/p-plush.webp', name:'Hand-Stitched Mister Cloud + Book of Choice', cat:'toy', age:['tots','kids','family'], ageLabel:'Tots, Kids & Gifts', price:150, emoji:'🪡', blurb:'A hand-stitched Mister Cloud, made one at a time, paired with the Mister Cloud book of your choice.', desc:'A hand-stitched Mister Cloud, made one at a time, paired with the Mister Cloud book of your choice. A keepsake for a new baby, a grandchild, or a first library.', teaches:['A keepsake that starts the pause habit','Pick any Mister Cloud book to go with it'] },
-  { id:'yarn-board', img:'/assets/img/p-yarn-board.webp', featured:5, name:'Message Route Yarn-Board', cat:'toy', age:['kids'], ageLabel:'Kids 4–12', price:12, emoji:'🧶', blurb:'A hands-on lacing toy: thread yarn from device to router to data center to family, and trace the route.' },
 
   // Devices & Tools
   { id:'armor-pack', img:'/assets/img/p-armor-pack.webp', featured:6, name:'Mister Cloud Armor Pack', cat:'device', age:['family'], ageLabel:'Everyone', price:24, emoji:'🛡️', blurb:'Sliding camera covers, microphone blockers, and RFID-protection cases for phones, tablets, and computers.' },
-  { id:'tower-catcher', featured:11, name:'The Tower Catcher', cat:'device', age:['kids','teens','family'], ageLabel:'Kids & Teens', price:99, emoji:'🎮', blurb:'A Game Boy-style handheld that maps live cell-tower handoffs from the backseat, turning every road trip into proof that the internet has a body.', desc:'A Game Boy-style handheld that maps live cell-tower handoffs from the backseat. Watch the signal jump tower to tower, measure its strength, and record the route: an interactive lesson in networks, geography, and the physical internet.', teaches:['The internet has a physical body','Networks, geography & infrastructure'] },
   { id:'cone-silence', name:'Cone of Digital Silence', cat:'device', age:['family'], ageLabel:'Family', price:0, priceLabel:'Pre-order', emoji:'⛺', blurb:'A space-saving mesh Faraday tent for phones: slip devices inside and notifications simply stop, so families share an unbroken hour together. No jammer, just physics.' },
-  { id:'camera-covers', name:'Sliding Camera-Cover Kit', cat:'device', age:['family'], ageLabel:'Everyone', price:8, emoji:'📸', blurb:'A pack of thin sliding covers so the camera eye only opens when you choose.' },
-  { id:'privacy-cards', name:'Family Privacy Card Deck', cat:'device', age:['family'], ageLabel:'Family', price:12, emoji:'🗃️', blurb:'Conversation and routine cards built around “Do we need to share this with Mister Cloud?”' },
   { id:'no-thank-you-buttons', name:'“No Thank You” Button Pack', cat:'device', age:['kids','family'], ageLabel:'Kids & Family', price:6, emoji:'🔘', blurb:'Real press-me buttons for practicing the calm, confident “no thank you.”' },
-  { id:'permission-cards', name:'Permission Routine Cards', cat:'device', age:['family'], ageLabel:'Family', price:10, emoji:'✅', blurb:'Step-by-step cards for the pause: ask first, check where it goes, then choose.' },
 
   // Zero-Data Apps
 
   // Grandparent Mode
-  { id:'grandparent-kit', name:'Grandparent Device-Safety Kit', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents 60+', price:29, emoji:'🧰', blurb:'A plain-language kit for phones, tablets, smart TVs, and voice assistants: setup, permissions, and kid-safe settings.' },
   { id:'scam-guide', name:'Scam-Spotter Field Guide', cat:'elder', age:['grandparents'], ageLabel:'Grandparents 60+', price:12, emoji:'🔎', blurb:'Recognize phishing, fake prizes, and manipulative interfaces, and the pause that stops a scam.' },
   { id:'password-kit', name:'Password Hygiene Starter Kit', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents 60+', price:14, emoji:'🔑', blurb:'A simple, paper-first system for strong passwords without the overwhelm.' },
   { id:'safety-checklist', name:'Family Device-Safety Checklist', cat:'elder', age:['grandparents','family'], ageLabel:'Grandparents & Family', price:0, priceLabel:'Free', emoji:'📋', blurb:'A free printable checklist for safer shared-device use with grandchildren.' },
