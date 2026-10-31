@@ -3,7 +3,7 @@
    Each card is badged "Available now" (AVAILABLE_NOW in config.js) or "Pre-order".
    Age chips, availability chips, type tabs and sort narrow it down; the product
    dialog handles Buy now / Pre-order / licensing / free-guide buttons.
-   Deep links: /shop?avail=now|preorder   /shop?age=tots|kids|teens|grownups|educators
+   Deep links: /shop?avail=now|preorder   /shop?age=tots|kids|teens|grownups|seniors|educators
                /shop?tab=books|programs|tools|merch   /shop?cat=<CATS key, e.g. music>
                /shop?product=<id> opens that product */
 (function () {
@@ -20,7 +20,7 @@
   const AGES = {
     all: null,
     tots: ['tots'], kids: ['kids'], teens: ['teens'],
-    grownups: ['family', 'grandparents'], educators: ['educators'],
+    grownups: ['family'], seniors: ['grandparents'], educators: ['educators'],
   };
   // Placeholder art tint per category (Clear Sky pastel tints, lightened).
   const TINT = {
@@ -110,7 +110,7 @@
     { tab: 'books', id: 'kids-books', eyebrow: 'For kids', title: 'Books for kids',
       sub: 'Board books for little ones, picture books for curious kids, and guides for teens.', show: 6 },
     { tab: 'programs', id: 'programs', eyebrow: 'For grown-ups', title: 'Programs for grown-ups',
-      sub: 'Book + workbook programs for parents, teachers, grandparents and home-schoolers, plus plain-language guides.', show: 6 },
+      sub: 'Book + workbook programs for parents, teachers, adults 65+ and home-schoolers, plus plain-language guides.', show: 6 },
     { tab: 'tools', id: 'tools', eyebrow: 'For the whole family', title: 'Plush &amp; family tools',
       sub: 'The Mister Cloud plush, everyday privacy tools and family bundles.', show: 6 },
   ];

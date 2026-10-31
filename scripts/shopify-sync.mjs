@@ -62,7 +62,7 @@ function loadCatalogue() {
 
 const AGE_LABELS = {
   tots: 'Tots 0-3', kids: 'Kids 4-12', teens: 'Teens 13-18',
-  family: 'Parents & Family', grandparents: 'Grandparents 60+', educators: 'Educators',
+  family: 'Parents & Family', grandparents: 'Adults 65+', educators: 'Educators',
 };
 
 // Map one site product → a Shopify product payload.
